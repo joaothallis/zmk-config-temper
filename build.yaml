@@ -19,7 +19,7 @@
 #
 ---
 include:
-  - board: seeed_xiao_ble
+  - board: nice_nano_v2
     shield: temper_left
-  - board: seeed_xiao_ble
+  - board: nice_nano_v2
     shield: temper_right
