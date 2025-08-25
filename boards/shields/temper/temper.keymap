@@ -26,6 +26,12 @@
         };
     };
     behaviors {
+         hyper: hyper {
+            compatible = "zmk,behavior-mods";
+            #binding-cells = <0>;
+            bindings = <&kp NO>, <&kp NO>;
+            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI)>;
+        };
         hyper_a: hyper_a {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <0>;
