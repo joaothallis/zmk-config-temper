@@ -40,7 +40,7 @@ layers:
     - {type: held}
     - {t: ▽, type: trans}
   func:
-  - [F11, F12, '', '&bootloader', '&sys_reset', '&sys_reset', '&bootloader', '', '', '']
+  - [F11, F12, '', '&bootloader', '&reset', '&reset', '&bootloader', '', '', '']
   - [F10, F9, F8, F7, F6, NLCK, '', '', '', '']
   - [F5, F4, F3, F2, F1, RCTRL, RALT, '0', '', '']
   - - {t: ▽, type: trans}
