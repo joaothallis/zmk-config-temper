@@ -27,16 +27,16 @@
     };
     behaviors {
          hyper: hyper {
-            compatible = "zmk,behavior-mods";
+            compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp NO>, <&kp NO>;
-            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI)>;
+            mods = <MOD_LCTL MOD_LSFT MOD_LALT MOD_LGUI>;
         };
         hyper_a: hyper_a {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <0>;
             flavor = "balanced";
-            tapping-term = <200>;
+            tapping-term-ms = <200>;
             bindings = <&kp A>, <&hyper>;
         };
         home_s: home_s {
@@ -79,7 +79,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <0>;
             flavor = "balanced";
-            tapping-term = <200>;
+            tapping-term-ms = <200>;
             bindings = <&kp SQT>, <&hyper>;
         };
     };
