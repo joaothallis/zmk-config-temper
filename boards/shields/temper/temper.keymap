@@ -8,61 +8,73 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/ext_power.h>
 
 #define DEFAULT 0
-#define GAME 1
-#define NUM 2
-#define NAV 3
-#define FUN 4
+#define NUM 1
+#define SYM 2
+#define FUNC 3
 
 # define ______ &trans
+
+&mt {
+  tapping-term-ms = <200>;
+  flavor = "tap-preferred";
+};
 
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <NUM NAV>;
-            then-layer = <FUN>;
+            if-layers = <NUM SYM>;
+            then-layer = <FUNC>;
         };
     };
     behaviors {
-        home_s: home_s {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp S>, <&kp LALT>;
-            mods = <MOD_LSFT>;
+
+        // Home row mods
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
         };
-        home_d: home_d {
-            compatible = "zmk,behavior-mod-morph";
+        
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&kp D>, <&kp LCTL>;
-            mods = <MOD_LSFT>;
+            tapping-term-ms = <200>;
+            bindings = <&hm RGUI SEMI>, <&kp SQT>;
         };
-        home_f: home_f {
-            compatible = "zmk,behavior-mod-morph";
+
+        td1: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&kp F>, <&kp LSFT>;
-            mods = <MOD_LSFT>;
+            tapping-term-ms = <200>;
+            bindings = <&mt LCTRL TAB>, <&kp ESC>;
+        }; 
+    };
+    
+    combos {
+        compatible = "zmk,combos";
+        combo_vimwq {
+            timeout-ms = <50>;
+            key-positions = <1 2>;
+            bindings = <&vim_quit>;
         };
-        home_j: home_j {
-            compatible = "zmk,behavior-mod-morph";
+     };
+
+    macros {
+        vim_quit: vim_quit {
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp J>, <&kp RSFT>;
-            mods = <MOD_RSFT>;
-        };
-        home_k: home_k {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp K>, <&kp RCTL>;
-            mods = <MOD_LSFT>;
-        };
-        home_l: home_l {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp L>, <&kp RALT>;
-            mods = <MOD_RSFT>;
+            bindings = <&macro_tap &kp ESC &kp COLON &kp W &kp Q>;
+
         };
     };
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -71,11 +83,11 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
         &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O       &kp P   
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &kp A       &home_s       &home_d       &home_f       &kp G               &kp H         &home_j       &home_k       &home_l     &kp SCLN
+        &kp A       &hm LALT S   &hm LCTRL D     &hm LSHFT F    &kp G            &kp H       &hm RSHFT J   &hm RCTRL K    &hm RALT L    &td0
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT     &kp SLASH
+        &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT     &kp FSLH
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                  &kp LCTRL    &mo NUM          &kp ENTER         &kp SPACE       &mo NAV       &mo NUM     
+                                    &td1       &lt NUM BSPC  &mt LGUI ENTER   &mt RCTRL SPACE &lt SYM DEL  &mt LCTRL GRAVE
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
