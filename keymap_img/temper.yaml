@@ -13,7 +13,7 @@ layers:
     - {t: L, s: RALT}
     - '&hypr SCLN'
   - [Z, X, C, V, B, N, M, ',', ., /]
-  - [LCTRL, '&smart_shft', SPACE, BSPC, nav, num]
+  - [LCTRL, num, ENTER, SPACE, nav, num]
   game:
   - - TAB
     - '1'
@@ -54,13 +54,13 @@ layers:
   num:
   - ['~', '@', '{', '}', '%', '*', '7', '8', '9', '-']
   - [^, '#', (, ), $, _, '4', '5', '6', +]
-  - ['&amps_morph', <, '[', ']', '>', '0', '1', '2', '3', '=']
+  - [ESC, <, '[', ']', '>', '0', '1', '2', '3', '=']
   - - Ctl+C
-    - '!'
+    - {t: '!', type: held}
     - '0'
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {type: held}
+    - {t: ▽, type: trans}
   nav:
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -130,8 +130,8 @@ layers:
     - F3
     - F10
   - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {type: held}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {type: held}
-    - {type: held}
+    - {t: ▽, type: trans}
