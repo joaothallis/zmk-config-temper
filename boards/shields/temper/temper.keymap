@@ -26,19 +26,6 @@
         };
     };
     behaviors {
-         hyper: hyper {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp NO>, <&kp NO>;
-            mods = <MOD_LCTL MOD_LSFT MOD_LALT MOD_LGUI>;
-        };
-        hyper_a: hyper_a {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            bindings = <&kp A>, <&hyper>;
-        };
         home_s: home_s {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -75,13 +62,6 @@
             bindings = <&kp L>, <&kp RALT>;
             mods = <MOD_RSFT>;
         };
-        hyper_scln: hyper_scln {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            bindings = <&kp SQT>, <&hyper>;
-        };
     };
         keymap {
                 compatible = "zmk,keymap";
@@ -91,7 +71,7 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
         &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O       &kp P   
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &hyper_a      &home_s       &home_d       &home_f       &kp G             &kp H         &home_j       &home_k       &home_l     &hyper_scln
+      &kp HYPR A      &home_s       &home_d       &home_f       &kp G             &kp H         &home_j       &home_k       &home_l   &kp HYPR SCLN
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT     &kp SLASH
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
