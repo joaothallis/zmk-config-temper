@@ -18,7 +18,7 @@
 #define HYPR 4
 
 #define ______ &trans
-#define HYPR(key) &kp LG(LC(LA(LS(key))))
+#define HYPER(key) &kp LG(LC(LA(LS(key))))
 
 &mt {
   tapping-term-ms = <200>;
@@ -158,11 +158,11 @@
                 hypr_layer {
                         bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-       HYPR(Q)       HYPR(W)        HYPR(E)      HYPR(R)       HYPR(T)           HYPR(Y)       HYPR(U)       HYPR(I)       HYPR(O)      HYPR(P)
+     HYPER(Q)       HYPER(W)       HYPER(E)      HYPER(R)      HYPER(T)         HYPER(Y)       HYPER(U)     HYPER(I)       HYPER(O)      HYPER(P)
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-       HYPR(A)       HYPR(S)        HYPR(D)      HYPR(F)       HYPR(G)           HYPR(H)       HYPR(J)       HYPR(K)       HYPR(L)      &none
+     HYPER(A)       HYPER(S)       HYPER(D)      HYPER(F)      HYPER(G)         HYPER(H)       HYPER(J)     HYPER(K)       HYPER(L)      &none
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-       &none         &none          HYPR(C)      HYPR(V)       HYPR(B)           HYPR(N)       HYPR(M)       &none         &none        &none
+       &none         &none         HYPER(C)      HYPER(V)      HYPER(B)         HYPER(N)       HYPER(M)      &none         &none         &none
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                     ______        ______        ______            ______        ______        ______
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
