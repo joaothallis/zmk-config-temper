@@ -30,12 +30,12 @@ layers:
     - func
     - RALT
   sym:
-  - ['~', '@', '{', '}', '%', '&mmv MOVE_LEFT', '&mmv MOVE_DOWN', '&mmv MOVE_UP', MOVE RIGHT, '&msc SCROL_UP']
-  - [^, '#', (, ), $, LEFT, DOWN, UP, RIGHT, homeapp]
+  - ['~', '@', '{', '}', '%', '&mmv MOVE_LEFT', '&mmv MOVE_DOWN', '&mmv MOVE_UP', '&mmv MOVE_RIGHT', '&msc SCROL_UP']
+  - [^, '#', (, ), $, LEFT, DOWN, UP, RIGHT, '&homeapp']
   - [ESC, <, MUTE, VOL DN, VOL UP, '&mkp MB1', '&mkp MB2', '&brws_back', '&brws_fwd', '&msc SCROL_DOWN']
   - - Ctl+C
     - {t: ▽, type: trans}
-    - '0'
+    - Ctl+V
     - {t: ▽, type: trans}
     - {type: held}
     - {t: ▽, type: trans}
