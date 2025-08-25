@@ -2,7 +2,7 @@ layout: {zmk_keyboard: temper}
 layers:
   default:
   - [Q, W, E, R, T, Y, U, I, O, P]
-  - - '&hyper_a'
+  - - HYPR A
     - {t: S, s: LALT}
     - {t: D, s: LCTL}
     - {t: F, s: LSFT}
@@ -11,7 +11,7 @@ layers:
     - {t: J, s: RSFT}
     - {t: K, s: RCTL}
     - {t: L, s: RALT}
-    - '&hyper_scln'
+    - HYPR SCLN
   - [Z, X, C, V, B, N, M, ',', ., /]
   - [LCTRL, '&smart_shft', SPACE, BSPC, nav, num]
   game:
