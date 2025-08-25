@@ -73,6 +73,7 @@
         combo_vimwq {
             timeout-ms = <50>;
             key-positions = <1 2>;
+            layers = <DEFAULT>;
             bindings = <&vim_quit>;
         };
         combo_hypr {
@@ -96,6 +97,21 @@
             bindings = <&macro_tap &kp ESC &kp COLON &kp W &kp Q>;
 
         };
+        brws_back: brws_back {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp LALT &kp LEFT>;
+        };
+        brws_fwd: brws_fwd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp LALT &kp RIGHT>;
+        };
+        homeapp: homeapp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp LGUI &kp LCTRL &kp LSHFT>;
+        };
     };
 
         keymap {
@@ -117,11 +133,11 @@
                 num_layer {
                         bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        &kp TAB       &kp N1        &kp N2        &kp N3        &kp N4           &kp PLUS       &kp N7        &kp N8       &kp N9       &kp STAR  
+        &kp TAB       &kp N1        &kp HASH      &kp DLLR     &kp AT           &kp PLUS       &kp N7        &kp N8       &kp N9       &kp STAR  
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-       &kp ESC        &kp Q         &kp W         &kp E         &kp R            &kp MINUS      &kp N4        &kp N5       &kp N6       &kp SLASH
+       &kp ESC        &kp Q         &kp W         &kp LT       &kp GT            &kp MINUS      &kp N4        &kp N5       &kp N6       &kp SLASH
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-       &kp LSHFT      &kp A         &kp S         &kp D         &kp F            &kp N0         &kp N1        &kp N2       &kp N3       &kp EQUAL
+       &kp LSHFT      &kp A         &kp S         &kp D        &kp F            &kp N0         &kp N1        &kp N2       &kp N3       &kp EQUAL
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                     &kp ESC     &kp LCTRL     &kp SPACE          &kp DOT        &mo FUNC      &kp RALT
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
@@ -130,13 +146,13 @@
                 sym_layer {
                         bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-      &kp TILDE       &kp AT       &kp LBRC      &kp RBRC     &kp PRCNT         &kp STAR        &kp N7       &kp N8       &kp N9        &kp MINUS
-// ├─────────────┼─────────────┼─────────────┼─────────────┼────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &kp CARET      &kp HASH      &kp LPAR      &kp RPAR      &kp DLLR         &kp UNDER       &kp N4       &kp N5       &kp N6        &kp PLUS
+      &kp TILDE       &kp AT       &kp LBRC      &kp RBRC     &kp PRCNT        &mmv MOVE_LEFT  &mmv MOVE_DOWN &mmv MOVE_UP  &kp MOVE_RIGHT  &msc SCROL_UP
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &kp ESC     &kp LT       &kp LBKT      &kp RBKT       &kp GT          &kp N0          &kp N1       &kp N2       &kp N3        &kp EQUAL
+      &kp CARET      &kp HASH      &kp LPAR      &kp RPAR     &kp DLLR         &kp LEFT        &kp DOWN     &kp UP       &kp RIGHT     &kp homeapp
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+      &kp ESC        &kp LT        &kp C_MUTE  &kp C_VOL_DN   &kp C_VOL_UP     &mkp MB1        &mkp MB2     &brws_back   &brws_fwd     &msc SCROL_DOWN
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                  &kp LC(C)      &kp EXCL      &kp N0            ______        ______        ______
+                                  &kp LC(C)      ______       &kp N0            ______        ______        ______
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
@@ -146,9 +162,9 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
        &kp F11       &kp F12       &none         &bootloader   &sys_reset       &sys_reset    &bootloader   &none         &none         &none
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-       &kp F10       &kp F9        &kp F8        &kp F7        &kp F6           &none         &none         &none         &none         &none
+       &kp F10       &kp F9        &kp F8        &kp F7        &kp F6           &kp NUM       &none         &none         &none         &none
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-       &kp F5        &kp F4        &kp F3        &kp F2        &kp F1           &none         &none         &none         &none         &none
+       &kp F5        &kp F4        &kp F3        &kp F2        &kp F1           &kp RCTRL     &kp RALT      &kp N0         &none         &none
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                    ______        ______        ______            ______        ______        ______
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
