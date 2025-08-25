@@ -26,6 +26,12 @@
         };
     };
     behaviors {
+        hypr: hypr {
+            compatible = "zmk,behavior-macro-key-press";
+            labels = "HYPR";
+            #binding-cells = <1>;
+            bindings = <&kp LCTRL &kp LSHIFT &kp LALT &kp LGUI &macro_param_1to1>;
+        };
         home_s: home_s {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -71,7 +77,7 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
         &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O       &kp P   
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &kp HYPR A      &home_s       &home_d       &home_f       &kp G             &kp H         &home_j       &home_k       &home_l   &kp HYPR SCLN
+        &hypr A       &home_s       &home_d       &home_f       &kp G             &kp H         &home_j       &home_k       &home_l     &hypr SCLN
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT     &kp SLASH
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
