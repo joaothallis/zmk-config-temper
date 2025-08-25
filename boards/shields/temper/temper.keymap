@@ -26,54 +26,55 @@
         };
     };
     behaviors {
-        bspc_del: backspace_delete {
-            compatible = "zmk,behavior-mod-morph";
+        hyper_a: hyper_a {
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp DELETE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_RSFT)>;
+            flavor = "balanced";
+            tapping-term = <200>;
+            bindings = <&kp A>, <&hyper>;
         };
-        super_bspc: super_backspace {
+        home_s: home_s {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp LA(BACKSPACE)>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&kp S>, <&kp LALT>;
+            mods = <MOD_LSFT>;
         };
-        smart_shft: smart_shift {
+        home_d: home_d {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LSHFT>, <&caps_word>;
-            mods = <(MOD_LSFT)>;
+            bindings = <&kp D>, <&kp LCTL>;
+            mods = <MOD_LSFT>;
         };
-        comma_semi: comma_semi {
+        home_f: home_f {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp SEMI>;
-            mods = <(MOD_LSFT)>;
+            bindings = <&kp F>, <&kp LSFT>;
+            mods = <MOD_LSFT>;
         };
-        dot_colon: dot_colon {
+        home_j: home_j {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp COLON>;
-            mods = <(MOD_LSFT)>;
+            bindings = <&kp J>, <&kp RSFT>;
+            mods = <MOD_RSFT>;
         };
-        qmrk_excl: qmrk_excl {
+        home_k: home_k {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp QMARK>, <&kp EXCL>;
-            mods = <(MOD_LSFT)>;
+            bindings = <&kp K>, <&kp RCTL>;
+            mods = <MOD_LSFT>;
         };
-        slh_morph: slh_morph {
+        home_l: home_l {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp FSLH>, <&kp BSLH>;
-            mods = <(MOD_LSFT)>;
+            bindings = <&kp L>, <&kp RALT>;
+            mods = <MOD_RSFT>;
         };
-        amps_morph: amps_morph {
-            compatible = "zmk,behavior-mod-morph";
+        hyper_scln: hyper_scln {
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <0>;
-            bindings = <&kp AMPS>, <&kp PIPE>;
-            mods = <(MOD_LSFT)>;
+            flavor = "balanced";
+            tapping-term = <200>;
+            bindings = <&kp SQT>, <&hyper>;
         };
     };
         keymap {
@@ -84,9 +85,9 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
         &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O       &kp P   
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &kp A         &kp S         &kp D         &kp F         &kp G             &kp H         &kp J         &kp K         &kp L         &kp SQT
+        &hyper_a      &home_s       &home_d       &home_f       &kp G             &kp H         &home_j       &home_k       &home_l     &hyper_scln
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M      &comma_semi    &dot_colon    &qmrk_excl
+        &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &COMMA        &DOT        &SLASH
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                   &kp LCTRL    &smart_shft    &kp SPACE         &kp BSPC       &mo NAV       &mo NUM     
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
