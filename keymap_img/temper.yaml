@@ -14,49 +14,22 @@ layers:
     - '&td0'
   - [Z, X, C, V, B, N, M, ',', ., /]
   - - '&td1'
-    - {t: BSPC, h: game}
+    - {t: BSPC, h: num}
     - {t: ENTER, h: LGUI}
     - {t: SPACE, h: RCTRL}
-    - {t: DEL, h: num}
+    - {t: DEL, h: sym}
     - {t: '`', h: LCTRL}
-  game:
-  - - TAB
-    - '1'
-    - '2'
-    - '3'
-    - '4'
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - ESC
-    - Q
-    - W
-    - E
-    - R
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - UP
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - LSHFT
-    - A
-    - S
-    - D
-    - F
-    - {t: ▽, type: trans}
-    - LEFT
-    - DOWN
-    - RIGHT
-    - {t: ▽, type: trans}
+  num:
+  - [TAB, '1', '2', '3', '4', +, '7', '8', '9', '&kp_MULTIPLY']
+  - [ESC, Q, W, E, R, '-', '4', '5', '6', /]
+  - [HFT, A, S, D, F, '0', '1', '2', '3', .]
   - - ESC
     - {t: LCTRL, type: held}
     - SPACE
-    - RET
     - {t: ▽, type: trans}
+    - func
     - {t: ▽, type: trans}
-  num:
+  sym:
   - ['~', '@', '{', '}', '%', '*', '7', '8', '9', '-']
   - [^, '#', (, ), $, _, '4', '5', '6', +]
   - [ESC, <, '[', ']', '>', '0', '1', '2', '3', '=']
@@ -66,7 +39,7 @@ layers:
     - {t: ▽, type: trans}
     - {type: held}
     - {t: ▽, type: trans}
-  nav:
+  func:
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -103,7 +76,7 @@ layers:
     - {t: ▽, type: trans}
     - {type: held}
     - {t: ▽, type: trans}
-  fun:
+  hypr:
   - - {t: ▽, type: trans}
     - MUTE
     - VOL DN
