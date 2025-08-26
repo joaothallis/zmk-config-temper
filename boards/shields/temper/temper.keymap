@@ -83,14 +83,14 @@
             timeout-ms = <50>;
             key-positions = <30 31>;
             layers = <DEFAULT>;
-            bindings = <&tg HYPR>;
+            bindings = <&tog HYPR>;
         };
         // Combo to toggle FUNC layer
         func_toggle {
             timeout-ms = <50>;
             key-positions = <34 35>;
             layers = <DEFAULT>;
-            bindings = <&tg FUNC>;
+            bindings = <&tog FUNC>;
         };
         // Combo to send CAPS LOCK
         caps_combo {
