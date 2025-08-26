@@ -85,10 +85,10 @@ combos:
   k: hypr
   l: [default]
 - p: [30, 31]
-  k: '&tg 4'
+  k: {t: hypr, h: toggle}
   l: [default]
 - p: [34, 35]
-  k: '&tg 3'
+  k: {t: func, h: toggle}
   l: [default]
 - p: [14, 15]
   k: CAPS

@@ -299,15 +299,15 @@ path.combo {
 </a></g>
 <g class="combo combopos-2">
 <rect rx="6" ry="6" x="207" y="219" width="28" height="26" class="combo"/>
-<text x="221" y="232" class="combo tap">
-<tspan x="221" dy="-0.6em">&amp;tg</tspan><tspan x="221" dy="1.2em">4</tspan>
-</text>
+<a href="#hypr">
+<text x="221" y="232" class="combo tap layer-activator">hypr</text>
+</a><text x="221" y="243" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-3">
 <rect rx="6" ry="6" x="552" y="218" width="28" height="26" class="combo"/>
-<text x="566" y="231" class="combo tap">
-<tspan x="566" dy="-0.6em">&amp;tg</tspan><tspan x="566" dy="1.2em">3</tspan>
-</text>
+<a href="#func">
+<text x="566" y="231" class="combo tap layer-activator">func</text>
+</a><text x="566" y="242" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-4">
 <path d="M394,114 l-107,0" class="combo"/>
