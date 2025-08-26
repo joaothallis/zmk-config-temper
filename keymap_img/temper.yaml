@@ -11,21 +11,21 @@ layers:
     - {t: J, h: RSHFT}
     - {t: K, h: RCTRL}
     - {t: L, h: RALT}
-    - '&td0'
+    - ;
   - [Z, X, C, V, B, N, M, ',', ., /]
   - - '&td1'
-    - {t: BSPC, h: num}
+    - {t: DEL, h: num}
     - {t: ENTER, h: LGUI}
     - {t: SPACE, h: RCTRL}
-    - {t: DEL, h: sym}
-    - {t: '`', h: LCTRL}
+    - {t: BSPC, h: sym}
+    - {t: '''', h: LCTRL}
   num:
-  - [TAB, '1', '#', $, '@', +, '7', '8', '9', '*']
-  - [ESC, Q, W, <, '>', '-', '4', '5', '6', /]
-  - [LSHFT, A, S, D, F, '0', '1', '2', '3', '=']
-  - - ESC
-    - {t: LCTRL, type: held}
-    - SPACE
+  - ['', '', '#', $, '@', +, '7', '8', '9', '*']
+  - ['', '', '`', <, '>', '-', '4', '5', '6', /]
+  - ['', '', '|', '~', _, '0', '1', '2', '3', '=']
+  - - LGUI
+    - {type: held}
+    - ENTER
     - .
     - func
     - RALT
@@ -40,8 +40,17 @@ layers:
     - {type: held}
     - {t: ▽, type: trans}
   func:
-  - [F11, F12, '', '&bootloader', '&sys_reset', '&sys_reset', '&bootloader', '', '', '']
-  - [F10, F9, F8, F7, F6, LNLCK, '', '', '', '']
+  - - F11
+    - F12
+    - ''
+    - '&bootloader'
+    - '&sys_reset'
+    - '&sys_reset'
+    - '&bootloader'
+    - {t: BT, h: '1'}
+    - {t: BT, h: '2'}
+    - {t: BT, h: '3'}
+  - [F10, F9, F8, F7, F6, LNLCK, BT CLR, '', '', '']
   - [F5, F4, F3, F2, F1, RCTRL, RALT, '0', '', '']
   - - {t: ▽, type: trans}
     - {type: held}
@@ -69,3 +78,6 @@ combos:
 - p: [14, 15]
   k: CAPS
   l: [default]
+- p: [13, 14]
+  k: <
+  l: [num]
