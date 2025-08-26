@@ -89,4 +89,4 @@ combos:
   l: [sym]
 - p: [23, 24]
   k: '&ls_rs_macro'
-  l: [sym]
+  l: [num]
