@@ -45,19 +45,12 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-        
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&hm RGUI SEMI>, <&kp SQT>;
-        };
-
+        // Tap dance press for ESC; hold for LGUI+TAB
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt LCTRL TAB>, <&kp ESC>;
+            bindings = <&kp ESC>, <&mt LGUI TAB>;
         }; 
     };
     
@@ -89,6 +82,12 @@
             layers = <DEFAULT>;
             bindings = <&kp CAPS>;
         };
+        lt_gt_combo {
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+            layers = <NUM>;
+            bindings = <&kp LT &kp GT &kp LEFT>;
+         };
      };
 
     macros {
@@ -123,24 +122,24 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
         &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O       &kp P   
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &kp A       &hm LALT S   &hm LCTRL D     &hm LSHFT F    &kp G             &kp H       &hm RSHFT J   &hm RCTRL K   &hm RALT L    &td0
+        &kp A       &hm LALT S   &hm LCTRL D     &hm LSHFT F    &kp G             &kp H       &hm RSHFT J   &hm RCTRL K   &hm RALT L    &kp SEMI
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT     &kp FSLH
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                    &td1       &lt NUM BSPC  &mt LGUI ENTER   &mt RCTRL SPACE &lt SYM DEL  &mt LCTRL GRAVE
+                                    &td1       &lt NUM DEL  &mt LGUI ENTER   &mt RCTRL SPACE &lt SYM BSPC  &mt LCTRL SQT
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
         num_layer {
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        &kp TAB       &kp N1        &kp HASH      &kp DLLR     &kp AT           &kp PLUS       &kp N7        &kp N8       &kp N9       &kp STAR  
+       &none        &none         &kp HASH      &kp DLLR     &kp AT            &kp PLUS       &kp N7        &kp N8       &kp N9       &kp STAR  
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-       &kp ESC        &kp Q         &kp W         &kp LT       &kp GT            &kp MINUS      &kp N4        &kp N5       &kp N6       &kp SLASH
+       &none        &none         &kp GRAVE     &kp LT       &kp GT            &kp MINUS      &kp N4        &kp N5       &kp N6       &kp SLASH
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-       &kp LSHFT      &kp A         &kp S         &kp D        &kp F            &kp N0         &kp N1        &kp N2       &kp N3       &kp EQUAL
+       &none        &none         &kp PIPE      &kp TILDE    &kp UNDER         &kp N0         &kp N1        &kp N2       &kp N3       &kp EQUAL
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                    &kp ESC     &kp LCTRL     &kp SPACE          &kp DOT        &mo FUNC      &kp RALT
+                                  &kp LGUI      ______       &kp ENTER         &kp DOT        &mo FUNC      &kp RALT
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -161,9 +160,9 @@
         func_layer {
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-       &kp F11       &kp F12       &none         &bootloader   &sys_reset       &sys_reset         &bootloader   &none         &none         &none
+       &kp F11       &kp F12       &none         &bootloader   &sys_reset       &sys_reset    &bootloader   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-       &kp F10       &kp F9        &kp F8        &kp F7        &kp F6           &kp LNLCK       &none         &none         &none         &none
+       &kp F10       &kp F9        &kp F8        &kp F7        &kp F6           &kp LNLCK     &bt BT_CLR    &none         &none         &none
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
        &kp F5        &kp F4        &kp F3        &kp F2        &kp F1           &kp RCTRL     &kp RALT      &kp N0         &none         &none
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
