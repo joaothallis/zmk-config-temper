@@ -92,6 +92,27 @@
             layers = <NUM>;
             bindings = <&lt_gt_macro>;
          };
+        // Combo to type { } and move cursor left
+        lb_rb_combo {
+            timeout-ms = <50>;
+            key-positions = <3 4>;
+            layers = <SYM>;
+            bindings = <&lb_rb_macro>;
+        };
+        // Combo to type ( ) and move cursor left
+        lp_rp_combo {
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+            layers = <SYM>;
+            bindings = <&lp_rp_macro>;
+        };
+        // Combo to type [ ] and move cursor left
+        ls_rs_combo {
+            timeout-ms = <50>;
+            key-positions = <23 24>;
+            layers = <SYM>;
+            bindings = <&ls_rs_macro>;
+        };
      };
 
     macros {
@@ -125,7 +146,24 @@
             #binding-cells = <0>;
             bindings = <&macro_tap &kp LT &kp GT &kp LEFT>;
         };
-  }
+        // Macro to type { } and move cursor left
+        lb_rb_macro: lb_rb_macro_with_cursor {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp LBRC &kp RBRC &kp LEFT>;
+        };
+        // Macro to type ( ) and move cursor left
+        lp_rp_macro: lp_rp_macro_with_cursor {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp LPAR &kp RPAR &kp LEFT>;
+        };
+        // Macro to type [ ] and move cursor left
+        ls_rs_macro: ls_rs_macro_with_cursor {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp LBKT &kp RBKT &kp LEFT>;
+        };
     };
 
     keymap {
@@ -147,11 +185,11 @@
         num_layer {
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-       &none        &none         &kp HASH      &kp DLLR     &kp AT            &kp PLUS       &kp N7        &kp N8       &kp N9       &kp STAR  
+       &none        &kp UNDER     &kp HASH      &kp DLLR     &kp AT            &kp PLUS       &kp N7        &kp N8       &kp N9       &kp STAR  
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-       &none        &none         &kp GRAVE     &kp LT       &kp GT            &kp MINUS      &kp N4        &kp N5       &kp N6       &kp SLASH
+       &none        &kp TILDE     &kp GRAVE     &kp LT       &kp GT            &kp MINUS      &kp N4        &kp N5       &kp N6       &kp SLASH
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-       &none        &none         &kp PIPE      &kp TILDE    &kp UNDER         &kp N0         &kp N1        &kp N2       &kp N3       &kp EQUAL
+       &none        &none         &kp PIPE      &kp LBKT     &kp RBKT         &kp N0         &kp N1        &kp N2       &kp N3       &kp EQUAL
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                   &kp LGUI      ______       &kp ENTER         &kp DOT        &mo FUNC      &kp RALT
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
@@ -160,13 +198,13 @@
         sym_layer {
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-      &kp TILDE       &kp AT       &kp LBRC      &kp RBRC     &kp PRCNT        &mmv MOVE_LEFT  &mmv MOVE_DOWN &mmv MOVE_UP  &mmv MOVE_RIGHT  &msc SCRL_UP
+      &none          &kp CARET     &kp PRCNT    &kp LBRC      &kp RBRC        &mmv MOVE_LEFT  &mmv MOVE_DOWN &mmv MOVE_UP  &mmv MOVE_RIGHT  &msc SCRL_UP
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &kp CARET      &kp HASH      &kp LPAR      &kp RPAR     &kp DLLR         &kp LEFT        &kp DOWN     &kp UP       &kp RIGHT     &homeapp
+      &none          &none         &kp DLLR     &kp LPAR      &kp RPAR         &kp LEFT        &kp DOWN     &kp UP       &kp RIGHT     &homeapp
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &kp ESC        &kp LT        &kp C_MUTE  &kp C_VOL_DN   &kp C_VOL_UP     &mkp MB1        &mkp MB2     &brws_back   &brws_fwd     &msc SCRL_DOWN
+      &none          &none        &kp C_MUTE  &kp C_VOL_DN   &kp C_VOL_UP     &mkp MB1        &mkp MB2     &brws_back   &brws_fwd     &msc SCRL_DOWN
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                  &kp LC(C)      ______       &kp LC(V)            ______        ______        ______
+                                  &kp LC(C)     &kp LC(V)   &kp LG(ENTER)       ______        ______        ______
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
