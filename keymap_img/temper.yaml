@@ -79,5 +79,5 @@ combos:
   k: CAPS
   l: [default]
 - p: [13, 14]
-  k: <
+  k: '&lt_gt_macro'
   l: [num]

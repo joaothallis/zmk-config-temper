@@ -446,7 +446,7 @@ path.combo {
 </g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="223" y="97" width="28" height="26" class="combo"/>
-<text x="237" y="110" class="combo tap">&lt;</text>
+<text x="237" y="110" class="combo tap"><tspan style="font-size: 64%">&amp;lt_gt_mac…</tspan></text>
 </g>
 </g>
 </g>
