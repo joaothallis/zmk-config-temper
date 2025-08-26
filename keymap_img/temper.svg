@@ -252,9 +252,8 @@ path.combo {
 </g>
 <g transform="translate(758, 199)" class="key keypos-29">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">FSLH</tspan><tspan x="0" dy="1.2em">RGUI</tspan>
-</text>
+<text x="0" y="0" class="key tap">RGUI</text>
+<text x="0" y="24" class="key hold">/</text>
 </g>
 <g transform="translate(188, 228)" class="key keypos-30">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>

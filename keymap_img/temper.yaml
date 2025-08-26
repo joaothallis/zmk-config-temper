@@ -21,7 +21,7 @@ layers:
     - M
     - ','
     - .
-    - FSLH RGUI
+    - {t: RGUI, h: /}
   - - Gui+Q
     - {t: DEL, h: num}
     - ENTER
