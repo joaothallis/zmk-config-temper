@@ -1,31 +1,40 @@
 layout: {zmk_keyboard: temper}
 layers:
   default:
-  - [Q, W, E, R, T, Y, U, I, O, P]
+  - ['&td_q_tab', W, E, R, T, Y, U, I, O, P]
   - - A
-    - {t: S, h: LALT}
-    - {t: D, h: LCTRL}
-    - {t: F, h: LSHFT}
+    - {t: LALT, h: S}
+    - {t: LCTRL, h: D}
+    - {t: LSHFT, h: F}
     - G
     - H
-    - {t: J, h: RSHFT}
-    - {t: K, h: RCTRL}
-    - {t: L, h: RALT}
+    - {t: RSHFT, h: J}
+    - {t: RCTRL, h: K}
+    - {t: RALT, h: L}
     - ;
-  - [Z, X, C, V, B, N, M, ',', ., /]
-  - - '&td1'
+  - - {t: LGUI, h: Z}
+    - X
+    - C
+    - V
+    - B
+    - N
+    - M
+    - ','
+    - .
+    - FSLH RGUI
+  - - Gui+Q
     - {t: DEL, h: num}
-    - {t: ENTER, h: LGUI}
-    - {t: SPACE, h: RCTRL}
+    - ENTER
+    - SPACE
     - {t: BSPC, h: sym}
-    - {t: '''', h: LCTRL}
+    - Ctl+BSPC
   num:
   - ['', _, '#', $, '@', +, '7', '8', '9', '*']
   - ['', '~', '`', '%', '!', '-', '4', '5', '6', /]
   - ['', \, '|', '&', ^, '0', '1', '2', '3', '=']
   - - LGUI
     - {type: held}
-    - ENTER
+    - {t: ▽, type: trans}
     - .
     - func
     - RALT
@@ -33,9 +42,9 @@ layers:
   - ['&dq_macro', <, '>', '{', '}', '&mmv MOVE_LEFT', '&mmv MOVE_DOWN', '&mmv MOVE_UP', '&mmv MOVE_RIGHT', '&msc SCRL_UP']
   - ['', '[', ']', (, ), LEFT, DOWN, UP, RIGHT, '&homeapp']
   - ['', PP, MUTE, VOL DN, VOL UP, '&mkp MB1', '&mkp MB2', '&brws_back', '&brws_fwd', '&msc SCRL_DOWN']
-  - - Gui+Q
+  - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - Gui+ENTER
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {type: held}
     - {t: ▽, type: trans}
@@ -75,6 +84,12 @@ combos:
 - p: [32, 33]
   k: hypr
   l: [default]
+- p: [30, 31]
+  k: '&tg 4'
+  l: [default]
+- p: [34, 35]
+  k: '&tg 3'
+  l: [default]
 - p: [14, 15]
   k: CAPS
   l: [default]
@@ -90,3 +105,6 @@ combos:
 - p: [11, 12]
   k: '&ls_rs_macro'
   l: [sym]
+- p: [7, 8]
+  k: ESC
+  l: [default]
