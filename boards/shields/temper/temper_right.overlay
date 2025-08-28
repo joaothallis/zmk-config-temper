@@ -11,32 +11,27 @@
 };
 
 &kscan0 {
-    col-gpios
-        = <&pro_micro 15 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 18 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 19 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 20 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 21 GPIO_ACTIVE_HIGH>
-        ;
+    col-gpios = <
+        &pro_micro 15 GPIO_ACTIVE_HIGH,
+        &pro_micro 18 GPIO_ACTIVE_HIGH,
+        &pro_micro 19 GPIO_ACTIVE_HIGH,
+        &pro_micro 20 GPIO_ACTIVE_HIGH,
+        &pro_micro 21 GPIO_ACTIVE_HIGH
+    >;
 };
 
 &spi0 {
-    display_spi: nice_view_spi {
-        compatible = "zmk,spi-nice-view";
-        reg = <0>;
-        spi-max-frequency = <2000000>;
-    };
+    nice_view@0 {
+        compatible = "nice-view,nice-view";
+        reg = <0>;                        // Required for Zephyr SPI child
+        spi-max-frequency = <2000000>;
+
+        cs-gpios = <&pro_micro 17 GPIO_ACTIVE_LOW>;
+        vcom-gpios = <&pro_micro 20 GPIO_ACTIVE_HIGH>;
+
+        width = <160>;
+        height = <68>;
+        rotation = <270>;
+    };
 };
 
-/ {
-    nice_view: nice_view@0 {
-        compatible = "nice-view,nice-view";
-        spi = <&display_spi>;
-        width = <160>;
-        height = <68>;
-
-        cs-gpios = <&pro_micro 17 GPIO_ACTIVE_LOW>;
-        vcom-gpios = <&pro_micro 20 GPIO_ACTIVE_HIGH>;
-        rotation = <270>;
-    };
-};
