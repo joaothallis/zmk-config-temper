@@ -60,7 +60,7 @@ layers:
     - {t: BT, h: '2'}
     - {t: BT, h: '3'}
   - [F10, F9, F8, F7, F6, LNLCK, BT CLR, '', '', '']
-  - [F5, F4, F3, F2, F1, RCTRL, RALT, '0', '', '']
+  - [F5, F4, F3, F2, F1, '&nomachine', '', '', '', '']
   - - {t: ▽, type: trans}
     - {type: held}
     - {t: ▽, type: trans}
