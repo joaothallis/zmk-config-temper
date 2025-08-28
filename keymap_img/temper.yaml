@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: temper}
 layers:
   default:
-  - ['&td_q_tab', W, E, R, T, Y, U, I, O, P]
+  - [Q, W, E, R, T, Y, U, I, O, P]
   - - A
     - {t: LALT, h: S}
     - {t: LCTRL, h: D}
@@ -22,12 +22,12 @@ layers:
     - ','
     - .
     - {t: RGUI, h: /}
-  - - Gui+Q
+  - - TAB
     - {t: DEL, h: num}
     - ENTER
     - SPACE
     - {t: BSPC, h: sym}
-    - Ctl+BSPC
+    - ESC
   num:
   - ['', _, '#', $, '@', +, '7', '8', '9', '*']
   - ['', '~', '`', '%', '!', '-', '4', '5', '6', /]
@@ -90,6 +90,12 @@ combos:
 - p: [34, 35]
   k: {t: func, h: toggle}
   l: [default]
+- p: [34, 35]
+  k: {t: num, h: toggle}
+  l: [num]
+- p: [30, 31]
+  k: {t: sym, h: toggle}
+  l: [sym]
 - p: [14, 15]
   k: CAPS
   l: [default]
@@ -105,6 +111,3 @@ combos:
 - p: [11, 12]
   k: '&ls_rs_macro'
   l: [sym]
-- p: [7, 8]
-  k: ESC
-  l: [default]
