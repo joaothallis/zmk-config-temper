@@ -91,14 +91,14 @@ combos:
   k: CAPS
   l: [default]
 - p: [1, 2]
-  k: '&sym_par LT GT'
+  k: '&lt_gt_macro'
   l: [sym]
 - p: [3, 4]
-  k: '&sym_par LBRC RBRC'
+  k: '&lb_rb_macro'
   l: [sym]
 - p: [13, 14]
-  k: '&sym_par LPAR RPAR'
+  k: '&lp_rp_macro'
   l: [sym]
 - p: [11, 12]
-  k: '&sym_par LBKT RBKT'
+  k: '&ls_rs_macro'
   l: [sym]
