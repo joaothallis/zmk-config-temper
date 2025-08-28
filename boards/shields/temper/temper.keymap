@@ -111,28 +111,28 @@
             timeout-ms = <50>;
             key-positions = <1 2>;
             layers = <SYM>;
-            bindings = <&sym_par LT GT>;
+            bindings = <&lt_gt_macro>;
          };
         // Combo to type { } and move cursor left
         lb_rb_combo {
             timeout-ms = <50>;
             key-positions = <3 4>;
             layers = <SYM>;
-            bindings = <&sym_par LBRC RBRC>;
+            bindings = <&lb_rb_macro>;
         };
         // Combo to type ( ) and move cursor left
         lp_rp_combo {
             timeout-ms = <50>;
             key-positions = <13 14>;
             layers = <SYM>;
-            bindings = <&sym_par LPAR RPAR>;
+            bindings = <&lp_rp_macro>;
         };
         // Combo to type [ ] and move cursor left
         ls_rs_combo {
             timeout-ms = <50>;
             key-positions = <11 12>;
             layers = <SYM>;
-            bindings = <&sym_par LBKT RBKT>;
+            bindings = <&ls_rs_macro>;
         };
      };
 
@@ -143,10 +143,29 @@
             #binding-cells = <0>;
             bindings = <&macro_tap &kp ESC &kp COLON &kp W &kp Q &kp ENTER>;
         };
-        // Macro to send Par symbol and move cursor left
-        sym_par: sym_par {
+        // Macro to type < > and move cursor left
+        lt_gt_macro: lt_gt_macro_with_cursor {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <2>;
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp LT &kp GT &kp LEFT>;
+        };
+        // Macro to type { } and move cursor left
+        lb_rb_macro: lb_rb_macro_with_cursor {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp LBRC &kp RBRC &kp LEFT>;
+        };
+        // Macro to type ( ) and move cursor left
+        lp_rp_macro: lp_rp_macro_with_cursor {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp LPAR &kp RPAR &kp LEFT>;
+        };
+        // Macro to type [ ] and move cursor left
+        ls_rs_macro: ls_rs_macro_with_cursor {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp LBKT &kp RBKT &kp LEFT>;
         };
         // Macro to open homerow app (LGUI+LCTRL+LSHFT) 
         homeapp: homeapp {
