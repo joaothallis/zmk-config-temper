@@ -293,18 +293,12 @@ path.combo {
 <text x="392" y="246" class="combo tap layer-activator">hypr</text>
 </a></g>
 <g class="combo combopos-2">
-<rect rx="6" ry="6" x="207" y="219" width="28" height="26" class="combo"/>
-<a href="#hypr">
-<text x="221" y="232" class="combo tap layer-activator">hypr</text>
-</a><text x="221" y="243" class="combo hold">toggle</text>
-</g>
-<g class="combo combopos-3">
 <rect rx="6" ry="6" x="552" y="218" width="28" height="26" class="combo"/>
 <a href="#func">
 <text x="566" y="231" class="combo tap layer-activator">func</text>
 </a><text x="566" y="242" class="combo hold">toggle</text>
 </g>
-<g class="combo combopos-4">
+<g class="combo combopos-3">
 <path d="M394,114 l-107,0" class="combo"/>
 <path d="M394,114 l107,0" class="combo"/>
 <rect rx="6" ry="6" x="380" y="101" width="28" height="26" class="combo"/>
@@ -949,6 +943,12 @@ path.combo {
 <g transform="translate(599, 228)" class="key trans keypos-35">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
+</g>
+<g class="combo combopos-0">
+<rect rx="6" ry="6" x="207" y="219" width="28" height="26" class="combo"/>
+<a href="#hypr">
+<text x="221" y="232" class="combo tap layer-activator">hypr</text>
+</a><text x="221" y="243" class="combo hold">toggle</text>
 </g>
 </g>
 </g>

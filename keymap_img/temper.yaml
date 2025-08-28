@@ -77,7 +77,7 @@ combos:
   l: [default]
 - p: [30, 31]
   k: {t: hypr, h: toggle}
-  l: [default]
+  l: [hypr]
 - p: [34, 35]
   k: {t: func, h: toggle}
   l: [default]
