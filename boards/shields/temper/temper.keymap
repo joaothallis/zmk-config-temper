@@ -75,7 +75,7 @@
         hypr_toogle {
             timeout-ms = <50>;
             key-positions = <30 31>;
-            layers = <DEFAULT>;
+            layers = <HYPR>;
             bindings = <&tog HYPR>;
         };
         // Combo to toggle FUNC layer
