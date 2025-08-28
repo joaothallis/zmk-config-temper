@@ -111,28 +111,28 @@
             timeout-ms = <50>;
             key-positions = <1 2>;
             layers = <SYM>;
-            bindings = <&lt_gt_macro>;
+            bindings = <&sym_par LT GT>;
          };
         // Combo to type { } and move cursor left
         lb_rb_combo {
             timeout-ms = <50>;
             key-positions = <3 4>;
             layers = <SYM>;
-            bindings = <&lb_rb_macro>;
+            bindings = <&sym_par LBRC RBRC>;
         };
         // Combo to type ( ) and move cursor left
         lp_rp_combo {
             timeout-ms = <50>;
             key-positions = <13 14>;
             layers = <SYM>;
-            bindings = <&lp_rp_macro>;
+            bindings = <&sym_par LPAR RPAR>;
         };
         // Combo to type [ ] and move cursor left
         ls_rs_combo {
             timeout-ms = <50>;
             key-positions = <11 12>;
             layers = <SYM>;
-            bindings = <&ls_rs_macro>;
+            bindings = <&sym_par LBKT RBKT>;
         };
      };
 
@@ -141,49 +141,19 @@
         vim_quit: vim_quit {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp ESC &kp COLON &kp W &kp Q>;
+            bindings = <&macro_tap &kp ESC &kp COLON &kp W &kp Q &kp ENTER>;
         };
-        // Macro to Browser back
-        brws_back: brws_back {
+        // Macro to send Par symbol and move cursor left
+        sym_par: sym_par {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp LALT &kp LEFT>;
-        };
-        // Macro to Browser forward
-        brws_fwd: brws_fwd {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp LALT &kp RIGHT>;
+            #binding-cells = <2>;
+            bindings = <&macro_tap &kp $1 &kp $2 &kp LEFT>;
         };
         // Macro to open homerow app (LGUI+LCTRL+LSHFT) 
         homeapp: homeapp {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap &kp LGUI &kp LCTRL &kp LSHFT>;
-        };
-        // Macro to type < > and move cursor left
-        lt_gt_macro: lt_gt_macro_with_cursor {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp LT &kp GT &kp LEFT>;
-        };
-        // Macro to type { } and move cursor left
-        lb_rb_macro: lb_rb_macro_with_cursor {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp LBRC &kp RBRC &kp LEFT>;
-        };
-        // Macro to type ( ) and move cursor left
-        lp_rp_macro: lp_rp_macro_with_cursor {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp LPAR &kp RPAR &kp LEFT>;
-        };
-        // Macro to type [ ] and move cursor left
-        ls_rs_macro: ls_rs_macro_with_cursor {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp LBKT &kp RBKT &kp LEFT>;
         };
         // Macro to type "" and move cursor left
         dq_macro: dq_macro_with_cursor {
@@ -216,9 +186,9 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
         &kp Q       &kp W         &kp E          &kp R          &kp T             &kp Y         &kp U         &kp I         &kp O       &kp P
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &kp A       &hm S LALT   &hm D LCTRL     &hm F LSHFT    &kp G             &kp H       &hm J RSHFT   &hm K RCTRL   &hm L RALT    &kp SEMI
+        &kp A       &hm S LGUI   &hm D LCTRL     &hm F LSHFT    &kp G             &kp H       &hm J RSHFT   &hm K RCTRL   &hm L RGUI    &kp SEMI
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &hm Z LGUI      &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT     &hm FSLH RGUI
+        &kp Z       &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                     &kp TAB     &lt NUM DEL    &kp ENTER        &kp SPACE    &lt SYM BSPC     &kp ESC
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
@@ -233,7 +203,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
        &none        &kp BSLH      &kp PIPE      &kp AMPS     &kp CARET         &kp N0         &kp N1        &kp N2       &kp N3       &kp EQUAL
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                  &kp LGUI      ______         ______          &kp DOT        &mo FUNC      &kp RALT
+                                  &kp LGUI      ______         ______          &kp DOT        &mo FUNC    &mt BSPC RALT
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -244,7 +214,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
       &tmux_fwd      &kp LBKT     &kp RBKT       &kp LPAR      &kp RPAR         &kp LEFT        &kp DOWN     &kp UP       &kp RIGHT     &homeapp
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &tmux_back     &kp C_PP     &kp C_MUTE  &kp C_VOL_DN   &kp C_VOL_UP     &mkp MB1        &mkp MB2     &brws_back   &brws_fwd     &msc SCRL_DOWN
+      &tmux_back     &kp C_PP     &kp C_MUTE  &kp C_VOL_DN   &kp C_VOL_UP       &mkp MB1      &mkp MB2     &kp LG(LEFT)  &kp LG(RIGHT)  &msc SCRL_DOWN
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                    ______       ______          ______          ______        ______        ______
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
