@@ -76,28 +76,28 @@
             timeout-ms = <50>;
             key-positions = <30 31>;
             layers = <HYPR>;
-            bindings = <&tog HYPR>;
+            bindings = <&sl HYPR>;
         };
         // Combo to toggle FUNC layer
         func_toggle {
             timeout-ms = <50>;
             key-positions = <34 35>;
             layers = <DEFAULT>;
-            bindings = <&tog FUNC>;
+            bindings = <&sl FUNC>;
         };
         // Combo to toggle NUM layer
         num_toggle {
             timeout-ms = <50>;
             key-positions = <34 35>;
             layers = <NUM>;
-            bindings = <&tog NUM>;
+            bindings = <&sl NUM>;
         };
         // Combo to toggle SYM layer
         sym_toggle {
             timeout-ms = <50>;
             key-positions = <30 31>;
             layers = <SYM>;
-            bindings = <&tog SYM>;
+            bindings = <&sl SYM>;
         };
         // Combo to send CAPS LOCK
         caps_combo {
@@ -171,7 +171,8 @@
         homeapp: homeapp {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp RGUI &kp RCTRL &kp RSHFT>;
+            bindings = <&macro_press &kp LGUI &kp LCTRL &kp LSHFT>,
+                        <&macro_release &kp LSHFT &kp LCTRL &kp LGUI>;
         };
         // Macro to type "" and move cursor left
         dq_macro: dq_macro_with_cursor {
@@ -182,7 +183,8 @@
         nomachine: nomachine_settings {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp RCTRL &kp RALT &kp N0>;
+            bindings = <&macro_press &kp RCTRL &kp RALT &kp N0>,
+                       <&macro_release &kp N0 &kp RALT &kp RCTRL>;
         };
     };
 
