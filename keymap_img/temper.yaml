@@ -34,7 +34,7 @@ layers:
   - ['"', '[', ']', (, ), LEFT, DOWN, UP, RIGHT, '&homeapp']
   - ['''', PP, MUTE, VOL DN, VOL UP, '&mkp MB1', '&mkp MB2', Gui+LEFT, Gui+RIGHT, '&msc SCRL_DOWN']
   - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - ''
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {type: held}
