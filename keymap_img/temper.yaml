@@ -31,8 +31,8 @@ layers:
     - {t: RALT, h: BSPC}
   sym:
   - ['&dq_macro', <, '>', '{', '}', '&mmv MOVE_LEFT', '&mmv MOVE_DOWN', '&mmv MOVE_UP', '&mmv MOVE_RIGHT', '&msc SCRL_UP']
-  - ['&tmux_fwd', '[', ']', (, ), LEFT, DOWN, UP, RIGHT, '&homeapp']
-  - ['&tmux_back', PP, MUTE, VOL DN, VOL UP, '&mkp MB1', '&mkp MB2', Gui+LEFT, Gui+RIGHT, '&msc SCRL_DOWN']
+  - ['"', '[', ']', (, ), LEFT, DOWN, UP, RIGHT, '&homeapp']
+  - ['''', PP, MUTE, VOL DN, VOL UP, '&mkp MB1', '&mkp MB2', Gui+LEFT, Gui+RIGHT, '&msc SCRL_DOWN']
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
