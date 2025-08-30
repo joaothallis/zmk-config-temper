@@ -171,23 +171,13 @@
         homeapp: homeapp {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp LGUI &kp LCTRL &kp LSHFT>;
+            bindings = <&macro_tap &kp RGUI &kp RCTRL &kp RSHFT>;
         };
         // Macro to type "" and move cursor left
         dq_macro: dq_macro_with_cursor {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap &kp DQT &kp DQT &kp LEFT>;
-        };
-        tmux_fwd: tmux_session_forward {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp LCTRL &kp N &kp RPAR>;
-        };
-        tmux_back: tmux_session_back {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp LCTRL &kp N &kp LPAR>;
         };
         nomachine: nomachine_settings {
             compatible = "zmk,behavior-macro";
@@ -230,9 +220,9 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
       &dq_macro      &kp LT       &kp GT         &kp LBRC      &kp RBRC        &mmv MOVE_LEFT  &mmv MOVE_DOWN &mmv MOVE_UP  &mmv MOVE_RIGHT  &msc SCRL_UP
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &tmux_fwd      &kp LBKT     &kp RBKT       &kp LPAR      &kp RPAR         &kp LEFT        &kp DOWN     &kp UP       &kp RIGHT     &homeapp
+      &kp DQT      &kp LBKT     &kp RBKT       &kp LPAR      &kp RPAR         &kp LEFT        &kp DOWN     &kp UP       &kp RIGHT     &homeapp
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &tmux_back     &kp C_PP     &kp C_MUTE  &kp C_VOL_DN   &kp C_VOL_UP       &mkp MB1      &mkp MB2     &kp LG(LEFT)  &kp LG(RIGHT)  &msc SCRL_DOWN
+      &kp SQT     &kp C_PP     &kp C_MUTE  &kp C_VOL_DN   &kp C_VOL_UP       &mkp MB1      &mkp MB2     &kp LG(LEFT)  &kp LG(RIGHT)  &msc SCRL_DOWN
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                    ______       ______          ______          ______        ______        ______
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
