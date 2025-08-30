@@ -296,7 +296,7 @@ path.combo {
 <rect rx="6" ry="6" x="552" y="218" width="28" height="26" class="combo"/>
 <a href="#func">
 <text x="566" y="231" class="combo tap layer-activator">func</text>
-</a><text x="566" y="242" class="combo hold">toggle</text>
+</a><text x="566" y="242" class="combo hold">sticky</text>
 </g>
 <g class="combo combopos-3">
 <path d="M394,114 l-107,0" class="combo"/>
@@ -455,7 +455,7 @@ path.combo {
 <rect rx="6" ry="6" x="552" y="218" width="28" height="26" class="combo"/>
 <a href="#num">
 <text x="566" y="231" class="combo tap layer-activator">num</text>
-</a><text x="566" y="242" class="combo hold">toggle</text>
+</a><text x="566" y="242" class="combo hold">sticky</text>
 </g>
 </g>
 </g>
@@ -632,7 +632,7 @@ path.combo {
 <rect rx="6" ry="6" x="207" y="219" width="28" height="26" class="combo"/>
 <a href="#sym">
 <text x="221" y="232" class="combo tap layer-activator">sym</text>
-</a><text x="221" y="243" class="combo hold">toggle</text>
+</a><text x="221" y="243" class="combo hold">sticky</text>
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="105" y="25" width="28" height="26" class="combo"/>
@@ -939,7 +939,7 @@ path.combo {
 <rect rx="6" ry="6" x="207" y="219" width="28" height="26" class="combo"/>
 <a href="#hypr">
 <text x="221" y="232" class="combo tap layer-activator">hypr</text>
-</a><text x="221" y="243" class="combo hold">toggle</text>
+</a><text x="221" y="243" class="combo hold">sticky</text>
 </g>
 </g>
 </g>

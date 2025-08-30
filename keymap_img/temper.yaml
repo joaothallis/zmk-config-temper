@@ -76,16 +76,16 @@ combos:
   k: hypr
   l: [default]
 - p: [30, 31]
-  k: {t: hypr, h: toggle}
+  k: {t: hypr, h: sticky}
   l: [hypr]
 - p: [34, 35]
-  k: {t: func, h: toggle}
+  k: {t: func, h: sticky}
   l: [default]
 - p: [34, 35]
-  k: {t: num, h: toggle}
+  k: {t: num, h: sticky}
   l: [num]
 - p: [30, 31]
-  k: {t: sym, h: toggle}
+  k: {t: sym, h: sticky}
   l: [sym]
 - p: [14, 15]
   k: CAPS
