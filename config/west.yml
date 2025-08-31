@@ -2,7 +2,7 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: customkbd      # <-- This remote was missing
+    - name: customkbd
       url-base: https://github.com/customkbd
 
   projects:
@@ -10,9 +10,9 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: temper-zmk-shield  # <-- This project was missing
+    - name: temper-zmk-shield
       remote: customkbd
-      revision: main
+      revision: master
 
   self:
     path: config
