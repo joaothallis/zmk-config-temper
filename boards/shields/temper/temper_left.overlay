@@ -16,6 +16,12 @@
         ;
 };
 
+/ {
+    chosen {
+        zmk,display = &nice_view;
+    };
+};
+
 &spi0 {
     nice_view: nice_view@0 {
         compatible = "nice-view,nice-view";
