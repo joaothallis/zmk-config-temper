@@ -283,16 +283,20 @@ path.combo {
 </g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="105" y="25" width="28" height="26" class="combo"/>
-<text x="119" y="38" class="combo tap"><tspan style="font-size: 78%">&amp;vim_quit</tspan></text>
+<text x="119" y="38" class="combo tap">&amp;vim_wq</text>
 </g>
 <g class="combo combopos-1">
+<rect rx="6" ry="6" x="655" y="25" width="28" height="26" class="combo"/>
+<text x="669" y="38" class="combo tap">&amp;vim_q</text>
+</g>
+<g class="combo combopos-2">
 <path d="M392,246 l-53,0" class="combo"/>
 <path d="M392,246 l53,0" class="combo"/>
 <rect rx="6" ry="6" x="378" y="233" width="28" height="26" class="combo"/>
 <a href="#hypr">
 <text x="392" y="246" class="combo tap layer-activator">hypr</text>
 </a></g>
-<g class="combo combopos-2">
+<g class="combo combopos-3">
 <path d="M394,114 l-107,0" class="combo"/>
 <path d="M394,114 l107,0" class="combo"/>
 <rect rx="6" ry="6" x="380" y="101" width="28" height="26" class="combo"/>
@@ -567,13 +571,13 @@ path.combo {
 <g transform="translate(520, 170)" class="key keypos-25">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">&amp;mkp</tspan><tspan x="0" dy="1.2em">MB1</tspan>
+<tspan x="0" dy="-0.6em">&amp;mkp</tspan><tspan x="0" dy="1.2em">LCLK</tspan>
 </text>
 </g>
 <g transform="translate(580, 162)" class="key keypos-26">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">&amp;mkp</tspan><tspan x="0" dy="1.2em">MB2</tspan>
+<tspan x="0" dy="-0.6em">&amp;mkp</tspan><tspan x="0" dy="1.2em">RCLK</tspan>
 </text>
 </g>
 <g transform="translate(639, 140)" class="key keypos-27">
@@ -634,6 +638,12 @@ path.combo {
 <rect rx="6" ry="6" x="105" y="81" width="28" height="26" class="combo"/>
 <text x="119" y="94" class="combo tap"><tspan style="font-size: 64%">&amp;ls_rs_mac…</tspan></text>
 </g>
+<g class="combo combopos-4">
+<rect rx="6" ry="6" x="536" y="153" width="28" height="26" class="combo"/>
+<text x="550" y="166" class="combo tap">
+<tspan x="550" dy="-0.6em">&amp;mkp</tspan><tspan x="550" dy="1.2em">MCLK</tspan>
+</text>
+</g>
 </g>
 </g>
 <g transform="translate(30, 1063)" class="layer-func">
@@ -693,17 +703,17 @@ path.combo {
 <g transform="translate(148, 84)" class="key keypos-12">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
 <text x="0" y="0" class="key tap">BT</text>
-<text x="0" y="24" class="key hold">1</text>
+<text x="0" y="24" class="key hold">0</text>
 </g>
 <g transform="translate(208, 106)" class="key keypos-13">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
 <text x="0" y="0" class="key tap">BT</text>
-<text x="0" y="24" class="key hold">2</text>
+<text x="0" y="24" class="key hold">1</text>
 </g>
 <g transform="translate(267, 114)" class="key keypos-14">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
 <text x="0" y="0" class="key tap">BT</text>
-<text x="0" y="24" class="key hold">3</text>
+<text x="0" y="24" class="key hold">2</text>
 </g>
 <g transform="translate(520, 114)" class="key keypos-15">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
