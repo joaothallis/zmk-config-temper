@@ -8,7 +8,7 @@
 
 / {
     chosen {
-        zmk,display = &nice_view;
+        zephyr,display = &nice_view;
     };
 };
 
@@ -26,7 +26,7 @@
     status = "okay"; /* This line enables the SPI bus */
 
     nice_view: nice_view@0 {
-        compatible = "nice-view,nice-view";
+        compatible = "nicekeyboards,nice-view";
         reg = <0>;
         status = "okay"; /* This line enables the display */
         spi-max-frequency = <2000000>;
