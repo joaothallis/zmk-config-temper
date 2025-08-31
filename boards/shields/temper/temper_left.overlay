@@ -6,6 +6,12 @@
 
 #include "temper.dtsi"
 
+/ {
+    chosen {
+        zmk,display = &nice_view;
+    };
+};
+
 &kscan0 {
     col-gpios
         = <&pro_micro 21 GPIO_ACTIVE_HIGH>
@@ -16,24 +22,18 @@
         ;
 };
 
-/ {
-    chosen {
-        zmk,display = &nice_view;
-    };
-};
-
 &spi0 {
+    status = "okay"; /* This line enables the SPI bus */
+
     nice_view: nice_view@0 {
         compatible = "nice-view,nice-view";
-        reg = <0>;                        // Required for Zephyr SPI child
+        reg = <0>;
+        status = "okay"; /* This line enables the display */
         spi-max-frequency = <2000000>;
-
         cs-gpios = <&pro_micro 17 GPIO_ACTIVE_LOW>;
         vcom-gpios = <&pro_micro 20 GPIO_ACTIVE_HIGH>;
-
         width = <160>;
         height = <68>;
         rotation = <270>;
     };
 };
-
