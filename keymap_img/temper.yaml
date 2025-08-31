@@ -28,7 +28,7 @@ layers:
     - {t: ▽, type: trans}
     - .
     - func
-    - {t: RALT, h: BSPC}
+    - {t: BSPC, h: RALT}
   sym:
   - ['&dq_macro', <, '>', '{', '}', '&mmv MOVE_LEFT', '&mmv MOVE_DOWN', '&mmv MOVE_UP', '&mmv MOVE_RIGHT', '&msc SCRL_UP']
   - ['"', '[', ']', (, ), LEFT, DOWN, UP, RIGHT, '&homeapp']
