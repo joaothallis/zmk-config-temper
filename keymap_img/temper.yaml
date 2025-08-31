@@ -34,13 +34,13 @@ layers:
   - ['"', '[', ']', (, ), LEFT, DOWN, UP, RIGHT, '&homeapp']
   - ['''', PP, MUTE, VOL DN, VOL UP, '&mkp MB1', '&mkp MB2', Gui+LEFT, Gui+RIGHT, '&msc SCRL_DOWN']
   - - {t: ▽, type: trans}
-    - ''
+    - func
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {type: held}
     - {t: ▽, type: trans}
   func:
-  - ['', '', BT CLR, '&bootloader', '&sys_reset', '&sys_reset', '&bootloader', '', '', '']
+  - [BT CLR, BT NXT, BT PRV, '&bootloader', '&sys_reset', '&sys_reset', '&bootloader', '', '', '']
   - - F11
     - F12
     - {t: BT, h: '1'}
@@ -75,18 +75,6 @@ combos:
 - p: [32, 33]
   k: hypr
   l: [default]
-- p: [30, 31]
-  k: {t: hypr, h: sticky}
-  l: [hypr]
-- p: [34, 35]
-  k: {t: func, h: sticky}
-  l: [default]
-- p: [34, 35]
-  k: {t: num, h: sticky}
-  l: [num]
-- p: [30, 31]
-  k: {t: sym, h: sticky}
-  l: [sym]
 - p: [14, 15]
   k: CAPS
   l: [default]
