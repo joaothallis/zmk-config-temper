@@ -32,7 +32,7 @@ layers:
   sym:
   - ['&dq_macro', <, '>', '{', '}', '&mmv MOVE_LEFT', '&mmv MOVE_DOWN', '&mmv MOVE_UP', '&mmv MOVE_RIGHT', '&msc SCRL_UP']
   - ['"', '[', ']', (, ), LEFT, DOWN, UP, RIGHT, '&homeapp']
-  - ['''', PP, MUTE, VOL DN, VOL UP, '&mkp MB1', '&mkp MB2', Gui+LEFT, Gui+RIGHT, '&msc SCRL_DOWN']
+  - ['''', PP, MUTE, VOL DN, VOL UP, '&mkp LCLK', '&mkp RCLK', Gui+LEFT, Gui+RIGHT, '&msc SCRL_DOWN']
   - - {t: ▽, type: trans}
     - func
     - {t: ▽, type: trans}
@@ -43,9 +43,9 @@ layers:
   - [BT CLR, BT NXT, BT PRV, '&bootloader', '&sys_reset', '&sys_reset', '&bootloader', '', '', '']
   - - F11
     - F12
+    - {t: BT, h: '0'}
     - {t: BT, h: '1'}
     - {t: BT, h: '2'}
-    - {t: BT, h: '3'}
     - LNLCK
     - '&nomachine'
     - ''
@@ -70,7 +70,10 @@ layers:
     - {t: ▽, type: trans}
 combos:
 - p: [1, 2]
-  k: '&vim_quit'
+  k: '&vim_wq'
+  l: [default]
+- p: [7, 8]
+  k: '&vim_q'
   l: [default]
 - p: [32, 33]
   k: hypr
@@ -89,4 +92,7 @@ combos:
   l: [sym]
 - p: [11, 12]
   k: '&ls_rs_macro'
+  l: [sym]
+- p: [25, 26]
+  k: '&mkp MCLK'
   l: [sym]
