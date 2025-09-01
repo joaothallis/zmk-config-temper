@@ -18,7 +18,7 @@ layers:
     - ENTER
     - SPACE
     - {t: BSPC, h: sym}
-    - ESC
+    - {t: ESC, h: hypr}
   num:
   - ['', _, '#', $, '@', +, '7', '8', '9', '*']
   - ['', '~', '`', '%', '!', '-', '4', '5', '6', /]
@@ -64,19 +64,16 @@ layers:
   - ['', '', Hyper+C, Hyper+V, Hyper+B, Hyper+N, Hyper+M, '', '', '']
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {type: held}
-    - {type: held}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {type: held}
 combos:
 - p: [1, 2]
   k: '&vim_wq'
   l: [default]
 - p: [7, 8]
   k: '&vim_q'
-  l: [default]
-- p: [32, 33]
-  k: hypr
   l: [default]
 - p: [14, 15]
   k: CAPS
