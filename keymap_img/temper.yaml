@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: temper}
 layers:
-  BASE:
+  DEFAULT:
   - [Q, W, E, R, T, Y, U, I, O, P]
   - - A
     - {t: S, h: LGUI}
@@ -71,13 +71,13 @@ layers:
 combos:
 - p: [1, 2]
   k: '&vim_wq'
-  l: [BASE]
+  l: [DEFAULT]
 - p: [7, 8]
   k: '&vim_q'
-  l: [BASE]
+  l: [DEFAULT]
 - p: [14, 15]
   k: CAPS
-  l: [BASE]
+  l: [DEFAULT]
 - p: [1, 2]
   k: '&lt_gt_macro'
   l: [SYM]
