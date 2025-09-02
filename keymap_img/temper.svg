@@ -124,8 +124,8 @@ path.combo {
 }
 /* End Tabler Icons Cleanup */
 </style>
-<g transform="translate(30, 0)" class="layer-default">
-<text x="0" y="28" class="label" id="default">default:</text>
+<g transform="translate(30, 0)" class="layer-DEFAULT">
+<text x="0" y="28" class="label" id="DEFAULT">DEFAULT:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(30, 87)" class="key keypos-0">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
@@ -260,8 +260,8 @@ path.combo {
 <g transform="translate(254, 236) rotate(15.0)" class="key keypos-31">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
 <text x="0" y="0" class="key tap">DEL</text>
-<a href="#num">
-<text x="0" y="24" class="key hold layer-activator">num</text>
+<a href="#NUM">
+<text x="0" y="24" class="key hold layer-activator">NUM</text>
 </a></g>
 <g transform="translate(321, 246) rotate(30.0)" class="key keypos-32">
 <rect rx="6" ry="6" x="-26" y="-42" width="52" height="85" class="key"/>
@@ -274,14 +274,14 @@ path.combo {
 <g transform="translate(533, 235) rotate(-15.0)" class="key keypos-34">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
 <text x="0" y="0" class="key tap">BSPC</text>
-<a href="#sym">
-<text x="0" y="24" class="key hold layer-activator">sym</text>
+<a href="#SYM">
+<text x="0" y="24" class="key hold layer-activator">SYM</text>
 </a></g>
 <g transform="translate(599, 228)" class="key keypos-35">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
 <text x="0" y="0" class="key tap">ESC</text>
-<a href="#hypr">
-<text x="0" y="24" class="key hold layer-activator">hypr</text>
+<a href="#HYPR">
+<text x="0" y="24" class="key hold layer-activator">HYPR</text>
 </a></g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="105" y="25" width="28" height="26" class="combo"/>
@@ -299,8 +299,8 @@ path.combo {
 </g>
 </g>
 </g>
-<g transform="translate(30, 354)" class="layer-num">
-<text x="0" y="28" class="label" id="num">num:</text>
+<g transform="translate(30, 354)" class="layer-NUM">
+<text x="0" y="28" class="label" id="NUM">NUM:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(30, 87)" class="key keypos-0">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
@@ -436,8 +436,8 @@ path.combo {
 </g>
 <g transform="translate(533, 235) rotate(-15.0)" class="key keypos-34">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
-<a href="#func">
-<text x="0" y="0" class="key tap layer-activator">func</text>
+<a href="#FUNC">
+<text x="0" y="0" class="key tap layer-activator">FUNC</text>
 </a></g>
 <g transform="translate(599, 228)" class="key keypos-35">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
@@ -446,8 +446,8 @@ path.combo {
 </g>
 </g>
 </g>
-<g transform="translate(30, 709)" class="layer-sym">
-<text x="0" y="28" class="label" id="sym">sym:</text>
+<g transform="translate(30, 709)" class="layer-SYM">
+<text x="0" y="28" class="label" id="SYM">SYM:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(30, 87)" class="key keypos-0">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
@@ -599,8 +599,8 @@ path.combo {
 </g>
 <g transform="translate(254, 236) rotate(15.0)" class="key keypos-31">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
-<a href="#func">
-<text x="0" y="0" class="key tap layer-activator">func</text>
+<a href="#FUNC">
+<text x="0" y="0" class="key tap layer-activator">FUNC</text>
 </a></g>
 <g transform="translate(321, 246) rotate(30.0)" class="key trans keypos-32">
 <rect rx="6" ry="6" x="-26" y="-42" width="52" height="85" class="key trans"/>
@@ -641,8 +641,8 @@ path.combo {
 </g>
 </g>
 </g>
-<g transform="translate(30, 1063)" class="layer-func">
-<text x="0" y="28" class="label" id="func">func:</text>
+<g transform="translate(30, 1063)" class="layer-FUNC">
+<text x="0" y="28" class="label" id="FUNC">FUNC:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(30, 87)" class="key keypos-0">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
@@ -791,8 +791,8 @@ path.combo {
 </g>
 </g>
 </g>
-<g transform="translate(30, 1417)" class="layer-hypr">
-<text x="0" y="28" class="label" id="hypr">hypr:</text>
+<g transform="translate(30, 1417)" class="layer-HYPR">
+<text x="0" y="28" class="label" id="HYPR">HYPR:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(30, 87)" class="key keypos-0">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
