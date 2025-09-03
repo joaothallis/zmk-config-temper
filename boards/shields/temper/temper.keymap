@@ -38,6 +38,13 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+        // Tap dance single tap = gui+c double tap = gui+v triple tap = Tab
+        td_tab: tap_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LG(C)>, <&kp LG(V)>, <&kp TAB>;
+        };
     };
 
     /*                KEY POSITIONS
@@ -179,7 +186,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         &kp Z       &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                    &kp TAB     &lt NUM DEL    &kp ENTER        &kp SPACE    &lt SYM BSPC   &lt HYPR ESC
+                                  &td_tab      &lt NUM DEL    &kp ENTER        &kp SPACE    &lt SYM BSPC   &lt HYPR ESC
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
