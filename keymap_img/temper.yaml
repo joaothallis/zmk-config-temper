@@ -13,7 +13,7 @@ layers:
     - {t: L, h: RGUI}
     - ;
   - [Z, X, C, V, B, N, M, ',', ., /]
-  - - TAB
+  - - '&td_tab'
     - {t: DEL, h: NUM}
     - ENTER
     - SPACE
