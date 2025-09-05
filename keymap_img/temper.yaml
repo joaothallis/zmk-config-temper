@@ -13,7 +13,7 @@ layers:
     - {t: L, h: RGUI}
     - ;
   - [Z, X, C, V, B, N, M, ',', ., /]
-  - - '&td_tab'
+  - - '&td_1'
     - {t: DEL, h: NUM}
     - ENTER
     - SPACE
@@ -77,6 +77,9 @@ combos:
   l: [DEFAULT]
 - p: [14, 15]
   k: CAPS
+  l: [DEFAULT]
+- p: [24, 25]
+  k: TAB
   l: [DEFAULT]
 - p: [1, 2]
   k: '&lt_gt_macro'
