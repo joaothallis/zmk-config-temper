@@ -84,7 +84,7 @@
             key-positions = <24 25>;
             layers = <DEFAULT>;
             bindings = <&kp TAB>;
-        }
+        };
         // Combo to type < > and move cursor left
         lt_gt_combo {
             timeout-ms = <50>;
