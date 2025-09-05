@@ -38,12 +38,12 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-        // Tap dance single tap = gui+c double tap = gui+v triple tap = Tab
-        td_tab: tap_dance {
+        // Tap dance single tap = gui+c double tap = gui+v
+        td_1: tap_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LG(C)>, <&kp LG(V)>, <&kp TAB>;
+            bindings = <&kp LG(C)>, <&kp LG(V)>;
         };
     };
 
@@ -78,6 +78,13 @@
             layers = <DEFAULT>;
             bindings = <&kp CAPS>;
         };
+        // Combo to send Tab
+        tab_combo {
+            timeout-ms = <50>;
+            key-positions = <24 25>;
+            layers = <DEFAULT>;
+            bindings = <&kp TAB>;
+        }
         // Combo to type < > and move cursor left
         lt_gt_combo {
             timeout-ms = <50>;
@@ -186,7 +193,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         &kp Z       &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                  &td_tab      &lt NUM DEL    &kp ENTER        &kp SPACE    &lt SYM BSPC   &lt HYPR ESC
+                                  &td_1     &lt NUM DEL    &kp ENTER        &kp SPACE    &lt SYM BSPC   &lt HYPR ESC
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
