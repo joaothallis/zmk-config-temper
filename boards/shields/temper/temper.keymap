@@ -44,7 +44,7 @@
             bindings = <&kp LG(C)>, <&kp LG(V)>;
         };
         // Enable hyper key when tapped
-        tp : tap-preferred {
+        tp: tap-preferred {
             compatible = "zmk,behavior-hold-tap";
             label = "TAP-PREFERRED";
             #binding-cells = <2>;
