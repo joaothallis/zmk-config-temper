@@ -37,11 +37,18 @@
             bindings = <&kp>, <&kp>;
         };
         // Tap dance single tap = gui+c double tap = gui+v
-        td_1: tap_dance {
+        copy_paste: copy_paste {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LG(C)>, <&kp LG(V)>;
+        };
+        // Tap dance single tap = . double tap = SPACE
+        dot_spc: dot_space {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp DOT>, <&kp SPACE>;
         };
         // Enable hyper key when tapped
         tp: tap-preferred {
@@ -128,6 +135,20 @@
             layers = <SYM>;
             bindings = <&mkp MCLK>;
         };
+        // Combo to go Next
+        next_combo {
+            timeout-ms = <50>;
+            key-positions = <23 24>;
+            layers = <SYM>;
+            bindings = <&kp C_NEXT>;
+        };
+        // Combo to go Previous
+        prev_combo {
+            timeout-ms = <50>;
+            key-positions = <21 22>;
+            layers = <SYM>;
+            bindings = <&kp C_PREV>;
+        };
      };
 
     macros {
@@ -201,7 +222,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         &kp Z       &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                  &td_1     &lt NUM DEL    &kp ENTER        &kp SPACE    &lt SYM BSPC   &tp LG(LC(LA(LSHFT))) ESC
+                                &copy_paste     &lt NUM DEL    &kp ENTER      &kp SPACE    &lt SYM BSPC   &tp LG(LC(LA(LSHFT))) ESC
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -215,7 +236,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
        &none        &kp BSLH      &kp PIPE      &kp AMPS     &kp CARET         &kp N0         &kp N1        &kp N2       &kp N3       &kp EQUAL
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                  &kp LGUI      ______         ______          &kp DOT        &mo FUNC    &mt RALT BSPC
+                                  &kp LGUI      ______         ______          &dot_spc       &mo FUNC    &mt RALT BSPC
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
