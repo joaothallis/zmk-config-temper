@@ -13,7 +13,7 @@ layers:
     - {t: L, h: RGUI}
     - ;
   - [Z, X, C, V, B, N, M, ',', ., /]
-  - - '&td_1'
+  - - '&copy_paste'
     - {t: DEL, h: NUM}
     - ENTER
     - SPACE
@@ -26,7 +26,7 @@ layers:
   - - LGUI
     - {type: held}
     - {t: ▽, type: trans}
-    - .
+    - '&dot_spc'
     - FUNC
     - {t: BSPC, h: RALT}
   SYM:
@@ -85,4 +85,10 @@ combos:
   l: [SYM]
 - p: [25, 26]
   k: '&mkp MCLK'
+  l: [SYM]
+- p: [23, 24]
+  k: NEXT
+  l: [SYM]
+- p: [21, 22]
+  k: PREV
   l: [SYM]
