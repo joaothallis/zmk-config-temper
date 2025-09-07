@@ -18,7 +18,7 @@ layers:
     - ENTER
     - SPACE
     - {t: BSPC, h: SYM}
-    - '&tp LG(LC(LA(LSHFT))) ESC'
+    - {t: ESC, h: Gui+Ctl+Alt+LSHFT}
   NUM:
   - ['', _, '#', $, '@', +, '7', '8', '9', '*']
   - ['', '~', '`', '%', '!', '-', '4', '5', '6', /]
