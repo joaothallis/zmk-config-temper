@@ -1,9 +1,5 @@
-behaviors:
-  copy_dance:
-    display: "C"
-  paste_dance:
-    display: "V"
-  vim_wq:
-    display: ":wq"
-  vim_q:
-    display: ":q"
+aliases:
+  copy_dance: "C"
+  paste_dance: "V"
+  vim_wq: ":wq"
+  vim_q: ":q"
