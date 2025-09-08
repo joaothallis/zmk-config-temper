@@ -59,7 +59,7 @@ layers:
     - $$mdi:mouse-right-click-outline$$
     - $$mdi:arrow-left-bold-box-outline$$
     - $$mdi:arrow-right-bold-box-outline$$
-    - {t: '$$mdi:pan-down$$', s: $$mouse-scroll-wheel$$}
+    - {t: '$$mdi:pan-down$$', s: '$$mdi:mouse-scroll-wheel$$'}
   - - {t: ▽, type: trans}
     - {t: FUNC, type: momentary}
     - {t: ▽, type: trans}
