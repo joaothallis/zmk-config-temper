@@ -13,7 +13,7 @@ layers:
     - {t: L, h: '$$mdi:apple-keyboard-command$$'}
     - {t: ;, s: ':'}
   - - {t: T, s: '$$mdi:apple-keyboard-caps$$'}
-    - '&cut_dance'
+    - {t: X, s: '$$mdi:content-cut$$'}
     - {t: C, s: '$$mdi:content-copy$$'}
     - {t: V, s: '$$mdi:content-paste$$'}
     - B
