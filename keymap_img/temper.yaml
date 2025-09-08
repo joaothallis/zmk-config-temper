@@ -11,7 +11,7 @@ layers:
     - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
     - {t: K, h: '$$mdi:apple-keyboard-control$$'}
     - {t: L, h: '$$mdi:apple-keyboard-command$$'}
-    - SEMI
+    - ;
   - - Z
     - X
     - {t: C, s: '$$mdi:content-copy$$'}
@@ -19,9 +19,9 @@ layers:
     - B
     - N
     - M
-    - COMMA
-    - DOT
-    - FSLH
+    - ','
+    - .
+    - /
   - - {t: '$$mdi:keyboard-tab$$', h: Hyper}
     - {t: '$$mdi:backspace-reverse-outline$$', h: NUM}
     - ENTER
@@ -29,9 +29,9 @@ layers:
     - {t: '$$mdi:backspace$$', h: SYM}
     - {t: '$$mdi:keyboard-esc$$', h: Hyper}
   NUM:
-  - ['', UNDER, HASH, DLLR, AT, PLUS, '7', '8', '9', STAR]
-  - ['', TILDE, GRAVE, PRCNT, EXCL, MINUS, '4', '5', '6', SLASH]
-  - ['', BSLH, PIPE, AMPS, CARET, '0', '1', '2', '3', EQUAL]
+  - ['', _, '#', $, '@', +, '7', '8', '9', '*']
+  - ['', '~', '`', '%', '!', '-', '4', '5', '6', /]
+  - ['', \, '|', '&', ^, '0', '1', '2', '3', '=']
   - - LGUI
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -40,17 +40,17 @@ layers:
     - {t: '$$mdi:backspace$$', h: Alt}
   SYM:
   - - '""'
-    - LT
-    - GT
-    - LBRC
-    - RBRC
+    - <
+    - '>'
+    - '{'
+    - '}'
     - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
     - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
     - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
     - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
     - $$mdi:pan-up$$
-  - [DQT, LBKT, RBKT, LPAR, RPAR, LEFT, DOWN, UP, RIGHT, Home]
-  - [SQT, '$$mdi:play-pause$$', '$$mdi:volume-off$$', '$$mdi:volume-low$$', '$$mdi:volume-high$$', '$$mdi:mouse-left-click-outline$$', '$$mdi:mouse-right-click-outline$$',
+  - ['"', '[', ']', (, ), LEFT, DOWN, UP, RIGHT, HomeRow]
+  - ['''', '$$mdi:play-pause$$', '$$mdi:volume-off$$', '$$mdi:volume-low$$', '$$mdi:volume-high$$', '$$mdi:mouse-left-click-outline$$', '$$mdi:mouse-right-click-outline$$',
     Gui+LEFT, Gui+RIGHT, '$$mdi:pan-down$$']
   - - {t: ▽, type: trans}
     - {t: FUNC, type: momentary}
@@ -67,7 +67,7 @@ layers:
     - {h: '2', s: '$$mdi:bluetooth-connect$$'}
     - {h: '3', s: '$$mdi:bluetooth-connect$$'}
     - LNLCK
-    - NoMa
+    - NoMachine
     - ''
     - ''
     - ''
