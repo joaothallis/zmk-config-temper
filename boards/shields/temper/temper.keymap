@@ -114,6 +114,18 @@
             layers = <DEFAULT>;
             bindings = <&vim_q>;
         };
+        combo_bspc {
+            timeout-ms = <50>;
+            key-positions = <5 6>;
+            layers = <DEFAULT NUM>;
+            bindings = <&kp BSPC>;
+        };
+        combo_del {
+            timeout-ms = <50>;
+            key-positions = <3 4>;
+            layers = <DEFAULT NUM>;
+            bindings = <&kp DEL>;
+        };
         // Combo to type < > and move cursor left
         lt_gt_combo {
             timeout-ms = <50>;

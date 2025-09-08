@@ -87,6 +87,8 @@ parse_config:
     # Combos
     "&vim_wq": "Vim WQ"
     "&vim_q": "Vim Q!"
+    "&combo_del": $$mdi:backspace-reverse-outline$$
+    "&combo_bspc": $$mdi:backspace$$
 
     # Browser navigation
     "&kp LG(LEFT)": $$mdi:arrow-left-bold-box-outline$$
@@ -138,8 +140,7 @@ parse_config:
     SQT: ''''
     LGUI: $$mdi:apple-keyboard-command$$
     LNLCK: 'Num Lock'
-    DEL: $$mdi:backspace-reverse-outline$$
-    BSPC: $$mdi:backspace$$
+    RALT: $$mdi:apple-keyboard-option$$
     # Arrow keys
     UP: $$mdi:arrow-up-bold$$
     DOWN: $$mdi:arrow-down-bold$$
