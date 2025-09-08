@@ -24,11 +24,6 @@ draw_config:
 parse_config:
   mark_alternate_layer_activators: true
   raw_binding_map:
-    # Layers and Layer Taps
-    "&lt NUM DEL": { tap: $$mdi:backspace-reverse-outline$$, hold: NUM, type: hold-tap }
-    "&lt SYM BSPC": { tap: $$mdi:backspace$$, hold: SYM, type: hold-tap }
-    "&mo FUNC": { tap: FUNC, type: momentary }
-
     # Homerow Mods
     "&hm LGUI S": { tap: S, hold: $$mdi:apple-keyboard-command$$ }
     "&hm LCTRL D": { tap: D, hold: $$mdi:apple-keyboard-control$$ }
@@ -143,6 +138,8 @@ parse_config:
     SQT: ''''
     LGUI: $$mdi:apple-keyboard-command$$
     LNLCK: 'Num Lock'
+    DEL: $$mdi:backspace-reverse-outline$$
+    BSPC: $$mdi:backspace$$
     # Arrow keys
     UP: $$mdi:arrow-up-bold$$
     DOWN: $$mdi:arrow-down-bold$$

@@ -28,7 +28,7 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layer = <NUM SYM>;
+            if-layers = <NUM SYM>;
             then-layer = <FUNC>;
         };
     };
