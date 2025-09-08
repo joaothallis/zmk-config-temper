@@ -284,17 +284,17 @@ path.combo {
 <text x="0" y="24" class="key hold"><tspan style="font-size: 64%">Gui+Ctl+Al…</tspan></text>
 </g>
 <g class="combo combopos-0">
-<rect rx="6" ry="6" x="94" y="26" width="50" height="24" class="combo"/>
+<rect rx="6" ry="6" x="105" y="25" width="28" height="26" class="combo"/>
 <text x="119" y="38" class="combo tap">&amp;vim_wq</text>
 </g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="644" y="26" width="50" height="24" class="combo"/>
+<rect rx="6" ry="6" x="655" y="25" width="28" height="26" class="combo"/>
 <text x="669" y="38" class="combo tap">&amp;vim_q</text>
 </g>
 <g class="combo combopos-2">
 <path d="M394,114 l-107,0" class="combo"/>
 <path d="M394,114 l107,0" class="combo"/>
-<rect rx="6" ry="6" x="369" y="102" width="50" height="24" class="combo"/>
+<rect rx="6" ry="6" x="380" y="101" width="28" height="26" class="combo"/>
 <text x="394" y="114" class="combo tap">CAPS</text>
 </g>
 </g>
@@ -618,33 +618,33 @@ path.combo {
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
 <g class="combo combopos-0">
-<rect rx="6" ry="6" x="94" y="26" width="50" height="24" class="combo"/>
+<rect rx="6" ry="6" x="105" y="25" width="28" height="26" class="combo"/>
 <text x="119" y="38" class="combo tap"><tspan style="font-size: 64%">&amp;lt_gt_mac…</tspan></text>
 </g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="212" y="42" width="50" height="24" class="combo"/>
+<rect rx="6" ry="6" x="223" y="41" width="28" height="26" class="combo"/>
 <text x="237" y="54" class="combo tap"><tspan style="font-size: 64%">&amp;lb_rb_mac…</tspan></text>
 </g>
 <g class="combo combopos-2">
-<rect rx="6" ry="6" x="212" y="98" width="50" height="24" class="combo"/>
+<rect rx="6" ry="6" x="223" y="97" width="28" height="26" class="combo"/>
 <text x="237" y="110" class="combo tap"><tspan style="font-size: 64%">&amp;lp_rp_mac…</tspan></text>
 </g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="94" y="82" width="50" height="24" class="combo"/>
+<rect rx="6" ry="6" x="105" y="81" width="28" height="26" class="combo"/>
 <text x="119" y="94" class="combo tap"><tspan style="font-size: 64%">&amp;ls_rs_mac…</tspan></text>
 </g>
 <g class="combo combopos-4">
-<rect rx="6" ry="6" x="525" y="154" width="50" height="24" class="combo"/>
+<rect rx="6" ry="6" x="536" y="153" width="28" height="26" class="combo"/>
 <text x="550" y="166" class="combo tap">
 <tspan x="550" dy="-0.6em">&amp;mkp</tspan><tspan x="550" dy="1.2em">MCLK</tspan>
 </text>
 </g>
 <g class="combo combopos-5">
-<rect rx="6" ry="6" x="212" y="154" width="50" height="24" class="combo"/>
+<rect rx="6" ry="6" x="223" y="153" width="28" height="26" class="combo"/>
 <text x="237" y="166" class="combo tap">NEXT</text>
 </g>
 <g class="combo combopos-6">
-<rect rx="6" ry="6" x="94" y="138" width="50" height="24" class="combo"/>
+<rect rx="6" ry="6" x="105" y="137" width="28" height="26" class="combo"/>
 <text x="119" y="150" class="combo tap">PREV</text>
 </g>
 </g>
