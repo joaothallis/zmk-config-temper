@@ -34,7 +34,7 @@ custom_keys:
     label: ":q!"
     type: combo
   lt_gt_macro:
-    label: < >
+    label: "< >"
   lb_rb_macro:
     label: "{ }"
   lp_rp_macro:
@@ -64,6 +64,7 @@ custom_keys:
 
   # --- Combos (for display purposes) ---
   # The keymap-drawer action will automatically detect the combos
+  # from your keymap file. These definitions help give them clean labels.
   combo_vimwq:
     label: ":wq"
     type: combo
@@ -74,17 +75,13 @@ custom_keys:
     label: Caps
     type: combo
   lt_gt_combo:
-    label: < >
-    type: combo
+    label: "< >"
   lb_rb_combo:
     label: "{ }"
-    type: combo
   lp_rp_combo:
     label: ( )
-    type: combo
   ls_rs_combo:
     label: "[ ]"
-    type: combo
   mmb_combo:
     label: MMB
     type: combo
