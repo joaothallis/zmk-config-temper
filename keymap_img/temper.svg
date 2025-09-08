@@ -240,72 +240,11 @@ path.combo {
 }
 /* End Tabler Icons Cleanup */
 
-svg.keymap {
-  background-color: #fdfdfd;
-  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
-}
-
-/* Default keys */
-rect.key {
-  fill: #f6f8fa;
-  stroke: #d0d7de;
-  stroke-width: 1;
-  rx: 6; /* rounded corners */
-}
-
-/* Text inside keys */
-text {
-  fill: #24292e;
-  font-size: 12px;
-}
-
-/* Held keys (when you press and hold) */
-rect.held, rect.combo.held {
-  fill: #c8e1ff;
-  stroke: #1d76db;
-}
-
-/* Combo keys */
-rect.combo {
-  fill: #e1e4e8;
-  stroke: #b1bac4;
-}
-
-/* Layer toggle / layer-tap keys */
-rect.layer {
-  fill: #fff5b1;      /* soft yellow background */
-  stroke: #d4b106;    /* gold border */
-  stroke-width: 1.5;
-}
-rect.layer.held {
-  fill: #ffe58f;      /* stronger yellow when held */
-  stroke: #d48806;
-}
-
-/* On the NUM layer, highlight the NUM key (pos 31) */
-svg.layer-NUM .key-31 rect.key {
-  fill: #d0f0c0;      /* light green fill */
-  stroke: #5dbb63;    /* stronger green border */
-}
-
-/* On the SYM layer, highlight the SYM key (pos 34) */
-svg.layer-SYM .key-34 rect.key {
-  fill: #d0f0c0;
-  stroke: #5dbb63;
-}
-
-/* On the FUNC layer, highlight BOTH the NUM (31) and SYM (34) keys */
-svg.layer-FUNC .key-31 rect.key,
-svg.layer-FUNC .key-34 rect.key {
-  fill: #d0f0c0;
-  stroke: #5dbb63;
-}
-
-/* Keys with icons look a little bigger */
-.glyph {
-  width: 20px;
-  height: 20px;
-}
+svg.keymap { background-color: #ffffff; font-family: sans-serif; }
+rect.key { fill: #f6f8fa; stroke: #c9cccf; stroke-width: 1; }
+rect.held, rect.combo.held { fill: #c8e1ff; }
+rect.combo { fill: #e1e4e8; }
+text { fill: #24292e; }
 </style>
 <g transform="translate(30, 0)" class="layer-DEFAULT">
 <text x="0" y="28" class="label" id="DEFAULT">DEFAULT:</text>
@@ -448,11 +387,11 @@ svg.layer-FUNC .key-34 rect.key {
 <use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:keyboard-tab"/>
 <text x="0" y="24" class="key hold">Hyper</text>
 </g>
-<g transform="translate(254, 236) rotate(15.0)" class="key keypos-31">
-<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
-<use href="#mdi:backspace-reverse-outline" xlink:href="#mdi:backspace-reverse-outline" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:backspace-reverse-outline"/>
+<g transform="translate(254, 236) rotate(15.0)" class="key hold-tap keypos-31">
+<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key hold-tap"/>
+<use href="#mdi:backspace-reverse-outline" xlink:href="#mdi:backspace-reverse-outline" x="-9" y="-9" height="18" width="18.0" class="key hold-tap tap glyph mdi:backspace-reverse-outline"/>
 <a href="#NUM">
-<text x="0" y="24" class="key hold layer-activator">NUM</text>
+<text x="0" y="24" class="key hold-tap hold layer-activator">NUM</text>
 </a></g>
 <g transform="translate(321, 246) rotate(30.0)" class="key keypos-32">
 <rect rx="6" ry="6" x="-26" y="-42" width="52" height="85" class="key"/>
@@ -462,11 +401,11 @@ svg.layer-FUNC .key-34 rect.key {
 <rect rx="6" ry="6" x="-26" y="-42" width="52" height="85" class="key"/>
 <text x="0" y="0" class="key tap">SPACE</text>
 </g>
-<g transform="translate(533, 235) rotate(-15.0)" class="key keypos-34">
-<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
-<use href="#mdi:backspace" xlink:href="#mdi:backspace" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:backspace"/>
+<g transform="translate(533, 235) rotate(-15.0)" class="key hold-tap keypos-34">
+<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key hold-tap"/>
+<use href="#mdi:backspace" xlink:href="#mdi:backspace" x="-9" y="-9" height="18" width="18.0" class="key hold-tap tap glyph mdi:backspace"/>
 <a href="#SYM">
-<text x="0" y="24" class="key hold layer-activator">SYM</text>
+<text x="0" y="24" class="key hold-tap hold layer-activator">SYM</text>
 </a></g>
 <g transform="translate(599, 228)" class="key keypos-35">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
