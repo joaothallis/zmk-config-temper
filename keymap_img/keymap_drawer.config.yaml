@@ -1,6 +1,3 @@
-# Configuration for keymap-drawer, meant to be used with the automated GitHub Action.
-# This file incorporates custom styling and SVG glyphs for a more polished look.
-
 draw_config:
   # Add custom CSS styling for a dark theme and better key differentiation.
   svg_extra_style: |
@@ -112,17 +109,17 @@ draw_config:
     ls_rs_macro: {g: LS_RS}
 
     # Map keys to SVG glyphs
-    '&kp C_VOL_UP': {g: VOL_UP}
-    '&kp C_VOL_DN': {g: VOL_DOWN}
-    '&kp C_MUTE': {g: VOL_MUTE}
-    '&bt BT_CLR': {g: BT_ICON}
-    '&bt BT_NXT': {g: BT_ICON}
-    '&bt BT_PRV': {g: BT_ICON}
-    '&bt BT_SEL 0': {t: 1, g: BT_ICON, size: 10}
-    '&bt BT_SEL 1': {t: 2, g: BT_ICON, size: 10}
-    '&bt BT_SEL 2': {t: 3, g: BT_ICON, size: 10}
-    '&sys_reset': {g: RESET}
-    '&bootloader': {g: BOOT}
+    'kp C_VOL_UP': {g: VOL_UP}
+    'kp C_VOL_DN': {g: VOL_DOWN}
+    'kp C_MUTE': {g: VOL_MUTE}
+    'bt BT_CLR': {g: BT_ICON}
+    'bt BT_NXT': {g: BT_ICON}
+    'bt BT_PRV': {g: BT_ICON}
+    'bt BT_SEL 0': {t: '0', g: BT_ICON, size: 10}
+    'bt BT_SEL 1': {t: '1', g: BT_ICON, size: 10}
+    'bt BT_SEL 2': {t: '2', g: BT_ICON, size: 10}
+    'sys_reset': {g: RESET}
+    'bootloader': {g: BOOT}
 
 
     # Explicit aliases for combo nodes to ensure they are drawn correctly
@@ -136,3 +133,4 @@ draw_config:
     mmb_combo: {g: MMB}
     next_combo: {g: NEXT}
     prev_combo: {g: PREV}
+
