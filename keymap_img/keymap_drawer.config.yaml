@@ -37,13 +37,32 @@ draw_config:
 
     /* Layer toggle / layer-tap keys */
     rect.layer {
-      fill: #fff5b1;        /* soft yellow background */
-      stroke: #d4b106;      /* gold border */
+      fill: #fff5b1;      /* soft yellow background */
+      stroke: #d4b106;    /* gold border */
       stroke-width: 1.5;
     }
     rect.layer.held {
-      fill: #ffe58f;        /* stronger yellow when held */
+      fill: #ffe58f;      /* stronger yellow when held */
       stroke: #d48806;
+    }
+
+    /* On the NUM layer, highlight the NUM key (pos 31) */
+    svg.layer-NUM .key-31 rect.key {
+      fill: #d0f0c0;      /* light green fill */
+      stroke: #5dbb63;    /* stronger green border */
+    }
+
+    /* On the SYM layer, highlight the SYM key (pos 34) */
+    svg.layer-SYM .key-34 rect.key {
+      fill: #d0f0c0;
+      stroke: #5dbb63;
+    }
+
+    /* On the FUNC layer, highlight BOTH the NUM (31) and SYM (34) keys */
+    svg.layer-FUNC .key-31 rect.key,
+    svg.layer-FUNC .key-34 rect.key {
+      fill: #d0f0c0;
+      stroke: #5dbb63;
     }
 
     /* Keys with icons look a little bigger */
