@@ -6,76 +6,74 @@ draw_config:
   font_size: 18
   split_gap: 30
 
-  custom_keys:
-    # --- Tap Dances ---
-    copy_dance:
-      tap: C
-      hold: Copy
-    tabdance_paste:  # Changed from paste_dance to match keymap
-      tap: V
-      hold: Paste
-    dot_space:  # Changed from dot_spc to match keymap
-      tap: "."
-      hold: Spc
+custom_keys:
+  # --- Tap Dances ---
+  copy_dance:
+    tap: C
+    hold: Copy
+  paste_dance:  # Use paste_dance (behavior name), not tabdance_paste (label)
+    tap: V
+    hold: Paste
+  dot_spc:  # Use dot_spc (behavior name), not dot_space (label)
+    tap: "."
+    hold: Spc
 
-    # --- Macros ---
-    vim_wq:
-      label: ":wq"
-      type: combo
-    vim_q:
-      label: ":q!"
-      type: combo
-    lt_gt_macro:
-      label: "< >"
-    lb_rb_macro:
-      label: "{ }"
-    lp_rp_macro:
-      label: "( )"
-    ls_rs_macro:
-      label: "[ ]"
-    homeapp:
-      label: App
-      hold: Home
-    dq_macro:
-      label: '""'
-    nomachine:
-      label: NoM
-      hold: Cfg
+  # --- Macros ---
+  vim_wq:
+    label: ":wq"
+    type: combo
+  vim_q:
+    label: ":q!"
+    type: combo
+  lt_gt_macro:
+    label: "< >"
+  lb_rb_macro:
+    label: "{ }"
+  lp_rp_macro:
+    label: "( )"
+  ls_rs_macro:
+    label: "[ ]"
+  homeapp:
+    label: App
+    hold: Home
+  dq_macro:
+    label: '""'
+  nomachine:
+    label: NoM
+    hold: Cfg
 
-    # --- Hold-Taps ---
-    hm:
-      hold: Mod
-      type: mod
-    tp:
-      hold: Hyper
-      type: mod
+  # --- Hold-Taps ---
+  hm:
+    hold: Mod
+    type: mod
+  tp:
+    hold: Hyper
+    type: mod
 
-    # --- Combos ---
-    combo_vimwq:
-      label: ":wq"
-      type: combo
-    combo_vimq:
-      label: ":q!"
-      type: combo
-    caps_combo:
-      label: Caps
-      type: combo
-    lt_gt_combo:
-      label: "< >"
-    lb_rb_combo:
-      label: "{ }"
-    lp_rp_combo:
-      label: "( )"
-    ls_rs_combo:
-      label: "[ ]"
-    mmb_combo:
-      label: MMB
-      type: combo
-    next_combo:
-      label: Next
-      type: combo
-    prev_combo:
-      label: Prev
-      type: combo
-
-# layers will be auto-generated
+  # --- Combos ---
+  combo_vimwq:
+    label: ":wq"
+    type: combo
+  combo_vimq:
+    label: ":q!"
+    type: combo
+  caps_combo:
+    label: Caps
+    type: combo
+  lt_gt_combo:
+    label: "< >"
+  lb_rb_combo:
+    label: "{ }"
+  lp_rp_combo:
+    label: "( )"
+  ls_rs_combo:
+    label: "[ ]"
+  mmb_combo:
+    label: MMB
+    type: combo
+  next_combo:
+    label: Next
+    type: combo
+  prev_combo:
+    label: Prev
+    type: combo
