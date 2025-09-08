@@ -1,9 +1,105 @@
 draw_config:
-  custom_keys:
-    behavior_name:
-    tap: "top label"    # for tap behavior
-    hold: "bottom label" # for hold behavior
-    label: "center label" # for single label
-    type: "mod" # optional: "mod", "combo"
-    kp SPACE:
-      label: "SPACE_TEST"
+  # Defines the physical layout of the keyboard keys using x, y coordinates.
+  layout:
+    # Left half
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 2, y: 0}
+    - {x: 3, y: 0}
+    - {x: 4, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    - {x: 2, y: 1}
+    - {x: 3, y: 1}
+    - {x: 4, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 2}
+    - {x: 2, y: 2}
+    - {x: 3, y: 2}
+    - {x: 4, y: 2}
+    - {x: 2, y: 3, w: 1.5}
+    - {x: 3.5, y: 3, w: 1.5}
+    - {x: 5, y: 3, w: 1.5}
+
+    # Right half
+    - {x: 7, y: 0}
+    - {x: 8, y: 0}
+    - {x: 9, y: 0}
+    - {x: 10, y: 0}
+    - {x: 11, y: 0}
+    - {x: 7, y: 1}
+    - {x: 8, y: 1}
+    - {x: 9, y: 1}
+    - {x: 10, y: 1}
+    - {x: 11, y: 1}
+    - {x: 7, y: 2}
+    - {x: 8, y: 2}
+    - {x: 9, y: 2}
+    - {x: 10, y: 2}
+    - {x: 11, y: 2}
+    - {x: 7, y: 3, w: 1.5}
+    - {x: 8.5, y: 3, w: 1.5}
+    - {x: 10, y: 3, w: 1.5}
+
+  # Defines custom icons or text to be used for specific keys.
+  custom_glyphs:
+    VIM_WQ: {text: 'Vim WQ', size: 8}
+    VIM_Q: {text: 'Vim Q!', size: 8}
+    LT_GT: {text: '<>', size: 12}
+    LB_RB: {text: '{}', size: 12}
+    LP_RP: {text: '()', size: 12}
+    LS_RS: {text: '[]', size: 12}
+    DQ: {text: '""', size: 12}
+    MMB: {text: 'M-clk', size: 8}
+    NEXT: {text: 'Next', size: 8}
+    PREV: {text: 'Prev', size: 8}
+    HOMEAPP: {text: 'Home', size: 8}
+    NOMACHINE: {text: 'NoMa', size: 8}
+    COPY: {text: 'Copy', size: 8}
+    PASTE: {text: 'Paste', size: 8}
+    HYPER: {text: Hyper, size: 8}
+
+  # Maps ONLY custom/complex ZMK behaviors to the glyphs defined above or to text.
+  # Basic keys are handled automatically by the parser.
+  key_aliases:
+    ______: ▽
+    trans: ▽
+    &none: ''
+
+    # Custom Behaviors & Macros
+    hm LGUI S: {t: S, h: GUI}
+    hm LCTRL D: {t: D, h: CTL}
+    hm LSHFT F: {t: F, h: SFT}
+    hm RSHFT J: {t: J, h: SFT}
+    hm RCTRL K: {t: K, h: CTL}
+    hm RGUI L: {t: L, h: GUI}
+    copy_dance: {g: COPY}
+    paste_dance: {g: PASTE}
+    dot_spc: {t: '.', st: ␣}
+    'tp LG(LC(LA(LSHFT))) TAB': {t: Tab, h: {g: HYPER}}
+    'tp LG(LC(LA(LSHFT))) ESC': {t: Esc, h: {g: HYPER}}
+    lt NUM DEL: {t: Del, h: NUM}
+    lt SYM BSPC: {t: ⌫, h: SYM}
+    mo FUNC: {t: FUNC, type: momentary}
+    mt RALT BSPC: {t: ⌫, h: RALT}
+    dq_macro: {g: DQ}
+    homeapp: {g: HOMEAPP}
+    nomachine: {g: NOMACHINE}
+    vim_wq: {g: VIM_WQ}
+    vim_q: {g: VIM_Q}
+    lt_gt_macro: {g: LT_GT}
+    lb_rb_macro: {g: LB_RB}
+    lp_rp_macro: {g: LP_RP}
+    ls_rs_macro: {g: LS_RS}
+
+    # Aliases for combo bindings
+    vimwq: {g: VIM_WQ}
+    vimq: {g: VIM_Q}
+    caps_combo: {t: Caps}
+    lt_gt_combo: {g: LT_GT}
+    lb_rb_combo: {g: LB_RB}
+    lp_rp_combo: {g: LP_RP}
+    ls_rs_combo: {g: LS_RS}
+    mmb_combo: {g: MMB}
+    next_combo: {g: NEXT}
+    prev_combo: {g: PREV}
