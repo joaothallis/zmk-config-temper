@@ -62,9 +62,9 @@ draw_config:
 parse_config:
   raw_binding_map:
     # Layers and Layer Taps
-    "&lt NUM DEL": { tap: $$mdi:backspace-reverse-outline$$, hold: NUM, type: layer  }
-    "&lt SYM BSPC": { tap: $$mdi:backspace$$, hold: SYM, type: layer  }
-    "&mo FUNC": { tap: FUNC, type: layer }
+    "&lt NUM DEL": { tap: $$mdi:backspace-reverse-outline$$, hold: NUM  }
+    "&lt SYM BSPC": { tap: $$mdi:backspace$$, hold: SYM  }
+    "&mo FUNC": { tap: FUNC, type: momentary }
 
     # Homerow Mods
     "&hm LGUI S": { tap: S, hold: $$mdi:apple-keyboard-command$$ }
