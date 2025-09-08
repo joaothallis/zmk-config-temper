@@ -136,6 +136,7 @@ parse_config:
     DQT: '"'
     SQT: ''''
     LGUI: $$mdi:apple-keyboard-command$$
+    LNCLCK: "Num Lock"
     # Layers
     NUM: "NUM"
     SYM: "SYM"
