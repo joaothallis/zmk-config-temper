@@ -23,7 +23,7 @@ custom_keys:
     tap: V
     hold: Paste
   dot_spc:
-    tap: .
+    tap: "." # Quoted the dot to avoid potential YAML parsing ambiguity.
     hold: Spc
 
   # --- Macros ---
@@ -45,7 +45,7 @@ custom_keys:
     label: App
     hold: Home
   dq_macro:
-    label: "\"\""
+    label: '""' # Switched to single quotes for clarity and safety.
   nomachine:
     label: NoM
     hold: Cfg
