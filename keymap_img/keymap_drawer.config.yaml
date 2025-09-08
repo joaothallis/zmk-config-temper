@@ -40,6 +40,7 @@ parse_config:
     # Tap Dances
     "&copy_dance": { tap: C, shifted: $$mdi:content-copy$$ }
     "&paste_dance": { tap: V, shifted: $$mdi:content-paste$$ }
+    "&cut_dance": { tap: X, shifted: $$mdi:content-cut$$ }
     "&dot_spc": { tap: '.', shifted: $$mdi:keyboard-space$$ }
     "&caps_dance": { tap: T, shifted: $$mdi:apple-keyboard-caps$$ }
 
