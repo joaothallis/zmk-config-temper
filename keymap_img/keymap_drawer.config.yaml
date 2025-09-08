@@ -17,22 +17,7 @@ draw_config:
   glyph_tap_size: 18
   glyph_hold_size: 15
   glyph_shifted_size: 15
-
-overrides:
-  NUM:
-    3:       # bottom row (0-indexed)
-      1:     # second key in that row
-        type: held
-  SYM:
-    3:
-      4:
-        type: held
-  FUNC:
-    3:
-      1:
-        type: held
-      4:
-        type: held
+  
 # Contains settings used by the `parse` step, including detailed ZMK binding maps.
 parse_config:
   mark_alternate_layer_activators: true
@@ -160,3 +145,19 @@ parse_config:
     DOWN: $$mdi:arrow-down-bold$$
     LEFT: $$mdi:arrow-left-bold$$
     RIGHT: $$mdi:arrow-right-bold$$
+
+  layer_overrides:
+   NUM:
+     3:       # bottom row (0-indexed)
+       1:     # second key in that row
+         type: held
+   SYM:
+     3:
+       4:
+         type: held
+   FUNC:
+     3:
+       1:
+         type: held
+       4:
+         type: held
