@@ -1,95 +1,81 @@
-# This configuration file defines how your keymap image will be drawn.
-# It controls the visual style and sets custom labels for your ZMK behaviors.
-
 draw_config:
-  # These settings are optimized for a 36-key split keyboard like the Corne/Temper.
-  # They control the size and spacing of the keys in the final SVG image.
   key_w: 60
   key_h: 56
   combo_w: 50
   combo_h: 24
   font_size: 18
-  split_gap: 30 # Adds space between the two halves of the keyboard.
+  split_gap: 30
 
-custom_keys:
-  # This section maps your custom ZMK behaviors to user-friendly labels.
-  # The name on the left (e.g., "copy_dance") must exactly match your keymap file.
+  custom_keys:
+    # --- Tap Dances ---
+    copy_dance:
+      tap: C
+      hold: Copy
+    tabdance_paste:  # Changed from paste_dance to match keymap
+      tap: V
+      hold: Paste
+    dot_space:  # Changed from dot_spc to match keymap
+      tap: "."
+      hold: Spc
 
-  # --- Tap Dances ---
-  copy_dance:
-    tap: C
-    hold: Copy # Shows "Copy" on the bottom legend for the double-tap action.
-  paste_dance:
-    tap: V
-    hold: Paste
-  dot_spc:
-    tap: "." # Quoted the dot to avoid potential YAML parsing ambiguity.
-    hold: Spc
+    # --- Macros ---
+    vim_wq:
+      label: ":wq"
+      type: combo
+    vim_q:
+      label: ":q!"
+      type: combo
+    lt_gt_macro:
+      label: "< >"
+    lb_rb_macro:
+      label: "{ }"
+    lp_rp_macro:
+      label: "( )"
+    ls_rs_macro:
+      label: "[ ]"
+    homeapp:
+      label: App
+      hold: Home
+    dq_macro:
+      label: '""'
+    nomachine:
+      label: NoM
+      hold: Cfg
 
-  # --- Macros ---
-  vim_wq:
-    label: ":wq"
-    type: combo # Use 'combo' type for visual distinction.
-  vim_q:
-    label: ":q!"
-    type: combo
-  lt_gt_macro:
-    label: "< >"
-  lb_rb_macro:
-    label: "{ }"
-  lp_rp_macro:
-    label: "( )"
-  ls_rs_macro:
-    label: "[ ]"
-  homeapp:
-    label: App
-    hold: Home
-  dq_macro:
-    label: '""' # Switched to single quotes for clarity and safety.
-  nomachine:
-    label: NoM
-    hold: Cfg
+    # --- Hold-Taps ---
+    hm:
+      hold: Mod
+      type: mod
+    tp:
+      hold: Hyper
+      type: mod
 
-  # --- Hold-Taps & Layers ---
-  # For hold-taps, 'tap' is the top legend and 'hold' is the bottom.
-  hm:
-    # This is a generic definition for your homerow mods.
-    # The parser will automatically fill in the correct letters (S, D, F, etc.).
-    hold: Mod
-    type: mod
-  tp:
-    # This defines your "tap-preferred" behavior for the Hyper keys.
-    hold: Hyper
-    type: mod
+    # --- Combos ---
+    combo_vimwq:
+      label: ":wq"
+      type: combo
+    combo_vimq:
+      label: ":q!"
+      type: combo
+    caps_combo:
+      label: Caps
+      type: combo
+    lt_gt_combo:
+      label: "< >"
+    lb_rb_combo:
+      label: "{ }"
+    lp_rp_combo:
+      label: "( )"
+    ls_rs_combo:
+      label: "[ ]"
+    mmb_combo:
+      label: MMB
+      type: combo
+    next_combo:
+      label: Next
+      type: combo
+    prev_combo:
+      label: Prev
+      type: combo
 
-  # --- Combos (for display purposes) ---
-  # The keymap-drawer action will automatically detect the combos
-  # from your keymap file. These definitions help give them clean labels.
-  combo_vimwq:
-    label: ":wq"
-    type: combo
-  combo_vimq:
-    label: ":q!"
-    type: combo
-  caps_combo:
-    label: Caps
-    type: combo
-  lt_gt_combo:
-    label: "< >"
-  lb_rb_combo:
-    label: "{ }"
-  lp_rp_combo:
-    label: "( )"
-  ls_rs_combo:
-    label: "[ ]"
-  mmb_combo:
-    label: MMB
-    type: combo
-  next_combo:
-    label: Next
-    type: combo
-  prev_combo:
-    label: Prev
-    type: combo
-
-# The `layers` section will be generated automatically by the workflow.
+# layers will be auto-generated
