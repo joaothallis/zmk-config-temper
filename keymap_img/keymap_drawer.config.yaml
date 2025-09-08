@@ -9,20 +9,8 @@ draw_config:
     rect.held, rect.combo.held { fill: #c8e1ff; }
     rect.combo { fill: #e1e4e8; }
     text { fill: #24292e; }
-    /* NUM layer key (position 31 in your matrix) */
-    g.key:nth-child(32) rect.key.held {
-      fill: #ffd8d8 !important; /* Red for NUM */
-    }
-    
-    /* SYM layer key (position 34 in your matrix) */  
-    g.key:nth-child(35) rect.key.held {
-      fill: #d8ffd8 !important; /* Green for SYM */
-    }
-    
-    /* FUNC layer key (you'll need to find its position) */
-    g.key:nth-child(X) rect.key.held {
-      fill: #d8d8ff !important; /* Blue for FUNC */
-    }
+    rect.held { fill: #ffcccc; }  # red highlight instead of default blue
+     
   glyph_urls:
     mdi: https://raw.githubusercontent.com/Templarian/MaterialDesign-SVG/master/svg/{}.svg
   use_local_cache: true
@@ -30,6 +18,21 @@ draw_config:
   glyph_hold_size: 15
   glyph_shifted_size: 15
 
+overrides:
+  NUM:
+    3:       # bottom row (0-indexed)
+      1:     # second key in that row
+        type: held
+  SYM:
+    3:
+      4:
+        type: held
+  FUNC:
+    3:
+      1:
+        type: held
+      4:
+        type: held
 # Contains settings used by the `parse` step, including detailed ZMK binding maps.
 parse_config:
   mark_alternate_layer_activators: true
