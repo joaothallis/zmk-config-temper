@@ -19,6 +19,7 @@ draw_config:
 # Contains settings used by the `parse` step, including detailed ZMK binding maps.
 parse_config:
   raw_binding_map:
+    layer_names: [DEFAULT, NUM, SYM, FUNC]
     # Layers and Layer Taps
     "&lt NUM DEL": { tap: $$mdi:backspace-reverse-outline$$, hold: NUM, type: hold-tap }
     "&lt SYM BSPC": { tap: $$mdi:backspace$$, hold: SYM, type: hold-tap }
