@@ -20,8 +20,8 @@ draw_config:
 parse_config:
   raw_binding_map:
     # Layers and Layer Taps
-    "&lt NUM DEL": { tap: $$mdi:backspace-reverse-outline$$, hold: NUM, type: hold-tap, flavor: hold-on-key }
-    "&lt SYM BSPC": { tap: $$mdi:backspace$$, hold: SYM, type: hold-tap, flavor: hold-on-key }
+    "&lt NUM DEL": { tap: $$mdi:backspace-reverse-outline$$, hold: NUM, type: hold-tap }
+    "&lt SYM BSPC": { tap: $$mdi:backspace$$, hold: SYM, type: hold-tap }
     "&mo FUNC": { tap: FUNC, type: momentary }
 
     # Homerow Mods
