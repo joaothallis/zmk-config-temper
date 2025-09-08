@@ -1,77 +1,138 @@
+# Configuration for keymap-drawer, meant to be used with the automated GitHub Action.
+# This file incorporates custom styling and SVG glyphs for a more polished look.
+
 draw_config:
-  key_w: 60
-  key_h: 56
-  combo_w: 50
-  combo_h: 24
-  font_size: 18
-  split_gap: 30
+  # Add custom CSS styling for a dark theme and better key differentiation.
+  svg_extra_style: |
+    svg.keymap { background-color: #24292e; }
+    rect.key { fill: #444d56; stroke: #24292e; stroke-width: 1; }
+    rect.held, rect.combo.held { fill: #8250c8; }
+    rect.combo { fill: #343a41; }
+    text { fill: #c9d1d9; }
 
-  custom_keys:
-    # --- ALL Tap Dances ---
-    copy_dance:
-      tap: C
-      hold: Copy
-    paste_dance:
-      tap: V
-      hold: Paste
-    dot_spc:
-      tap: "."
-      hold: Spc
+  # Defines the physical layout of the keyboard keys using x, y coordinates.
+  layout:
+    # Left half
+    - {x: 0, y: 0}
+    - {x: 1, y: 0}
+    - {x: 2, y: 0}
+    - {x: 3, y: 0}
+    - {x: 4, y: 0}
+    - {x: 0, y: 1}
+    - {x: 1, y: 1}
+    - {x: 2, y: 1}
+    - {x: 3, y: 1}
+    - {x: 4, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 2}
+    - {x: 2, y: 2}
+    - {x: 3, y: 2}
+    - {x: 4, y: 2}
+    - {x: 2, y: 3, w: 1.5}
+    - {x: 3.5, y: 3, w: 1.5}
+    - {x: 5, y: 3, w: 1.5}
 
-    # --- ALL Macros ---
-    vim_wq:
-      label: ":wq"
-    vim_q:
-      label: ":q!"
-    lt_gt_macro:
-      label: "< >"
-    lb_rb_macro:
-      label: "{ }"
-    lp_rp_macro:
-      label: "( )"
-    ls_rs_macro:
-      label: "[ ]"
-    homeapp:
-      label: App
-      hold: Home
-    dq_macro:
-      label: '""'
-    nomachine:
-      label: NoM
-      hold: Cfg
+    # Right half
+    - {x: 7, y: 0}
+    - {x: 8, y: 0}
+    - {x: 9, y: 0}
+    - {x: 10, y: 0}
+    - {x: 11, y: 0}
+    - {x: 7, y: 1}
+    - {x: 8, y: 1}
+    - {x: 9, y: 1}
+    - {x: 10, y: 1}
+    - {x: 11, y: 1}
+    - {x: 7, y: 2}
+    - {x: 8, y: 2}
+    - {x: 9, y: 2}
+    - {x: 10, y: 2}
+    - {x: 11, y: 2}
+    - {x: 7, y: 3, w: 1.5}
+    - {x: 8.5, y: 3, w: 1.5}
+    - {x: 10, y: 3, w: 1.5}
 
-    # --- ALL Hold-Taps ---
-    hm:
-      hold: Mod
-      type: mod
-    tp:
-      hold: Hyper
-      type: mod
+  # Defines custom icons or text to be used for specific keys.
+  custom_glyphs:
+    VIM_WQ: {text: 'Vim WQ', size: 8}
+    VIM_Q: {text: 'Vim Q!', size: 8}
+    LT_GT: {text: '<>', size: 12}
+    LB_RB: {text: '{}', size: 12}
+    LP_RP: {text: '()', size: 12}
+    LS_RS: {text: '[]', size: 12}
+    DQ: {text: '""', size: 12}
+    MMB: {text: 'M-clk', size: 8}
+    NEXT: {text: 'Next', size: 8}
+    PREV: {text: 'Prev', size: 8}
+    HOMEAPP: {text: 'Home', size: 8}
+    NOMACHINE: {text: 'NoMa', size: 8}
+    COPY: {text: 'Copy', size: 8}
+    PASTE: {text: 'Paste', size: 8}
+    HYPER: {text: Hyper, size: 8}
+    CAPS: {text: Caps, size: 8}
 
-    # --- ALL Combos ---
-    combo_vimwq:
-      label: ":wq"
-      type: combo
-    combo_vimq:
-      label: ":q!"
-      type: combo
-    caps_combo:
-      label: Caps
-      type: combo
-    lt_gt_combo:
-      label: "< >"
-    lb_rb_combo:
-      label: "{ }"
-    lp_rp_combo:
-      label: "( )"
-    ls_rs_combo:
-      label: "[ ]"
-    mmb_combo:
-      label: MMB
-      type: combo
-    next_combo:
-      label: Next
-      type: combo
-    prev_combo:
-      label: Prev
-      type: combo
+    # SVG Glyphs inspired by the example
+    VOL_UP: {icon: 'volume-up', size: 16}
+    VOL_DOWN: {icon: 'volume-down', size: 16}
+    VOL_MUTE: {icon: 'volume-off', size: 16}
+    BT_ICON: {icon: 'bluetooth', size: 16}
+    RESET: {icon: 'refresh-cw', size: 16}
+    BOOT: {icon: 'download-cloud', size: 16}
+
+  # Maps ONLY custom/complex ZMK behaviors to the glyphs defined above or to text.
+  key_aliases:
+    ______: ▽
+    trans: ▽
+    '&none': ''
+
+    # Custom Behaviors & Macros
+    hm LGUI S: {t: S, h: GUI}
+    hm LCTRL D: {t: D, h: CTL}
+    hm LSHFT F: {t: F, h: SFT}
+    hm RSHFT J: {t: J, h: SFT}
+    hm RCTRL K: {t: K, h: CTL}
+    hm RGUI L: {t: L, h: GUI}
+    copy_dance: {g: COPY}
+    paste_dance: {g: PASTE}
+    dot_spc: {t: '.', st: ␣}
+    'tp LG(LC(LA(LSHFT))) TAB': {t: Tab, h: {g: HYPER}}
+    'tp LG(LC(LA(LSHFT))) ESC': {t: Esc, h: {g: HYPER}}
+    lt NUM DEL: {t: Del, h: NUM}
+    lt SYM BSPC: {t: ⌫, h: SYM}
+    mo FUNC: {t: FUNC, type: momentary}
+    mt RALT BSPC: {t: ⌫, h: RALT}
+    dq_macro: {g: DQ}
+    homeapp: {g: HOMEAPP}
+    nomachine: {g: NOMACHINE}
+    vim_wq: {g: VIM_WQ}
+    vim_q: {g: VIM_Q}
+    lt_gt_macro: {g: LT_GT}
+    lb_rb_macro: {g: LB_RB}
+    lp_rp_macro: {g: LP_RP}
+    ls_rs_macro: {g: LS_RS}
+
+    # Map keys to SVG glyphs
+    '&kp C_VOL_UP': {g: VOL_UP}
+    '&kp C_VOL_DN': {g: VOL_DOWN}
+    '&kp C_MUTE': {g: VOL_MUTE}
+    '&bt BT_CLR': {g: BT_ICON}
+    '&bt BT_NXT': {g: BT_ICON}
+    '&bt BT_PRV': {g: BT_ICON}
+    '&bt BT_SEL 0': {t: 1, g: BT_ICON, size: 10}
+    '&bt BT_SEL 1': {t: 2, g: BT_ICON, size: 10}
+    '&bt BT_SEL 2': {t: 3, g: BT_ICON, size: 10}
+    '&sys_reset': {g: RESET}
+    '&bootloader': {g: BOOT}
+
+
+    # Explicit aliases for combo nodes to ensure they are drawn correctly
+    combo_vimwq: {g: VIM_WQ}
+    combo_vimq: {g: VIM_Q}
+    caps_combo: {g: CAPS}
+    lt_gt_combo: {g: LT_GT}
+    lb_rb_combo: {g: LB_RB}
+    lp_rp_combo: {g: LP_RP}
+    ls_rs_combo: {g: LS_RS}
+    mmb_combo: {g: MMB}
+    next_combo: {g: NEXT}
+    prev_combo: {g: PREV}
