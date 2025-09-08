@@ -29,8 +29,8 @@ layers:
     - SYM
     - {t: '$$mdi:keyboard-esc$$', h: Hyper}
   NUM:
-  - [BSPC, _, '#', $, '@', +, '7', '8', '9', '*']
-  - [DEL, '~', '`', '%', '!', '-', '4', '5', '6', /]
+  - ['$$mdi:backspace$$', _, '#', $, '@', +, '7', '8', '9', '*']
+  - ['$$mdi:backspace-reverse-outline$$', '~', '`', '%', '!', '-', '4', '5', '6', /]
   - ['', \, '|', '&', ^, '0', '1', '2', '3', '=']
   - - $$mdi:apple-keyboard-command$$
     - {type: held}
@@ -80,10 +80,10 @@ layers:
     - ''
   - [F1, F2, F3, F4, F5, F6, F7, F8, F9, F10]
   - - {t: ▽, type: trans}
+    - {type: held}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {type: held}
     - {t: ▽, type: trans}
 combos:
 - p: [1, 2]
