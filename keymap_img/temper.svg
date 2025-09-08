@@ -128,7 +128,7 @@ svg.keymap { background-color: #24292e; }
 rect.key { fill: #444d56; stroke: #24292e; stroke-width: 1; }
 rect.held, rect.combo.held { fill: #8250c8; }
 rect.combo { fill: #343a41; }
-text { fill: #c9d1d9; font-family: sans-serif; }
+text.label { stroke: none; fill: #e0f0f0;}
 </style>
 <g transform="translate(30, 0)" class="layer-DEFAULT">
 <text x="0" y="28" class="label" id="DEFAULT">DEFAULT:</text>
