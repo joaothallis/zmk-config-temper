@@ -11,7 +11,7 @@ layers:
     - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
     - {t: K, h: '$$mdi:apple-keyboard-control$$'}
     - {t: L, h: '$$mdi:apple-keyboard-command$$'}
-    - ;
+    - {t: ;, s: ':'}
   - - Z
     - X
     - {t: C, s: '$$mdi:content-copy$$'}
@@ -19,9 +19,9 @@ layers:
     - B
     - N
     - M
-    - ','
-    - .
-    - /
+    - {t: ',', s: <}
+    - {t: ., s: '>'}
+    - {t: /, s: '?'}
   - - {t: '$$mdi:keyboard-tab$$', h: Hyper}
     - {t: '$$mdi:backspace-reverse-outline$$', h: NUM}
     - ENTER
@@ -45,13 +45,21 @@ layers:
     - '{'
     - '}'
     - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
-    - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-    - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+    - $$mdi:mouse-move-down$$
+    - $$mdi:mouse-move-up$$
     - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-    - $$mdi:pan-up$$
-  - ['"', '[', ']', (, ), LEFT, DOWN, UP, RIGHT, HomeRow]
-  - ['''', '$$mdi:play-pause$$', '$$mdi:volume-off$$', '$$mdi:volume-low$$', '$$mdi:volume-high$$', '$$mdi:mouse-left-click-outline$$', '$$mdi:mouse-right-click-outline$$',
-    Gui+LEFT, Gui+RIGHT, '$$mdi:pan-down$$']
+    - {t: '$$mdi:pan-up$$', s: '$$mdi:mouse-scroll-wheel$$'}
+  - ['"', '[', ']', (, ), '$$mdi:arrow-left-bold$$', '$$mdi:arrow-down-bold$$', '$$mdi:arrow-up-bold$$', '$$mdi:arrow-right-bold$$', '$$mdi:keyboard-settings$$']
+  - - ''''
+    - $$mdi:play-pause$$
+    - $$mdi:volume-off$$
+    - $$mdi:volume-low$$
+    - $$mdi:volume-high$$
+    - $$mdi:mouse-left-click-outline$$
+    - $$mdi:mouse-right-click-outline$$
+    - $$mdi:arrow-left-bold-box-outline$$
+    - $$mdi:arrow-right-bold-box-outline$$
+    - {t: '$$mdi:pan-down$$', s: $$mouse-scroll-wheel$$}
   - - {t: ▽, type: trans}
     - {t: FUNC, type: momentary}
     - {t: ▽, type: trans}
@@ -59,15 +67,14 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   FUNC:
-  - ['$$mdi:bluetooth-off$$', '$$mdi:bluetooth-audio$$', '$$mdi:bluetooth-audio$$', '$$mdi:progress-download$$', '$$mdi:backup-restore$$', '$$mdi:backup-restore$$',
-    '$$mdi:progress-download$$', '', '', '']
+  - ['$$mdi:bluetooth-off$$', '$$mdi:bluetooth-transfer$$', '$$mdi:bluetooth-transfer$$', Boot, Reset, Reset, Boot, '', '', '']
   - - F11
     - F12
     - {h: '1', s: '$$mdi:bluetooth-connect$$'}
     - {h: '2', s: '$$mdi:bluetooth-connect$$'}
     - {h: '3', s: '$$mdi:bluetooth-connect$$'}
     - LNLCK
-    - NoMachine
+    - $$mdi:gnome$$
     - ''
     - ''
     - ''
@@ -89,16 +96,16 @@ combos:
   k: CAPS
   l: [DEFAULT]
 - p: [1, 2]
-  k: <>
+  k: < >
   l: [SYM]
 - p: [3, 4]
-  k: '{}'
+  k: '{ }'
   l: [SYM]
 - p: [13, 14]
-  k: ()
+  k: ( )
   l: [SYM]
 - p: [11, 12]
-  k: '[]'
+  k: '[ ]'
   l: [SYM]
 - p: [25, 26]
   k: $$mdi:mouse-scroll-wheel$$
