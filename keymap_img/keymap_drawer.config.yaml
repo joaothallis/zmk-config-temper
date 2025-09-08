@@ -1,5 +1,9 @@
 aliases:
-  copy_dance: "C"
-  paste_dance: "V"
-  vim_wq: ":wq"
-  vim_q: ":q"
+- key: copy_dance
+  display: "C"
+- key: paste_dance
+  display: "V"
+- key: vim_wq
+  display: ":wq"
+- key: vim_q
+  display: ":q"
