@@ -1,4 +1,9 @@
 draw_config:
   custom_keys:
-    kp SPACE:  # Test with a basic keycode
-      label: "TEST"
+    behavior_name:
+    tap: "top label"    # for tap behavior
+    hold: "bottom label" # for hold behavior
+    label: "center label" # for single label
+    type: "mod" # optional: "mod", "combo"
+    kp SPACE:
+      label: "SPACE_TEST"
