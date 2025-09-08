@@ -44,15 +44,15 @@ parse_config:
 
     # Bluetooth Keys
     "&bt BT_CLR": $$mdi:bluetooth-off$$
-    "&bt BT_NXT": $$mdi:bluetooth-audio$$
-    "&bt BT_PRV": $$mdi:bluetooth-audio$$
+    "&bt BT_NXT": $$mdi:bluetooth-transfer$$
+    "&bt BT_PRV": $$mdi:bluetooth-transfer$$
     "&bt BT_SEL 0": { hold: 1, shifted: $$mdi:bluetooth-connect$$ }
     "&bt BT_SEL 1": { hold: 2, shifted: $$mdi:bluetooth-connect$$ }
     "&bt BT_SEL 2": { hold: 3, shifted: $$mdi:bluetooth-connect$$ }
 
     # System Keys
-    "&sys_reset": $$mdi:backup-restore$$
-    "&bootloader": $$mdi:progress-download$$
+    "&sys_reset": "Reset"
+    "&bootloader": "Boot"
 
     # Media Keys
     "&kp C_PP": $$mdi:play-pause$$
@@ -68,23 +68,27 @@ parse_config:
     "&mkp MCLK": $$mdi:mouse-scroll-wheel$$
     "&mmv MOVE_LEFT": { tap: $$mdi:menu-left$$, shifted: $$mdi:mouse$$ }
     "&mmv MOVE_RIGHT": { tap: $$mdi:menu-right$$, shifted: $$mdi:mouse$$ }
-    "&mmv MOVE_UP": { tap: $$mdi:menu-up$$, shifted: $$mdi:mouse$$ }
-    "&mmv MOVE_DOWN": { tap: $$mdi:menu-down$$, shifted: $$mdi:mouse$$ }
-    "&msc SCRL_UP": $$mdi:pan-up$$
-    "&msc SCRL_DOWN": $$mdi:pan-down$$
+    "&mmv MOVE_UP": $$mdi:mouse-move-up$$
+    "&mmv MOVE_DOWN": $$mdi:mouse-move-down$$
+    "&msc SCRL_UP": { tap: $$mdi:pan-up$$, shifted: $$mdi:mouse-scroll-wheel$$ }
+    "&msc SCRL_DOWN": { tap: $$mdi:pan-down$$, shifted: $$mouse-scroll-wheel$$ }
 
     # Macros (assign simple text/icons)
     "&dq_macro": '""'
-    "&homeapp": HomeRow
-    "&nomachine": NoMachine
-    "&lt_gt_macro": "<>"
-    "&lb_rb_macro": "{}"
-    "&lp_rp_macro": "()"
-    "&ls_rs_macro": "[]"
+    "&homeapp": $$mdi:keyboard-settings$$
+    "&nomachine": $$mdi:gnome$$
+    "&lt_gt_macro": "< >"
+    "&lb_rb_macro": "{ }"
+    "&lp_rp_macro": "( )"
+    "&ls_rs_macro": "[ ]"
 
     # Combos
     "&vim_wq": Vim WQ
     "&vim_q": Vim Q!
+
+    # Browser navigation
+    "&kp LG(LEFT)": $$mdi:arrow-left-bold-box-outline$$
+    "&kp LG(RIGHT)": $$mdi:arrow-right-bold-box-outline$$
 
   # Use the default ZMK keycode mapping for standard keys
   zmk_keycode_map:
@@ -108,10 +112,18 @@ parse_config:
     EQUAL: '='
     MINUS: '-'
     SLASH: '/'
-    FSLH: '/'
-    COMMA: ','
-    DOT: '.'
-    SEMI: ';'
+    FSLH: 
+      tap: '/'
+      shifted: '?'
+    COMMA: 
+       tap: ','
+       shifted: '<'
+    DOT: 
+      tap: '.'
+      shifted: '>'
+    SEMI: 
+      tap: ';'
+      shifted: ':'
     LT: '<'
     GT: '>'
     LBKT: '['
@@ -122,3 +134,8 @@ parse_config:
     RPAR: ')'
     DQT: '"'
     SQT: ''''
+        # Arrow keys
+    UP: $$mdi:arrow-up-bold$$
+    DOWN: $$mdi:arrow-down-bold$$
+    LEFT: $$mdi:arrow-left-bold$$
+    RIGHT: $$mdi:arrow-right-bold$$
