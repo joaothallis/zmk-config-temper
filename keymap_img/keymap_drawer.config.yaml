@@ -25,6 +25,8 @@ parse_config:
     "&lt NUM DEL": { tap: $$mdi:backspace-reverse-outline$$, hold: NUM, type: hold-tap }
     "&lt SYM BSPC": { tap: $$mdi:backspace$$, hold: SYM, type: hold-tap }
     "&mo FUNC": { tap: FUNC, type: momentary }
+    "&mo SYM": { tap: SYM, type: momentary, held: true  }
+    "&mo NUM": { tap: NUM, type: momentary, held: true  }
 
     # Homerow Mods
     "&hm LGUI S": { tap: S, hold: $$mdi:apple-keyboard-command$$ }
@@ -138,7 +140,7 @@ parse_config:
     DQT: '"'
     SQT: ''''
     LGUI: $$mdi:apple-keyboard-command$$
-    LNCLCK: "Num Lock"
+    LNCLCK: 'Num Lock'
     # Layers
     NUM: "NUM"
     SYM: "SYM"
