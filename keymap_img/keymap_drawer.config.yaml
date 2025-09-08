@@ -4,72 +4,11 @@
 # Contains settings used by the `draw` step, like styling and icon sources.
 draw_config:
   svg_extra_style: |
-    svg.keymap {
-      background-color: #fdfdfd;
-      font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
-    }
-
-    /* Default keys */
-    rect.key {
-      fill: #f6f8fa;
-      stroke: #d0d7de;
-      stroke-width: 1;
-      rx: 6; /* rounded corners */
-    }
-
-    /* Text inside keys */
-    text {
-      fill: #24292e;
-      font-size: 12px;
-    }
-
-    /* Held keys (when you press and hold) */
-    rect.held, rect.combo.held {
-      fill: #c8e1ff;
-      stroke: #1d76db;
-    }
-
-    /* Combo keys */
-    rect.combo {
-      fill: #e1e4e8;
-      stroke: #b1bac4;
-    }
-
-    /* Layer toggle / layer-tap keys */
-    rect.layer {
-      fill: #fff5b1;      /* soft yellow background */
-      stroke: #d4b106;    /* gold border */
-      stroke-width: 1.5;
-    }
-    rect.layer.held {
-      fill: #ffe58f;      /* stronger yellow when held */
-      stroke: #d48806;
-    }
-
-    /* On the NUM layer, highlight the NUM key (pos 31) */
-    svg.layer-NUM .key-31 rect.key {
-      fill: #d0f0c0;      /* light green fill */
-      stroke: #5dbb63;    /* stronger green border */
-    }
-
-    /* On the SYM layer, highlight the SYM key (pos 34) */
-    svg.layer-SYM .key-34 rect.key {
-      fill: #d0f0c0;
-      stroke: #5dbb63;
-    }
-
-    /* On the FUNC layer, highlight BOTH the NUM (31) and SYM (34) keys */
-    svg.layer-FUNC .key-31 rect.key,
-    svg.layer-FUNC .key-34 rect.key {
-      fill: #d0f0c0;
-      stroke: #5dbb63;
-    }
-
-    /* Keys with icons look a little bigger */
-    .glyph {
-      width: 20px;
-      height: 20px;
-    }
+    svg.keymap { background-color: #ffffff; font-family: sans-serif; }
+    rect.key { fill: #f6f8fa; stroke: #c9cccf; stroke-width: 1; }
+    rect.held, rect.combo.held { fill: #c8e1ff; }
+    rect.combo { fill: #e1e4e8; }
+    text { fill: #24292e; }
   glyph_urls:
     mdi: https://raw.githubusercontent.com/Templarian/MaterialDesign-SVG/master/svg/{}.svg
   use_local_cache: true
@@ -81,8 +20,8 @@ draw_config:
 parse_config:
   raw_binding_map:
     # Layers and Layer Taps
-    "&lt NUM DEL": { tap: $$mdi:backspace-reverse-outline$$, hold: NUM  }
-    "&lt SYM BSPC": { tap: $$mdi:backspace$$, hold: SYM  }
+    "&lt NUM DEL": { tap: $$mdi:backspace-reverse-outline$$, hold: NUM, type: hold-tap, flavor: hold-on-key }
+    "&lt SYM BSPC": { tap: $$mdi:backspace$$, hold: SYM, type: hold-tap, flavor: hold-on-key }
     "&mo FUNC": { tap: FUNC, type: momentary }
 
     # Homerow Mods
