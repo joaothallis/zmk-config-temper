@@ -1,5 +1,3 @@
-layout: 
-  zmk_keyboard: temper
 draw_config:
   # Add custom CSS styling for a dark theme and better key differentiation.
   svg_extra_style: |
