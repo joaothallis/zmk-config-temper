@@ -136,7 +136,11 @@ parse_config:
     DQT: '"'
     SQT: ''''
     LGUI: $$mdi:apple-keyboard-command$$
-        # Arrow keys
+    # Layers
+    NUM: "NUM"
+    SYM: "SYM"
+    FUNC: "FUNC"
+    # Arrow keys
     UP: $$mdi:arrow-up-bold$$
     DOWN: $$mdi:arrow-down-bold$$
     LEFT: $$mdi:arrow-left-bold$$
