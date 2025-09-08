@@ -9,6 +9,10 @@ draw_config:
     rect.held, rect.combo.held { fill: #c8e1ff; }
     rect.combo { fill: #e1e4e8; }
     text { fill: #24292e; }
+    rect.layer-NUM.held { fill: #ffd8d8; }
+    rect.layer-SYM.held { fill: #d8ffd8; }
+    rect.layer-FUNC.held { fill: #d8d8ff; }
+    rect.layer-active { stroke: #ff0000; stroke-width: 2; }
   glyph_urls:
     mdi: https://raw.githubusercontent.com/Templarian/MaterialDesign-SVG/master/svg/{}.svg
   use_local_cache: true
@@ -19,6 +23,12 @@ draw_config:
 # Contains settings used by the `parse` step, including detailed ZMK binding maps.
 parse_config:
   mark_alternate_layer_activators: true
+  chorded_layers:
+    FUNC: ["NUM", "SYM"]  # FUNC activates when both NUM and SYM are held
+  layer_detection:
+    NUM: ["&lt NUM", "hold: NUM"]
+    SYM: ["&lt SYM", "hold: SYM"] 
+    FUNC: ["chorded: NUM+SYM"]
   raw_binding_map:
     # Layers and Layer Taps
     "&lt NUM DEL": { tap: $$mdi:backspace-reverse-outline$$, hold: NUM, type: hold-tap }
