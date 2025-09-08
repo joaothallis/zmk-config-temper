@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: temper}
 layers:
   DEFAULT:
-  - - B
+  - - Q
     - W
     - E
     - R
