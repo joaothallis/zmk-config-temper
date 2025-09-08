@@ -36,12 +36,19 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-        // Tap dance single tap = gui+c double tap = gui+v
-        copy_paste: copy_paste {
+        // Tap dance single tap = C double tap = gui+c
+        C: copy_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LG(C)>, <&kp LG(V)>;
+            tapping-term-ms = <150>;
+            bindings = <&kp C>, <&kp LG(C)>;
+        };
+        // Tap dance single tap = V double tap = gui+v
+        V: paste_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&kp V>, <&kp LG(V)>;
         };
         // Tap dance single tap = . double tap = SPACE
         dot_spc: dot_space {
@@ -92,13 +99,6 @@
             key-positions = <14 15>;
             layers = <DEFAULT>;
             bindings = <&kp CAPS>;
-        };
-        // Combo to send Tab
-        tab_combo {
-            timeout-ms = <50>;
-            key-positions = <24 25>;
-            layers = <DEFAULT>;
-            bindings = <&kp TAB>;
         };
         // Combo to type < > and move cursor left
         lt_gt_combo {
@@ -220,9 +220,9 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         &kp A       &hm LGUI S   &hm LCTRL D     &hm LSHFT F    &kp G             &kp H       &hm RSHFT J   &hm RCTRL K   &hm RGUI L    &kp SEMI
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &kp Z       &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH
+        &kp Z       &kp X          &C            &V             &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                &copy_paste     &lt NUM DEL    &kp ENTER      &kp SPACE    &lt SYM BSPC   &tp LG(LC(LA(LSHFT))) ESC
+                    &tp LG(LC(LA(LSHFT))) TAB    &lt NUM DEL    &kp ENTER      &kp SPACE    &lt SYM BSPC   &tp LG(LC(LA(LSHFT))) ESC
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
