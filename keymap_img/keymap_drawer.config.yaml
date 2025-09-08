@@ -1,3 +1,5 @@
+layout: 
+  zmk_keyboard: temper
 draw_config:
   # Add custom CSS styling for a dark theme and better key differentiation.
   svg_extra_style: |
@@ -5,49 +7,7 @@ draw_config:
     rect.key { fill: #444d56; stroke: #24292e; stroke-width: 1; }
     rect.held, rect.combo.held { fill: #8250c8; }
     rect.combo { fill: #343a41; }
-    text { fill: #c9d1d9; font-family: sans-serif; }
-
-  # Defines the physical layout of the keyboard keys using x, y coordinates.
-  layout:
-    # Left half
-    - {x: 0, y: 0}
-    - {x: 1, y: 0}
-    - {x: 2, y: 0}
-    - {x: 3, y: 0}
-    - {x: 4, y: 0}
-    - {x: 0, y: 1}
-    - {x: 1, y: 1}
-    - {x: 2, y: 1}
-    - {x: 3, y: 1}
-    - {x: 4, y: 1}
-    - {x: 0, y: 2}
-    - {x: 1, y: 2}
-    - {x: 2, y: 2}
-    - {x: 3, y: 2}
-    - {x: 4, y: 2}
-    - {x: 2, y: 3, w: 1.5}
-    - {x: 3.5, y: 3, w: 1.5}
-    - {x: 5, y: 3, w: 1.5}
-
-    # Right half
-    - {x: 7, y: 0}
-    - {x: 8, y: 0}
-    - {x: 9, y: 0}
-    - {x: 10, y: 0}
-    - {x: 11, y: 0}
-    - {x: 7, y: 1}
-    - {x: 8, y: 1}
-    - {x: 9, y: 1}
-    - {x: 10, y: 1}
-    - {x: 11, y: 1}
-    - {x: 7, y: 2}
-    - {x: 8, y: 2}
-    - {x: 9, y: 2}
-    - {x: 10, y: 2}
-    - {x: 11, y: 2}
-    - {x: 7, y: 3, w: 1.5}
-    - {x: 8.5, y: 3, w: 1.5}
-    - {x: 10, y: 3, w: 1.5}
+    text.label { stroke: none; fill: #e0f0f0;}
 
   # Defines custom SVG icons to be used for specific keys.
   glyphs:
