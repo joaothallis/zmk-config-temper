@@ -3,7 +3,7 @@
 
 # Contains settings used by the `draw` step, like styling and icon sources.
 draw_config:
-append_colon_to_layer_header: true
+  append_colon_to_layer_header: true
   arc_radius: 6.0
   arc_scale: 1.0
   combo_h: 26.0
