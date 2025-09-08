@@ -38,7 +38,7 @@ custom_keys:
   lb_rb_macro:
     label: "{ }"
   lp_rp_macro:
-    label: ( )
+    label: "( )"
   ls_rs_macro:
     label: "[ ]"
   homeapp:
@@ -79,7 +79,7 @@ custom_keys:
   lb_rb_combo:
     label: "{ }"
   lp_rp_combo:
-    label: ( )
+    label: "( )"
   ls_rs_combo:
     label: "[ ]"
   mmb_combo:
