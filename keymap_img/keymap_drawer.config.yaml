@@ -1,118 +1,118 @@
-# Configuration for keymap-drawer
-layout:
-  name: "temper"
-
-# Defines the physical layout of the keyboard keys (36 positions to match your keymap)
-physical_layout:
-  # Left half (positions 0-4, 10-14, 20-24, 30-32)
-  - {x: 0, y: 0}   # 0
-  - {x: 1, y: 0}   # 1
-  - {x: 2, y: 0}   # 2
-  - {x: 3, y: 0}   # 3
-  - {x: 4, y: 0}   # 4
-  - {x: 0, y: 1}   # 10
-  - {x: 1, y: 1}   # 11
-  - {x: 2, y: 1}   # 12
-  - {x: 3, y: 1}   # 13
-  - {x: 4, y: 1}   # 14
-  - {x: 0, y: 2}   # 20
-  - {x: 1, y: 2}   # 21
-  - {x: 2, y: 2}   # 22
-  - {x: 3, y: 2}   # 23
-  - {x: 4, y: 2}   # 24
-  - {x: 2, y: 3, w: 1.5}   # 30
-  - {x: 3.5, y: 3, w: 1.5} # 31
-  - {x: 5, y: 3, w: 1.5}   # 32
-
-  # Right half (positions 5-9, 15-19, 25-29, 33-35)
-  - {x: 7, y: 0}   # 5
-  - {x: 8, y: 0}   # 6
-  - {x: 9, y: 0}   # 7
-  - {x: 10, y: 0}  # 8
-  - {x: 11, y: 0}  # 9
-  - {x: 7, y: 1}   # 15
-  - {x: 8, y: 1}   # 16
-  - {x: 9, y: 1}   # 17
-  - {x: 10, y: 1}  # 18
-  - {x: 11, y: 1}  # 19
-  - {x: 7, y: 2}   # 25
-  - {x: 8, y: 2}   # 26
-  - {x: 9, y: 2}   # 27
-  - {x: 10, y: 2}  # 28
-  - {x: 11, y: 2}  # 29
-  - {x: 7, y: 3, w: 1.5}   # 33
-  - {x: 8.5, y: 3, w: 1.5} # 34
-  - {x: 10, y: 3, w: 1.5}  # 35
-
-# Maps ZMK behaviors to glyphs or text
-key_aliases:
-  ______: ▽
-  trans: ▽
-  '&none': ''
-
-  # Custom Behaviors & Macros
-  hm LGUI S: {t: S, h: GUI}
-  hm LCTRL D: {t: D, h: CTL}
-  hm LSHFT F: {t: F, h: SFT}
-  hm RSHFT J: {t: J, h: SFT}
-  hm RCTRL K: {t: K, h: CTL}
-  hm RGUI L: {t: L, h: GUI}
-  copy_dance: {t: Copy, size: 8}
-  paste_dance: {t: Paste, size: 8}
-  dot_spc: {t: '.', st: ␣}
-  'tp LG(LC(LA(LSHFT))) TAB': {t: Tab, h: {t: Hyper, size: 8}}
-  'tp LG(LC(LA(LSHFT))) ESC': {t: Esc, h: {t: Hyper, size: 8}}
-  lt NUM DEL: {t: Del, h: NUM}
-  lt SYM BSPC: {t: ⌫, h: SYM}
-  mo FUNC: {t: FUNC, type: momentary}
-  mt RALT BSPC: {t: ⌫, h: RALT}
-  dq_macro: {t: '""', size: 12}
-  homeapp: {t: Home, size: 8}
-  nomachine: {t: NoMa, size: 8}
-  vim_wq: {t: 'Vim WQ', size: 8}
-  vim_q: {t: 'Vim Q!', size: 8}
-  lt_gt_macro: {t: '<>', size: 12}
-  lb_rb_macro: {t: '{}', size: 12}
-  lp_rp_macro: {t: '()', size: 12}
-  ls_rs_macro: {t: '[]', size: 12}
-
-  # Media and System Controls
-  C_PP: {g: play_pause}
-  C_VOL_UP: {g: vol_up}
-  C_VOL_DN: {g: vol_down}
-  C_MUTE: {g: vol_mute}
-  BT_CLR: {g: bt_icon}
-  BT_NXT: {g: bt_icon}
-  BT_PRV: {g: bt_icon}
-  'BT_SEL 0': {t: '0', g: bt_icon, size: 10}
-  'BT_SEL 1': {t: '1', g: bt_icon, size: 10}
-  'BT_SEL 2': {t: '2', g: bt_icon, size: 10}
-  sys_reset: {g: reset_icon}
-  bootloader: {g: boot_icon}
-  LNLCK: {t: Num, size: 8}  # Num Lock
-
-  # Mouse and Navigation
-  mmv: {t: Mouse, size: 8}
-  msc: {t: Scroll, size: 8}
-  mkp: {t: Click, size: 8}
-  MCLK: {t: M-clk, size: 8}
-  C_NEXT: {t: Next, size: 8}
-  C_PREV: {t: Prev, size: 8}
-
-  # Explicit aliases for combo nodes
-  combo_vimwq: {t: 'Vim WQ', size: 8}
-  combo_vimq: {t: 'Vim Q!', size: 8}
-  caps_combo: {t: Caps, size: 8}
-  lt_gt_combo: {t: '<>', size: 12}
-  lb_rb_combo: {t: '{}', size: 12}
-  lp_rp_combo: {t: '()', size: 12}
-  ls_rs_combo: {t: '[]', size: 12}
-  mmb_combo: {t: 'M-clk', size: 8}
-  next_combo: {t: Next, size: 8}
-  prev_combo: {t: Prev, size: 8}
-
-# Contains settings used by the `draw` step
+# Configuration for keymap-drawer v0.22.1
 draw_config:
+  layout:
+    name: "temper"
+
+  # Defines the physical layout of the keyboard keys (36 positions to match your keymap)
+  physical_layout:
+    # Left half (positions 0-4, 10-14, 20-24, 30-32)
+    - {x: 0, y: 0}   # 0
+    - {x: 1, y: 0}   # 1
+    - {x: 2, y: 0}   # 2
+    - {x: 3, y: 0}   # 3
+    - {x: 4, y: 0}   # 4
+    - {x: 0, y: 1}   # 10
+    - {x: 1, y: 1}   # 11
+    - {x: 2, y: 1}   # 12
+    - {x: 3, y: 1}   # 13
+    - {x: 4, y: 1}   # 14
+    - {x: 0, y: 2}   # 20
+    - {x: 1, y: 2}   # 21
+    - {x: 2, y: 2}   # 22
+    - {x: 3, y: 2}   # 23
+    - {x: 4, y: 2}   # 24
+    - {x: 2, y: 3, w: 1.5}   # 30
+    - {x: 3.5, y: 3, w: 1.5} # 31
+    - {x: 5, y: 3, w: 1.5}   # 32
+
+    # Right half (positions 5-9, 15-19, 25-29, 33-35)
+    - {x: 7, y: 0}   # 5
+    - {x: 8, y: 0}   # 6
+    - {x: 9, y: 0}   # 7
+    - {x: 10, y: 0}  # 8
+    - {x: 11, y: 0}  # 9
+    - {x: 7, y: 1}   # 15
+    - {x: 8, y: 1}   # 16
+    - {x: 9, y: 1}   # 17
+    - {x: 10, y: 1}  # 18
+    - {x: 11, y: 1}  # 19
+    - {x: 7, y: 2}   # 25
+    - {x: 8, y: 2}   # 26
+    - {x: 9, y: 2}   # 27
+    - {x: 10, y: 2}  # 28
+    - {x: 11, y: 2}  # 29
+    - {x: 7, y: 3, w: 1.5}   # 33
+    - {x: 8.5, y: 3, w: 1.5} # 34
+    - {x: 10, y: 3, w: 1.5}  # 35
+
+  # Maps ZMK behaviors to glyphs or text
+  key_aliases:
+    ______: ▽
+    trans: ▽
+    '&none': ''
+
+    # Custom Behaviors & Macros
+    hm LGUI S: {t: S, h: GUI}
+    hm LCTRL D: {t: D, h: CTL}
+    hm LSHFT F: {t: F, h: SFT}
+    hm RSHFT J: {t: J, h: SFT}
+    hm RCTRL K: {t: K, h: CTL}
+    hm RGUI L: {t: L, h: GUI}
+    copy_dance: {t: Copy, size: 8}
+    paste_dance: {t: Paste, size: 8}
+    dot_spc: {t: '.', st: ␣}
+    'tp LG(LC(LA(LSHFT))) TAB': {t: Tab, h: {t: Hyper, size: 8}}
+    'tp LG(LC(LA(LSHFT))) ESC': {t: Esc, h: {t: Hyper, size: 8}}
+    lt NUM DEL: {t: Del, h: NUM}
+    lt SYM BSPC: {t: ⌫, h: SYM}
+    mo FUNC: {t: FUNC, type: momentary}
+    mt RALT BSPC: {t: ⌫, h: RALT}
+    dq_macro: {t: '""', size: 12}
+    homeapp: {t: Home, size: 8}
+    nomachine: {t: NoMa, size: 8}
+    vim_wq: {t: 'Vim WQ', size: 8}
+    vim_q: {t: 'Vim Q!', size: 8}
+    lt_gt_macro: {t: '<>', size: 12}
+    lb_rb_macro: {t: '{}', size: 12}
+    lp_rp_macro: {t: '()', size: 12}
+    ls_rs_macro: {t: '[]', size: 12}
+
+    # Media and System Controls
+    C_PP: {g: play_pause}
+    C_VOL_UP: {g: vol_up}
+    C_VOL_DN: {g: vol_down}
+    C_MUTE: {g: vol_mute}
+    BT_CLR: {g: bt_icon}
+    BT_NXT: {g: bt_icon}
+    BT_PRV: {g: bt_icon}
+    'BT_SEL 0': {t: '0', g: bt_icon, size: 10}
+    'BT_SEL 1': {t: '1', g: bt_icon, size: 10}
+    'BT_SEL 2': {t: '2', g: bt_icon, size: 10}
+    sys_reset: {g: reset_icon}
+    bootloader: {g: boot_icon}
+    LNLCK: {t: Num, size: 8}  # Num Lock
+
+    # Mouse and Navigation
+    mmv: {t: Mouse, size: 8}
+    msc: {t: Scroll, size: 8}
+    mkp: {t: Click, size: 8}
+    MCLK: {t: M-clk, size: 8}
+    C_NEXT: {t: Next, size: 8}
+    C_PREV: {t: Prev, size: 8}
+
+    # Explicit aliases for combo nodes
+    combo_vimwq: {t: 'Vim WQ', size: 8}
+    combo_vimq: {t: 'Vim Q!', size: 8}
+    caps_combo: {t: Caps, size: 8}
+    lt_gt_combo: {t: '<>', size: 12}
+    lb_rb_combo: {t: '{}', size: 12}
+    lp_rp_combo: {t: '()', size: 12}
+    ls_rs_combo: {t: '[]', size: 12}
+    mmb_combo: {t: 'M-clk', size: 8}
+    next_combo: {t: Next, size: 8}
+    prev_combo: {t: Prev, size: 8}
+
+  # Visual settings
   key_width: 60
   key_height: 56
   spacing: 4
