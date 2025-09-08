@@ -9,10 +9,20 @@ draw_config:
     rect.held, rect.combo.held { fill: #c8e1ff; }
     rect.combo { fill: #e1e4e8; }
     text { fill: #24292e; }
-    rect.layer-NUM.held { fill: #ffd8d8; }
-    rect.layer-SYM.held { fill: #d8ffd8; }
-    rect.layer-FUNC.held { fill: #d8d8ff; }
-    rect.layer-active { stroke: #ff0000; stroke-width: 2; }
+    /* NUM layer key (position 31 in your matrix) */
+    g.key:nth-child(32) rect.key.held {
+      fill: #ffd8d8 !important; /* Red for NUM */
+    }
+    
+    /* SYM layer key (position 34 in your matrix) */  
+    g.key:nth-child(35) rect.key.held {
+      fill: #d8ffd8 !important; /* Green for SYM */
+    }
+    
+    /* FUNC layer key (you'll need to find its position) */
+    g.key:nth-child(X) rect.key.held {
+      fill: #d8d8ff !important; /* Blue for FUNC */
+    }
   glyph_urls:
     mdi: https://raw.githubusercontent.com/Templarian/MaterialDesign-SVG/master/svg/{}.svg
   use_local_cache: true
@@ -23,12 +33,6 @@ draw_config:
 # Contains settings used by the `parse` step, including detailed ZMK binding maps.
 parse_config:
   mark_alternate_layer_activators: true
-  chorded_layers:
-    FUNC: ["NUM", "SYM"]  # FUNC activates when both NUM and SYM are held
-  layer_detection:
-    NUM: ["&lt NUM", "hold: NUM"]
-    SYM: ["&lt SYM", "hold: SYM"] 
-    FUNC: ["chorded: NUM+SYM"]
   raw_binding_map:
     # Layers and Layer Taps
     "&lt NUM DEL": { tap: $$mdi:backspace-reverse-outline$$, hold: NUM, type: hold-tap }
@@ -147,7 +151,7 @@ parse_config:
     DQT: '"'
     SQT: ''''
     LGUI: $$mdi:apple-keyboard-command$$
-    LNCLCK: 'Num Lock'
+    LNLCK: 'Num Lock'
     # Arrow keys
     UP: $$mdi:arrow-up-bold$$
     DOWN: $$mdi:arrow-down-bold$$
