@@ -4,11 +4,53 @@
 # Contains settings used by the `draw` step, like styling and icon sources.
 draw_config:
   svg_extra_style: |
-    svg.keymap { background-color: #ffffff; font-family: sans-serif; }
-    rect.key { fill: #f6f8fa; stroke: #c9cccf; stroke-width: 1; }
-    rect.held, rect.combo.held { fill: #c8e1ff; }
-    rect.combo { fill: #e1e4e8; }
-    text { fill: #24292e; }
+    svg.keymap {
+      background-color: #fdfdfd;
+      font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    /* Default keys */
+    rect.key {
+      fill: #f6f8fa;
+      stroke: #d0d7de;
+      stroke-width: 1;
+      rx: 6; /* rounded corners */
+    }
+
+    /* Text inside keys */
+    text {
+      fill: #24292e;
+      font-size: 12px;
+    }
+
+    /* Held keys (when you press and hold) */
+    rect.held, rect.combo.held {
+      fill: #c8e1ff;
+      stroke: #1d76db;
+    }
+
+    /* Combo keys */
+    rect.combo {
+      fill: #e1e4e8;
+      stroke: #b1bac4;
+    }
+
+    /* Layer toggle / layer-tap keys */
+    rect.layer {
+      fill: #fff5b1;        /* soft yellow background */
+      stroke: #d4b106;      /* gold border */
+      stroke-width: 1.5;
+    }
+    rect.layer.held {
+      fill: #ffe58f;        /* stronger yellow when held */
+      stroke: #d48806;
+    }
+
+    /* Keys with icons look a little bigger */
+    .glyph {
+      width: 20px;
+      height: 20px;
+    }
   glyph_urls:
     mdi: https://raw.githubusercontent.com/Templarian/MaterialDesign-SVG/master/svg/{}.svg
   use_local_cache: true
@@ -20,9 +62,9 @@ draw_config:
 parse_config:
   raw_binding_map:
     # Layers and Layer Taps
-    "&lt NUM DEL": { tap: $$mdi:backspace-reverse-outline$$, hold: NUM }
-    "&lt SYM BSPC": { tap: $$mdi:backspace$$, hold: SYM }
-    "&mo FUNC": { tap: FUNC, type: momentary }
+    "&lt NUM DEL": { tap: $$mdi:backspace-reverse-outline$$, hold: NUM, type: layer  }
+    "&lt SYM BSPC": { tap: $$mdi:backspace$$, hold: SYM, type: layer  }
+    "&mo FUNC": { tap: FUNC, type: layer }
 
     # Homerow Mods
     "&hm LGUI S": { tap: S, hold: $$mdi:apple-keyboard-command$$ }
@@ -36,6 +78,7 @@ parse_config:
     "&copy_dance": { tap: C, shifted: $$mdi:content-copy$$ }
     "&paste_dance": { tap: V, shifted: $$mdi:content-paste$$ }
     "&dot_spc": { tap: '.', shifted: $$mdi:keyboard-space$$ }
+    "&caps_dance": { tap: T, shifted: $$mdi:apple-keyboard-caps$$ }
 
     # Hold-Taps (Non-homerow)
     "&mt RALT BSPC": { tap: $$mdi:backspace$$, hold: Alt }

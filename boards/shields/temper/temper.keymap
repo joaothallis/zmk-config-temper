@@ -57,6 +57,13 @@
             tapping-term-ms = <200>;
             bindings = <&kp DOT>, <&kp SPACE>;
         };
+        // Tap dance single tap = T double tap = CAPS LOCK
+        caps_dance: tapdance_caps {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp T>, <&kp CAPS>;
+        };
         // Enable hyper key when tapped
         tp: tap-preferred {
             compatible = "zmk,behavior-hold-tap";
@@ -92,13 +99,6 @@
             key-positions = <7 8>;
             layers = <DEFAULT>;
             bindings = <&vim_q>;
-        };
-        // Combo to send CAPS LOCK
-        caps_combo {
-            timeout-ms = <50>;
-            key-positions = <14 15>;
-            layers = <DEFAULT>;
-            bindings = <&kp CAPS>;
         };
         // Combo to type < > and move cursor left
         lt_gt_combo {
@@ -216,7 +216,7 @@
             label = "DEFAULT";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        &kp Q       &kp W         &kp E          &kp R          &kp T             &kp Y         &kp U         &kp I         &kp O       &kp P
+        &kp Q       &kp W         &kp E          &kp R          &caps_dance       &kp Y         &kp U         &kp I         &kp O       &kp P
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         &kp A       &hm LGUI S   &hm LCTRL D     &hm LSHFT F    &kp G             &kp H       &hm RSHFT J   &hm RCTRL K   &hm RGUI L    &kp SEMI
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
