@@ -4,14 +4,17 @@
 # Contains settings used by the `draw` step, like styling and icon sources.
 draw_config:
   svg_extra_style: |
-    svg.keymap { background-color: #24292e; font-family: sans-serif; }
-    rect.key { fill: #444d56; stroke: #24292e; stroke-width: 1; }
-    rect.held, rect.combo.held { fill: #8250c8; }
-    rect.combo { fill: #343a41; }
-    text { fill: #c9d1d9; }
+    svg.keymap { background-color: #ffffff; font-family: sans-serif; }
+    rect.key { fill: #f6f8fa; stroke: #c9cccf; stroke-width: 1; }
+    rect.held, rect.combo.held { fill: #c8e1ff; }
+    rect.combo { fill: #e1e4e8; }
+    text { fill: #24292e; }
   glyph_urls:
     mdi: https://raw.githubusercontent.com/Templarian/MaterialDesign-SVG/master/svg/{}.svg
   use_local_cache: true
+  glyph_tap_size: 18
+  glyph_hold_size: 15
+  glyph_shifted_size: 15
 
 # Contains settings used by the `parse` step, including detailed ZMK binding maps.
 parse_config:
@@ -72,8 +75,8 @@ parse_config:
 
     # Macros (assign simple text/icons)
     "&dq_macro": '""'
-    "&homeapp": Home
-    "&nomachine": NoMa
+    "&homeapp": HomeRow
+    "&nomachine": NoMachine
     "&lt_gt_macro": "<>"
     "&lb_rb_macro": "{}"
     "&lp_rp_macro": "()"
@@ -85,6 +88,37 @@ parse_config:
 
   # Use the default ZMK keycode mapping for standard keys
   zmk_keycode_map:
-    TRANS: ▽ # Transparent
-    _______: ▽ # Transparent
-    K_TRANS: ▽ # Transparent
+    TRANS: ▽
+    _______: ▽
+    K_TRANS: ▽
+    UNDER: '_'
+    STAR: '*'
+    PLUS: '+'
+    BSLH: '\'
+    PIPE: '|'
+    HASH: '#'
+    DLLR: '$'
+    AT: '@'
+    TILDE: '~'
+    GRAVE: '`'
+    PRCNT: '%'
+    EXCL: '!'
+    AMPS: '&'
+    CARET: ^
+    EQUAL: '='
+    MINUS: '-'
+    SLASH: '/'
+    FSLH: '/'
+    COMMA: ','
+    DOT: '.'
+    SEMI: ';'
+    LT: '<'
+    GT: '>'
+    LBKT: '['
+    RBKT: ']'
+    LBRC: '{'
+    RBRC: '}'
+    LPAR: '('
+    RPAR: ')'
+    DQT: '"'
+    SQT: ''''
