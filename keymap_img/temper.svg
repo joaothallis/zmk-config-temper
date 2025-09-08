@@ -550,7 +550,7 @@ text { fill: #24292e; }
 </g>
 <g transform="translate(188, 228)" class="key keypos-30">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
-<text x="0" y="0" class="key tap">LGUI</text>
+<use href="#mdi:apple-keyboard-command" xlink:href="#mdi:apple-keyboard-command" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:apple-keyboard-command"/>
 </g>
 <g transform="translate(254, 236) rotate(15.0)" class="key trans keypos-31">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans"/>
@@ -731,27 +731,19 @@ text { fill: #24292e; }
 </g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="105" y="25" width="28" height="26" class="combo"/>
-<text x="119" y="38" class="combo tap">
-<tspan x="119" dy="-0.6em">&lt;</tspan><tspan x="119" dy="1.2em">&gt;</tspan>
-</text>
+<text x="119" y="38" class="combo tap">&lt;&gt;</text>
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="223" y="41" width="28" height="26" class="combo"/>
-<text x="237" y="54" class="combo tap">
-<tspan x="237" dy="-0.6em">{</tspan><tspan x="237" dy="1.2em">}</tspan>
-</text>
+<text x="237" y="54" class="combo tap">{}</text>
 </g>
 <g class="combo combopos-2">
 <rect rx="6" ry="6" x="223" y="97" width="28" height="26" class="combo"/>
-<text x="237" y="110" class="combo tap">
-<tspan x="237" dy="-0.6em">(</tspan><tspan x="237" dy="1.2em">)</tspan>
-</text>
+<text x="237" y="110" class="combo tap">()</text>
 </g>
 <g class="combo combopos-3">
 <rect rx="6" ry="6" x="105" y="81" width="28" height="26" class="combo"/>
-<text x="119" y="94" class="combo tap">
-<tspan x="119" dy="-0.6em">[</tspan><tspan x="119" dy="1.2em">]</tspan>
-</text>
+<text x="119" y="94" class="combo tap">[]</text>
 </g>
 <g class="combo combopos-4">
 <rect rx="6" ry="6" x="536" y="153" width="28" height="26" class="combo"/>

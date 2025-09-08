@@ -32,7 +32,7 @@ layers:
   - ['', _, '#', $, '@', +, '7', '8', '9', '*']
   - ['', '~', '`', '%', '!', '-', '4', '5', '6', /]
   - ['', \, '|', '&', ^, '0', '1', '2', '3', '=']
-  - - LGUI
+  - - $$mdi:apple-keyboard-command$$
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ., s: '$$mdi:keyboard-space$$'}
@@ -96,16 +96,16 @@ combos:
   k: CAPS
   l: [DEFAULT]
 - p: [1, 2]
-  k: < >
+  k: <>
   l: [SYM]
 - p: [3, 4]
-  k: '{ }'
+  k: '{}'
   l: [SYM]
 - p: [13, 14]
-  k: ( )
+  k: ()
   l: [SYM]
 - p: [11, 12]
-  k: '[ ]'
+  k: '[]'
   l: [SYM]
 - p: [25, 26]
   k: $$mdi:mouse-scroll-wheel$$
