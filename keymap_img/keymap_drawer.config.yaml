@@ -1,74 +1,136 @@
+# Configuration for keymap-drawer
+layout:
+  name: "temper"
+
+# Defines the physical layout of the keyboard keys (36 positions to match your keymap)
+physical_layout:
+  # Left half (positions 0-4, 10-14, 20-24, 30-32)
+  - {x: 0, y: 0}   # 0
+  - {x: 1, y: 0}   # 1
+  - {x: 2, y: 0}   # 2
+  - {x: 3, y: 0}   # 3
+  - {x: 4, y: 0}   # 4
+  - {x: 0, y: 1}   # 10
+  - {x: 1, y: 1}   # 11
+  - {x: 2, y: 1}   # 12
+  - {x: 3, y: 1}   # 13
+  - {x: 4, y: 1}   # 14
+  - {x: 0, y: 2}   # 20
+  - {x: 1, y: 2}   # 21
+  - {x: 2, y: 2}   # 22
+  - {x: 3, y: 2}   # 23
+  - {x: 4, y: 2}   # 24
+  - {x: 2, y: 3, w: 1.5}   # 30
+  - {x: 3.5, y: 3, w: 1.5} # 31
+  - {x: 5, y: 3, w: 1.5}   # 32
+
+  # Right half (positions 5-9, 15-19, 25-29, 33-35)
+  - {x: 7, y: 0}   # 5
+  - {x: 8, y: 0}   # 6
+  - {x: 9, y: 0}   # 7
+  - {x: 10, y: 0}  # 8
+  - {x: 11, y: 0}  # 9
+  - {x: 7, y: 1}   # 15
+  - {x: 8, y: 1}   # 16
+  - {x: 9, y: 1}   # 17
+  - {x: 10, y: 1}  # 18
+  - {x: 11, y: 1}  # 19
+  - {x: 7, y: 2}   # 25
+  - {x: 8, y: 2}   # 26
+  - {x: 9, y: 2}   # 27
+  - {x: 10, y: 2}  # 28
+  - {x: 11, y: 2}  # 29
+  - {x: 7, y: 3, w: 1.5}   # 33
+  - {x: 8.5, y: 3, w: 1.5} # 34
+  - {x: 10, y: 3, w: 1.5}  # 35
+
+# Maps ZMK behaviors to glyphs or text
+key_aliases:
+  ______: ▽
+  trans: ▽
+  '&none': ''
+
+  # Custom Behaviors & Macros
+  hm LGUI S: {t: S, h: GUI}
+  hm LCTRL D: {t: D, h: CTL}
+  hm LSHFT F: {t: F, h: SFT}
+  hm RSHFT J: {t: J, h: SFT}
+  hm RCTRL K: {t: K, h: CTL}
+  hm RGUI L: {t: L, h: GUI}
+  copy_dance: {t: Copy, size: 8}
+  paste_dance: {t: Paste, size: 8}
+  dot_spc: {t: '.', st: ␣}
+  'tp LG(LC(LA(LSHFT))) TAB': {t: Tab, h: {t: Hyper, size: 8}}
+  'tp LG(LC(LA(LSHFT))) ESC': {t: Esc, h: {t: Hyper, size: 8}}
+  lt NUM DEL: {t: Del, h: NUM}
+  lt SYM BSPC: {t: ⌫, h: SYM}
+  mo FUNC: {t: FUNC, type: momentary}
+  mt RALT BSPC: {t: ⌫, h: RALT}
+  dq_macro: {t: '""', size: 12}
+  homeapp: {t: Home, size: 8}
+  nomachine: {t: NoMa, size: 8}
+  vim_wq: {t: 'Vim WQ', size: 8}
+  vim_q: {t: 'Vim Q!', size: 8}
+  lt_gt_macro: {t: '<>', size: 12}
+  lb_rb_macro: {t: '{}', size: 12}
+  lp_rp_macro: {t: '()', size: 12}
+  ls_rs_macro: {t: '[]', size: 12}
+
+  # Media and System Controls
+  C_PP: {g: play_pause}
+  C_VOL_UP: {g: vol_up}
+  C_VOL_DN: {g: vol_down}
+  C_MUTE: {g: vol_mute}
+  BT_CLR: {g: bt_icon}
+  BT_NXT: {g: bt_icon}
+  BT_PRV: {g: bt_icon}
+  'BT_SEL 0': {t: '0', g: bt_icon, size: 10}
+  'BT_SEL 1': {t: '1', g: bt_icon, size: 10}
+  'BT_SEL 2': {t: '2', g: bt_icon, size: 10}
+  sys_reset: {g: reset_icon}
+  bootloader: {g: boot_icon}
+  LNLCK: {t: Num, size: 8}  # Num Lock
+
+  # Mouse and Navigation
+  mmv: {t: Mouse, size: 8}
+  msc: {t: Scroll, size: 8}
+  mkp: {t: Click, size: 8}
+  MCLK: {t: M-clk, size: 8}
+  C_NEXT: {t: Next, size: 8}
+  C_PREV: {t: Prev, size: 8}
+
+  # Explicit aliases for combo nodes
+  combo_vimwq: {t: 'Vim WQ', size: 8}
+  combo_vimq: {t: 'Vim Q!', size: 8}
+  caps_combo: {t: Caps, size: 8}
+  lt_gt_combo: {t: '<>', size: 12}
+  lb_rb_combo: {t: '{}', size: 12}
+  lp_rp_combo: {t: '()', size: 12}
+  ls_rs_combo: {t: '[]', size: 12}
+  mmb_combo: {t: 'M-clk', size: 8}
+  next_combo: {t: Next, size: 8}
+  prev_combo: {t: Prev, size: 8}
+
+# Contains settings used by the `draw` step
 draw_config:
-  # Add custom CSS styling for a dark theme and better key differentiation.
+  key_width: 60
+  key_height: 56
+  spacing: 4
+  
+  # Add custom CSS styling for a dark theme
   svg_extra_style: |
     svg.keymap { background-color: #24292e; }
     rect.key { fill: #444d56; stroke: #24292e; stroke-width: 1; }
     rect.held, rect.combo.held { fill: #8250c8; }
     rect.combo { fill: #343a41; }
-    text.label { stroke: none; fill: #e0f0f0;}
+    text { fill: #c9d1d9; font-family: sans-serif; }
 
-  # Defines custom SVG icons to be used for specific keys.
+  # Defines custom SVG icons
   glyphs:
+    play_pause: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 5m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z"></path><path d="M14 5m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z"></path></svg>'
     vol_up: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M15 8a5 5 0 0 1 0 8"></path><path d="M17.7 5a9 9 0 0 1 0 14"></path><path d="M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a.8 .8 0 0 1 1.5 .5v14a.8 .8 0 0 1 -1.5 .5l-3.5 -4.5"></path></svg>'
     vol_down: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M15 8a5 5 0 0 1 0 8"></path><path d="M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a.8 .8 0 0 1 1.5 .5v14a.8 .8 0 0 1 -1.5 .5l-3.5 -4.5"></path></svg>'
     vol_mute: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M15 8a5 5 0 0 1 1.912 4.934m-1.377 2.602a5 5 0 0 1 -.535 .464"></path><path d="M17.7 5a9 9 0 0 1 2.362 11.086m-1.676 2.299a9 9 0 0 1 -.686 .615"></path><path d="M9.069 5.054l.431 -.554a.8 .8 0 0 1 1.5 .5v2m0 4v8a.8 .8 0 0 1 -1.5 .5l-3.5 -4.5h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l1.294 -1.664"></path><path d="M3 3l18 18"></path></svg>'
     bt_icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M7 8l10 8l-5 4l0 -16l5 4l-10 8"></path></svg>'
     reset_icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4"></path><path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"></path></svg>'
     boot_icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M14 3v4a1 1 0 0 0 1 1h4"></path><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"></path><path d="M12 11l0 6"></path><path d="M15 14l-3 3l-3 -3"></path></svg>'
-
-  # Maps ONLY custom/complex ZMK behaviors to the glyphs defined above or to text.
-  key_aliases:
-    ______: ▽
-    trans: ▽
-    '&none': ''
-
-    # Custom Behaviors & Macros
-    hm LGUI S: {t: S, h: GUI}
-    hm LCTRL D: {t: D, h: CTL}
-    hm LSHFT F: {t: F, h: SFT}
-    hm RSHFT J: {t: J, h: SFT}
-    hm RCTRL K: {t: K, h: CTL}
-    hm RGUI L: {t: L, h: GUI}
-    copy_dance: {t: Copy, size: 8}
-    paste_dance: {t: Paste, size: 8}
-    dot_spc: {t: '.', st: ␣}
-    'tp LG(LC(LA(LSHFT))) TAB': {t: Tab, h: {t: Hyper, size: 8}}
-    'tp LG(LC(LA(LSHFT))) ESC': {t: Esc, h: {t: Hyper, size: 8}}
-    lt NUM DEL: {t: Del, h: NUM}
-    lt SYM BSPC: {t: ⌫, h: SYM}
-    mo FUNC: {t: FUNC, type: momentary}
-    mt RALT BSPC: {t: ⌫, h: RALT}
-    dq_macro: {t: '""', size: 12}
-    homeapp: {t: Home, size: 8}
-    nomachine: {t: NoMa, size: 8}
-    vim_wq: {t: 'Vim WQ', size: 8}
-    vim_q: {t: 'Vim Q!', size: 8}
-    lt_gt_macro: {t: '<>', size: 12}
-    lb_rb_macro: {t: '{}', size: 12}
-    lp_rp_macro: {t: '()', size: 12}
-    ls_rs_macro: {t: '[]', size: 12}
-
-    # Map keys to SVG glyphs (critical section)
-    C_VOL_UP: {g: vol_up, size: 16}
-    C_VOL_DN: {g: vol_down, size: 16}
-    C_MUTE: {g: vol_mute, size: 16}
-    BT_CLR: {g: bt_icon, size: 16}
-    BT_NXT: {g: bt_icon, size: 16}
-    BT_PRV: {g: bt_icon, size: 16}
-    'BT_SEL 0': {t: '0', g: bt_icon, size: 10}
-    'BT_SEL 1': {t: '1', g: bt_icon, size: 10}
-    'BT_SEL 2': {t: '2', g: bt_icon, size: 10}
-    sys_reset: {g: reset_icon, size: 16}
-    bootloader: {g: boot_icon, size: 16}
-
-    # Explicit aliases for combo nodes to ensure they are drawn correctly
-    combo_vimwq: {t: 'Vim WQ', size: 8}
-    combo_vimq: {t: 'Vim Q!', size: 8}
-    caps_combo: {t: Caps, size: 8}
-    lt_gt_combo: {t: '<>', size: 12}
-    lb_rb_combo: {t: '{}', size: 12}
-    lp_rp_combo: {t: '()', size: 12}
-    ls_rs_combo: {t: '[]', size: 12}
-    mmb_combo: {t: 'M-clk', size: 8}
-    next_combo: {t: Next, size: 8}
-    prev_combo: {t: Prev, size: 8}
