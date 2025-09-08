@@ -77,10 +77,10 @@ parse_config:
     "&dq_macro": '""'
     "&homeapp": $$mdi:keyboard-settings$$
     "&nomachine": $$mdi:gnome$$
-    "&lt_gt_macro": "< >"
-    "&lb_rb_macro": "{ }"
-    "&lp_rp_macro": "( )"
-    "&ls_rs_macro": "[ ]"
+    "&lt_gt_macro": "<>"
+    "&lb_rb_macro": "{}"
+    "&lp_rp_macro": "()"
+    "&ls_rs_macro": "[]"
 
     # Combos
     "&vim_wq": "Vim WQ"
@@ -134,6 +134,7 @@ parse_config:
     RPAR: ')'
     DQT: '"'
     SQT: ''''
+    LGUI: $$mdi:apple-keyboard-command$$
         # Arrow keys
     UP: $$mdi:arrow-up-bold$$
     DOWN: $$mdi:arrow-down-bold$$
