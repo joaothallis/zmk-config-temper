@@ -1,7 +1,16 @@
 layout: {zmk_keyboard: temper}
 layers:
   DEFAULT:
-  - [Q, W, E, R, T, Y, U, I, O, P]
+  - - Q
+    - W
+    - E
+    - R
+    - {t: T, s: '$$mdi:apple-keyboard-caps$$'}
+    - Y
+    - U
+    - I
+    - O
+    - P
   - - A
     - {t: S, h: '$$mdi:apple-keyboard-command$$'}
     - {t: D, h: '$$mdi:apple-keyboard-control$$'}
@@ -23,10 +32,10 @@ layers:
     - {t: ., s: '>'}
     - {t: /, s: '?'}
   - - {t: '$$mdi:keyboard-tab$$', h: Hyper}
-    - {t: '$$mdi:backspace-reverse-outline$$', h: NUM}
+    - {t: '$$mdi:backspace-reverse-outline$$', h: NUM, type: layer}
     - ENTER
     - SPACE
-    - {t: '$$mdi:backspace$$', h: SYM}
+    - {t: '$$mdi:backspace$$', h: SYM, type: layer}
     - {t: '$$mdi:keyboard-esc$$', h: Hyper}
   NUM:
   - ['', _, '#', $, '@', +, '7', '8', '9', '*']
@@ -36,7 +45,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ., s: '$$mdi:keyboard-space$$'}
-    - {t: FUNC, type: momentary}
+    - {t: FUNC, type: layer}
     - {t: '$$mdi:backspace$$', h: Alt}
   SYM:
   - - '""'
@@ -61,7 +70,7 @@ layers:
     - $$mdi:arrow-right-bold-box-outline$$
     - {t: '$$mdi:pan-down$$', s: '$$mdi:mouse-scroll-wheel$$'}
   - - {t: ▽, type: trans}
-    - {t: FUNC, type: momentary}
+    - {t: FUNC, type: layer}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -91,9 +100,6 @@ combos:
   l: [DEFAULT]
 - p: [7, 8]
   k: Vim Q!
-  l: [DEFAULT]
-- p: [14, 15]
-  k: CAPS
   l: [DEFAULT]
 - p: [1, 2]
   k: <>

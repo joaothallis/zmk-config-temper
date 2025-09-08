@@ -1,5 +1,8 @@
 <svg width="847" height="1473" viewBox="0 0 847 1473" class="keymap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>/* start glyphs */
+<svg id="mdi:apple-keyboard-caps">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-caps" viewBox="0 0 24 24"><path d="M15,14V8H17.17L12,2.83L6.83,8H9V14H15M12,0L22,10H17V16H7V10H2L12,0M7,18H17V24H7V18M15,20H9V22H15V20Z" /></svg>
+</svg>
 <svg id="mdi:apple-keyboard-command">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-command" viewBox="0 0 24 24"><path d="M6,2A4,4 0 0,1 10,6V8H14V6A4,4 0 0,1 18,2A4,4 0 0,1 22,6A4,4 0 0,1 18,10H16V14H18A4,4 0 0,1 22,18A4,4 0 0,1 18,22A4,4 0 0,1 14,18V16H10V18A4,4 0 0,1 6,22A4,4 0 0,1 2,18A4,4 0 0,1 6,14H8V10H6A4,4 0 0,1 2,6A4,4 0 0,1 6,2M16,18A2,2 0 0,0 18,20A2,2 0 0,0 20,18A2,2 0 0,0 18,16H16V18M14,10H10V14H14V10M6,16A2,2 0 0,0 4,18A2,2 0 0,0 6,20A2,2 0 0,0 8,18V16H6M8,6A2,2 0 0,0 6,4A2,2 0 0,0 4,6A2,2 0 0,0 6,8H8V6M18,8A2,2 0 0,0 20,6A2,2 0 0,0 18,4A2,2 0 0,0 16,6V8H18Z" /></svg>
 </svg>
@@ -237,11 +240,53 @@ path.combo {
 }
 /* End Tabler Icons Cleanup */
 
-svg.keymap { background-color: #ffffff; font-family: sans-serif; }
-rect.key { fill: #f6f8fa; stroke: #c9cccf; stroke-width: 1; }
-rect.held, rect.combo.held { fill: #c8e1ff; }
-rect.combo { fill: #e1e4e8; }
-text { fill: #24292e; }
+svg.keymap {
+  background-color: #fdfdfd;
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Default keys */
+rect.key {
+  fill: #f6f8fa;
+  stroke: #d0d7de;
+  stroke-width: 1;
+  rx: 6; /* rounded corners */
+}
+
+/* Text inside keys */
+text {
+  fill: #24292e;
+  font-size: 12px;
+}
+
+/* Held keys (when you press and hold) */
+rect.held, rect.combo.held {
+  fill: #c8e1ff;
+  stroke: #1d76db;
+}
+
+/* Combo keys */
+rect.combo {
+  fill: #e1e4e8;
+  stroke: #b1bac4;
+}
+
+/* Layer toggle / layer-tap keys */
+rect.layer {
+  fill: #fff5b1;        /* soft yellow background */
+  stroke: #d4b106;      /* gold border */
+  stroke-width: 1.5;
+}
+rect.layer.held {
+  fill: #ffe58f;        /* stronger yellow when held */
+  stroke: #d48806;
+}
+
+/* Keys with icons look a little bigger */
+.glyph {
+  width: 20px;
+  height: 20px;
+}
 </style>
 <g transform="translate(30, 0)" class="layer-DEFAULT">
 <text x="0" y="28" class="label" id="DEFAULT">DEFAULT:</text>
@@ -265,6 +310,7 @@ text { fill: #24292e; }
 <g transform="translate(267, 58)" class="key keypos-4">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
 <text x="0" y="0" class="key tap">T</text>
+<use href="#mdi:apple-keyboard-caps" xlink:href="#mdi:apple-keyboard-caps" x="-8" y="-24" height="15" width="15.0" class="key shifted glyph mdi:apple-keyboard-caps"/>
 </g>
 <g transform="translate(520, 58)" class="key keypos-5">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
@@ -383,11 +429,11 @@ text { fill: #24292e; }
 <use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:keyboard-tab"/>
 <text x="0" y="24" class="key hold">Hyper</text>
 </g>
-<g transform="translate(254, 236) rotate(15.0)" class="key keypos-31">
-<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
-<use href="#mdi:backspace-reverse-outline" xlink:href="#mdi:backspace-reverse-outline" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:backspace-reverse-outline"/>
+<g transform="translate(254, 236) rotate(15.0)" class="key layer keypos-31">
+<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key layer"/>
+<use href="#mdi:backspace-reverse-outline" xlink:href="#mdi:backspace-reverse-outline" x="-9" y="-9" height="18" width="18.0" class="key layer tap glyph mdi:backspace-reverse-outline"/>
 <a href="#NUM">
-<text x="0" y="24" class="key hold layer-activator">NUM</text>
+<text x="0" y="24" class="key layer hold layer-activator">NUM</text>
 </a></g>
 <g transform="translate(321, 246) rotate(30.0)" class="key keypos-32">
 <rect rx="6" ry="6" x="-26" y="-42" width="52" height="85" class="key"/>
@@ -397,11 +443,11 @@ text { fill: #24292e; }
 <rect rx="6" ry="6" x="-26" y="-42" width="52" height="85" class="key"/>
 <text x="0" y="0" class="key tap">SPACE</text>
 </g>
-<g transform="translate(533, 235) rotate(-15.0)" class="key keypos-34">
-<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
-<use href="#mdi:backspace" xlink:href="#mdi:backspace" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:backspace"/>
+<g transform="translate(533, 235) rotate(-15.0)" class="key layer keypos-34">
+<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key layer"/>
+<use href="#mdi:backspace" xlink:href="#mdi:backspace" x="-9" y="-9" height="18" width="18.0" class="key layer tap glyph mdi:backspace"/>
 <a href="#SYM">
-<text x="0" y="24" class="key hold layer-activator">SYM</text>
+<text x="0" y="24" class="key layer hold layer-activator">SYM</text>
 </a></g>
 <g transform="translate(599, 228)" class="key keypos-35">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
@@ -419,12 +465,6 @@ text { fill: #24292e; }
 <text x="669" y="38" class="combo tap">
 <tspan x="669" dy="-0.6em">Vim</tspan><tspan x="669" dy="1.2em">Q!</tspan>
 </text>
-</g>
-<g class="combo combopos-2">
-<path d="M394,114 l-107,0" class="combo"/>
-<path d="M394,114 l107,0" class="combo"/>
-<rect rx="6" ry="6" x="380" y="101" width="28" height="26" class="combo"/>
-<text x="394" y="114" class="combo tap">CAPS</text>
 </g>
 </g>
 </g>
@@ -565,10 +605,10 @@ text { fill: #24292e; }
 <text x="0" y="0" class="key tap">.</text>
 <use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="-8" y="-40" height="15" width="15.0" class="key shifted glyph mdi:keyboard-space"/>
 </g>
-<g transform="translate(533, 235) rotate(-15.0)" class="key momentary keypos-34">
-<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key momentary"/>
+<g transform="translate(533, 235) rotate(-15.0)" class="key layer keypos-34">
+<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key layer"/>
 <a href="#FUNC">
-<text x="0" y="0" class="key momentary tap layer-activator">FUNC</text>
+<text x="0" y="0" class="key layer tap layer-activator">FUNC</text>
 </a></g>
 <g transform="translate(599, 228)" class="key keypos-35">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
@@ -708,10 +748,10 @@ text { fill: #24292e; }
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g transform="translate(254, 236) rotate(15.0)" class="key momentary keypos-31">
-<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key momentary"/>
+<g transform="translate(254, 236) rotate(15.0)" class="key layer keypos-31">
+<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key layer"/>
 <a href="#FUNC">
-<text x="0" y="0" class="key momentary tap layer-activator">FUNC</text>
+<text x="0" y="0" class="key layer tap layer-activator">FUNC</text>
 </a></g>
 <g transform="translate(321, 246) rotate(30.0)" class="key trans keypos-32">
 <rect rx="6" ry="6" x="-26" y="-42" width="52" height="85" class="key trans"/>
