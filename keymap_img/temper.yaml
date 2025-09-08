@@ -32,10 +32,10 @@ layers:
     - {t: ., s: '>'}
     - {t: /, s: '?'}
   - - {t: '$$mdi:keyboard-tab$$', h: Hyper}
-    - {t: '$$mdi:backspace-reverse-outline$$', h: NUM, type: layer}
+    - {t: '$$mdi:backspace-reverse-outline$$', h: NUM}
     - ENTER
     - SPACE
-    - {t: '$$mdi:backspace$$', h: SYM, type: layer}
+    - {t: '$$mdi:backspace$$', h: SYM}
     - {t: '$$mdi:keyboard-esc$$', h: Hyper}
   NUM:
   - ['', _, '#', $, '@', +, '7', '8', '9', '*']
@@ -45,7 +45,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ., s: '$$mdi:keyboard-space$$'}
-    - {t: FUNC, type: layer}
+    - {t: FUNC, type: momentary}
     - {t: '$$mdi:backspace$$', h: Alt}
   SYM:
   - - '""'
@@ -70,7 +70,7 @@ layers:
     - $$mdi:arrow-right-bold-box-outline$$
     - {t: '$$mdi:pan-down$$', s: '$$mdi:mouse-scroll-wheel$$'}
   - - {t: ▽, type: trans}
-    - {t: FUNC, type: layer}
+    - {t: FUNC, type: momentary}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}

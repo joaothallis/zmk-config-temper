@@ -429,11 +429,11 @@ rect.layer.held {
 <use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:keyboard-tab"/>
 <text x="0" y="24" class="key hold">Hyper</text>
 </g>
-<g transform="translate(254, 236) rotate(15.0)" class="key layer keypos-31">
-<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key layer"/>
-<use href="#mdi:backspace-reverse-outline" xlink:href="#mdi:backspace-reverse-outline" x="-9" y="-9" height="18" width="18.0" class="key layer tap glyph mdi:backspace-reverse-outline"/>
+<g transform="translate(254, 236) rotate(15.0)" class="key keypos-31">
+<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
+<use href="#mdi:backspace-reverse-outline" xlink:href="#mdi:backspace-reverse-outline" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:backspace-reverse-outline"/>
 <a href="#NUM">
-<text x="0" y="24" class="key layer hold layer-activator">NUM</text>
+<text x="0" y="24" class="key hold layer-activator">NUM</text>
 </a></g>
 <g transform="translate(321, 246) rotate(30.0)" class="key keypos-32">
 <rect rx="6" ry="6" x="-26" y="-42" width="52" height="85" class="key"/>
@@ -443,11 +443,11 @@ rect.layer.held {
 <rect rx="6" ry="6" x="-26" y="-42" width="52" height="85" class="key"/>
 <text x="0" y="0" class="key tap">SPACE</text>
 </g>
-<g transform="translate(533, 235) rotate(-15.0)" class="key layer keypos-34">
-<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key layer"/>
-<use href="#mdi:backspace" xlink:href="#mdi:backspace" x="-9" y="-9" height="18" width="18.0" class="key layer tap glyph mdi:backspace"/>
+<g transform="translate(533, 235) rotate(-15.0)" class="key keypos-34">
+<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
+<use href="#mdi:backspace" xlink:href="#mdi:backspace" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:backspace"/>
 <a href="#SYM">
-<text x="0" y="24" class="key layer hold layer-activator">SYM</text>
+<text x="0" y="24" class="key hold layer-activator">SYM</text>
 </a></g>
 <g transform="translate(599, 228)" class="key keypos-35">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
@@ -605,10 +605,10 @@ rect.layer.held {
 <text x="0" y="0" class="key tap">.</text>
 <use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="-8" y="-40" height="15" width="15.0" class="key shifted glyph mdi:keyboard-space"/>
 </g>
-<g transform="translate(533, 235) rotate(-15.0)" class="key layer keypos-34">
-<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key layer"/>
+<g transform="translate(533, 235) rotate(-15.0)" class="key momentary keypos-34">
+<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key momentary"/>
 <a href="#FUNC">
-<text x="0" y="0" class="key layer tap layer-activator">FUNC</text>
+<text x="0" y="0" class="key momentary tap layer-activator">FUNC</text>
 </a></g>
 <g transform="translate(599, 228)" class="key keypos-35">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
@@ -748,10 +748,10 @@ rect.layer.held {
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g transform="translate(254, 236) rotate(15.0)" class="key layer keypos-31">
-<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key layer"/>
+<g transform="translate(254, 236) rotate(15.0)" class="key momentary keypos-31">
+<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key momentary"/>
 <a href="#FUNC">
-<text x="0" y="0" class="key layer tap layer-activator">FUNC</text>
+<text x="0" y="0" class="key momentary tap layer-activator">FUNC</text>
 </a></g>
 <g transform="translate(321, 246) rotate(30.0)" class="key trans keypos-32">
 <rect rx="6" ry="6" x="-26" y="-42" width="52" height="85" class="key trans"/>
