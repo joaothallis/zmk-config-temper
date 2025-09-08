@@ -1,16 +1,7 @@
 layout: {zmk_keyboard: temper}
 layers:
   DEFAULT:
-  - - Q
-    - W
-    - E
-    - R
-    - {t: T, s: '$$mdi:apple-keyboard-caps$$'}
-    - Y
-    - U
-    - I
-    - O
-    - P
+  - [Q, W, E, R, T, Y, U, I, O, P]
   - - A
     - {t: S, h: '$$mdi:apple-keyboard-command$$'}
     - {t: D, h: '$$mdi:apple-keyboard-control$$'}
@@ -21,8 +12,8 @@ layers:
     - {t: K, h: '$$mdi:apple-keyboard-control$$'}
     - {t: L, h: '$$mdi:apple-keyboard-command$$'}
     - {t: ;, s: ':'}
-  - - Z
-    - X
+  - - {t: T, s: '$$mdi:apple-keyboard-caps$$'}
+    - '&cut_dance'
     - {t: C, s: '$$mdi:content-copy$$'}
     - {t: V, s: '$$mdi:content-paste$$'}
     - B
@@ -32,21 +23,21 @@ layers:
     - {t: ., s: '>'}
     - {t: /, s: '?'}
   - - {t: '$$mdi:keyboard-tab$$', h: Hyper}
-    - {t: '$$mdi:backspace-reverse-outline$$', h: NUM, type: hold-tap}
+    - NUM
     - ENTER
     - SPACE
-    - {t: '$$mdi:backspace$$', h: SYM, type: hold-tap}
+    - SYM
     - {t: '$$mdi:keyboard-esc$$', h: Hyper}
   NUM:
-  - ['', _, '#', $, '@', +, '7', '8', '9', '*']
-  - ['', '~', '`', '%', '!', '-', '4', '5', '6', /]
+  - [BSPC, _, '#', $, '@', +, '7', '8', '9', '*']
+  - [DEL, '~', '`', '%', '!', '-', '4', '5', '6', /]
   - ['', \, '|', '&', ^, '0', '1', '2', '3', '=']
   - - $$mdi:apple-keyboard-command$$
-    - {t: ▽, type: trans}
+    - {type: held}
     - {t: ▽, type: trans}
     - {t: ., s: '$$mdi:keyboard-space$$'}
-    - {t: FUNC, type: momentary}
-    - {t: '$$mdi:backspace$$', h: Alt}
+    - {t: ▽, type: trans}
+    - RALT
   SYM:
   - - '""'
     - <
@@ -70,10 +61,10 @@ layers:
     - $$mdi:arrow-right-bold-box-outline$$
     - {t: '$$mdi:pan-down$$', s: '$$mdi:mouse-scroll-wheel$$'}
   - - {t: ▽, type: trans}
-    - {t: FUNC, type: momentary}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
+    - {type: held}
     - {t: ▽, type: trans}
   FUNC:
   - ['$$mdi:bluetooth-off$$', '$$mdi:bluetooth-transfer$$', '$$mdi:bluetooth-transfer$$', Boot, Reset, Reset, Boot, '', '', '']
