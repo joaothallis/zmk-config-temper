@@ -40,14 +40,14 @@
         copy_dance: tapdance_copy {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             bindings = <&kp C>, <&kp LG(C)>;
         };
         // Tap dance single tap = V double tap = gui+v
         paste_dance: tabdance_paste {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             bindings = <&kp V>, <&kp LG(V)>;
         };
         // Tap dance single tap = . double tap = SPACE
