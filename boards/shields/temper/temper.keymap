@@ -25,6 +25,13 @@
 };
 
 / {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layer = <NUM SYM>;
+            then-layer = <FUNC>;
+        };
+    };
     behaviors {
 
         // Home row mods
@@ -62,7 +69,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp T>, <&kp CAPS>;
+            bindings = <&kp Z>, <&kp CAPS>;
         };
         // Tap dance single tap = X double tap = gui+x
         cut_dance: tapdance_cut {
