@@ -12,7 +12,7 @@ layers:
     - {t: K, h: RCTRL}
     - {t: L, h: RGUI}
     - ;
-  - [B, X, '&copy_dance', '&paste_dance', B, N, M, ',', ., /]
+  - [Z, X, '&copy_dance', '&paste_dance', B, N, M, ',', ., /]
   - - {t: TAB, h: Gui+Ctl+Alt+LSHFT}
     - {t: DEL, h: NUM}
     - ENTER
