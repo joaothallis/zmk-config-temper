@@ -18,15 +18,12 @@ draw_config:
 
 # Contains settings used by the `parse` step, including detailed ZMK binding maps.
 parse_config:
-  layer_names: [DEFAULT, NUM, SYM, FUNC]
   mark_alternate_layer_activators: true
   raw_binding_map:
     # Layers and Layer Taps
     "&lt NUM DEL": { tap: $$mdi:backspace-reverse-outline$$, hold: NUM, type: hold-tap }
     "&lt SYM BSPC": { tap: $$mdi:backspace$$, hold: SYM, type: hold-tap }
     "&mo FUNC": { tap: FUNC, type: momentary }
-    "&mo SYM": { tap: SYM, type: momentary, held: true  }
-    "&mo NUM": { tap: NUM, type: momentary, held: true  }
 
     # Homerow Mods
     "&hm LGUI S": { tap: S, hold: $$mdi:apple-keyboard-command$$ }
@@ -141,10 +138,6 @@ parse_config:
     SQT: ''''
     LGUI: $$mdi:apple-keyboard-command$$
     LNCLCK: 'Num Lock'
-    # Layers
-    NUM: "NUM"
-    SYM: "SYM"
-    FUNC: "FUNC"
     # Arrow keys
     UP: $$mdi:arrow-up-bold$$
     DOWN: $$mdi:arrow-down-bold$$
