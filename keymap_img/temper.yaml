@@ -29,15 +29,15 @@ layers:
     - SYM
     - {t: '$$mdi:keyboard-esc$$', h: Hyper}
   NUM:
-  - ['$$mdi:backspace$$', _, '#', $, '@', +, '7', '8', '9', '*']
-  - ['$$mdi:backspace-reverse-outline$$', '~', '`', '%', '!', '-', '4', '5', '6', /]
+  - [BSPC, _, '#', $, '@', +, '7', '8', '9', '*']
+  - [DEL, '~', '`', '%', '!', '-', '4', '5', '6', /]
   - ['', \, '|', '&', ^, '0', '1', '2', '3', '=']
   - - $$mdi:apple-keyboard-command$$
     - {type: held}
     - {t: ▽, type: trans}
     - {t: ., s: '$$mdi:keyboard-space$$'}
     - {t: ▽, type: trans}
-    - RALT
+    - $$mdi:apple-keyboard-option$$
   SYM:
   - - '""'
     - <
@@ -92,6 +92,12 @@ combos:
 - p: [7, 8]
   k: Vim Q!
   l: [DEFAULT]
+- p: [5, 6]
+  k: BSPC
+  l: [DEFAULT, NUM]
+- p: [3, 4]
+  k: DEL
+  l: [DEFAULT, NUM]
 - p: [1, 2]
   k: <>
   l: [SYM]
