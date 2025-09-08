@@ -37,14 +37,14 @@
             bindings = <&kp>, <&kp>;
         };
         // Tap dance single tap = C double tap = gui+c
-        C: copy_dance {
+        copy_dance: tapdance_copy {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
             bindings = <&kp C>, <&kp LG(C)>;
         };
         // Tap dance single tap = V double tap = gui+v
-        V: paste_dance {
+        paste_dance: tabdance_paste {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
@@ -220,7 +220,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         &kp A       &hm LGUI S   &hm LCTRL D     &hm LSHFT F    &kp G             &kp H       &hm RSHFT J   &hm RCTRL K   &hm RGUI L    &kp SEMI
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &kp Z       &kp X          &C            &V             &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH
+        &kp Z       &kp X        &copy_dance    &paste_dance    &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                     &tp LG(LC(LA(LSHFT))) TAB    &lt NUM DEL    &kp ENTER      &kp SPACE    &lt SYM BSPC   &tp LG(LC(LA(LSHFT))) ESC
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
