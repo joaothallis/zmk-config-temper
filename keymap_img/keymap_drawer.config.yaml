@@ -71,7 +71,7 @@ parse_config:
     "&mmv MOVE_UP": $$mdi:mouse-move-up$$
     "&mmv MOVE_DOWN": $$mdi:mouse-move-down$$
     "&msc SCRL_UP": { tap: $$mdi:pan-up$$, shifted: $$mdi:mouse-scroll-wheel$$ }
-    "&msc SCRL_DOWN": { tap: $$mdi:pan-down$$, shifted: $$mouse-scroll-wheel$$ }
+    "&msc SCRL_DOWN": { tap: $$mdi:pan-down$$, shifted: $$mdi:mouse-scroll-wheel$$ }
 
     # Macros (assign simple text/icons)
     "&dq_macro": '""'
@@ -83,8 +83,8 @@ parse_config:
     "&ls_rs_macro": "[ ]"
 
     # Combos
-    "&vim_wq": Vim WQ
-    "&vim_q": Vim Q!
+    "&vim_wq": "Vim WQ"
+    "&vim_q": "Vim Q!"
 
     # Browser navigation
     "&kp LG(LEFT)": $$mdi:arrow-left-bold-box-outline$$
@@ -108,7 +108,7 @@ parse_config:
     PRCNT: '%'
     EXCL: '!'
     AMPS: '&'
-    CARET: ^
+    CARET: '^'
     EQUAL: '='
     MINUS: '-'
     SLASH: '/'
@@ -116,8 +116,8 @@ parse_config:
       tap: '/'
       shifted: '?'
     COMMA: 
-       tap: ','
-       shifted: '<'
+      tap: ','
+      shifted: '<'
     DOT: 
       tap: '.'
       shifted: '>'
