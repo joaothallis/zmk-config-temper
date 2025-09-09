@@ -114,18 +114,6 @@
             layers = <DEFAULT>;
             bindings = <&vim_q>;
         };
-        combo_bspc {
-            timeout-ms = <50>;
-            key-positions = <5 6>;
-            layers = <DEFAULT NUM>;
-            bindings = <&kp BSPC>;
-        };
-        combo_del {
-            timeout-ms = <50>;
-            key-positions = <3 4>;
-            layers = <DEFAULT NUM>;
-            bindings = <&kp DEL>;
-        };
         // Combo to type < > and move cursor left
         lt_gt_combo {
             timeout-ms = <50>;
@@ -248,7 +236,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &caps_dance    &cut_dance      &copy_dance    &paste_dance    &kp B           &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                    &tp LG(LC(LA(LSHFT))) TAB    &mo NUM      &kp ENTER          &kp SPACE    &mo SYM   &tp LG(LC(LA(LSHFT))) ESC
+                    &tp LG(LC(LA(LSHFT))) TAB  &lt NUM DEL    &kp ENTER          &kp SPACE   &lt SYM BSPC  &tp LG(LC(LA(LSHFT))) ESC
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };

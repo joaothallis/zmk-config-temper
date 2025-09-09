@@ -23,7 +23,15 @@ draw_config:
 # Contains settings used by the `parse` step, including detailed ZMK binding maps.
 parse_config:
   mark_alternate_layer_activators: true
+  layer_names:
+    0: DEFAULT
+    1: NUM
+    2: SYM
+    3: FUNC
   raw_binding_map:
+    "&lt NUM DEL": { tap: $$mdi:backspace-reverse-outline$$, hold: NUM, type: hold-tap }
+    "&lt SYM BSPC": { tap: $$mdi:backspace$$, hold: SYM, type: hold-tap }
+    "&mo FUNC": { tap: FUNC, type: momentary }
     # Homerow Mods
     "&hm LGUI S": { tap: S, hold: $$mdi:apple-keyboard-command$$ }
     "&hm LCTRL D": { tap: D, hold: $$mdi:apple-keyboard-control$$ }
@@ -87,8 +95,6 @@ parse_config:
     # Combos
     "&vim_wq": "Vim WQ"
     "&vim_q": "Vim Q!"
-    "&combo_del": $$mdi:backspace-reverse-outline$$
-    "&combo_bspc": $$mdi:backspace$$
 
     # Browser navigation
     "&kp LG(LEFT)": $$mdi:arrow-left-bold-box-outline$$
