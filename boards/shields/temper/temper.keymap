@@ -64,7 +64,7 @@
             tapping-term-ms = <200>;
             bindings = <&kp DOT>, <&kp SPACE>;
         };
-        // Tap dance single tap = T double tap = CAPS LOCK
+        // Tap dance single tap = Z double tap = CAPS LOCK
         caps_dance: tapdance_caps {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
