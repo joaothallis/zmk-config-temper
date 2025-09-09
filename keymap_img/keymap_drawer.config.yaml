@@ -29,9 +29,9 @@ parse_config:
     2: SYM
     3: FUNC
   raw_binding_map:
-    "&lt NUM DEL": { tap: $$mdi:backspace-reverse-outline$$, hold: NUM, type: hold-tap }
-    "&lt SYM BSPC": { tap: $$mdi:backspace$$, hold: SYM, type: hold-tap }
-    "&mo FUNC": { tap: FUNC, type: momentary }
+    "&lt 1 DEL": { tap: $$mdi:backspace-reverse-outline$$, hold: NUM, type: hold-tap }
+    "&lt 2 BSPC": { tap: $$mdi:backspace$$, hold: SYM, type: hold-tap }
+    "&mo 3": { tap: FUNC, type: momentary }
     # Homerow Mods
     "&hm LGUI S": { tap: S, hold: $$mdi:apple-keyboard-command$$ }
     "&hm LCTRL D": { tap: D, hold: $$mdi:apple-keyboard-control$$ }
