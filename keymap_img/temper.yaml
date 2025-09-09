@@ -23,17 +23,17 @@ layers:
     - {t: ., s: '>'}
     - {t: /, s: '?'}
   - - {t: '$$mdi:keyboard-tab$$', h: Hyper}
-    - NUM
+    - {t: '$$mdi:backspace-reverse-outline$$', h: NUM, type: hold-tap}
     - ENTER
     - SPACE
-    - SYM
+    - {t: '$$mdi:backspace$$', h: SYM, type: hold-tap}
     - {t: '$$mdi:keyboard-esc$$', h: Hyper}
   NUM:
   - ['', _, '#', $, '@', +, '7', '8', '9', '*']
   - ['', '~', '`', '%', '!', '-', '4', '5', '6', /]
   - ['', \, '|', '&', ^, '0', '1', '2', '3', '=']
   - - $$mdi:apple-keyboard-command$$
-    - {type: held}
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ., s: '$$mdi:keyboard-space$$'}
     - {t: ▽, type: trans}
@@ -64,7 +64,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {type: held}
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   FUNC:
   - ['$$mdi:bluetooth-off$$', '$$mdi:bluetooth-transfer$$', '$$mdi:bluetooth-transfer$$', Boot, Reset, Reset, Boot, '', '', '']
@@ -80,10 +80,10 @@ layers:
     - ''
   - [F1, F2, F3, F4, F5, F6, F7, F8, F9, F10]
   - - {t: ▽, type: trans}
-    - {type: held}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
 combos:
 - p: [1, 2]
@@ -92,12 +92,6 @@ combos:
 - p: [7, 8]
   k: Vim Q!
   l: [DEFAULT]
-- p: [5, 6]
-  k: BSPC
-  l: [DEFAULT, NUM]
-- p: [3, 4]
-  k: DEL
-  l: [DEFAULT, NUM]
 - p: [1, 2]
   k: <>
   l: [SYM]
