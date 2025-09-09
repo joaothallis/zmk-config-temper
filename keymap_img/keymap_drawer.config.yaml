@@ -28,6 +28,14 @@ parse_config:
     1: NUM
     2: SYM
     3: FUNC
+  raw_layer_overrides:
+    NUM:
+      31: { type: held }
+    SYM:
+      34: { type: held }
+    FUNC:
+      31: { type: held }
+      34: { type: held }
   raw_binding_map:
     "&lt 1 DEL": { tap: $$mdi:backspace-reverse-outline$$, hold: NUM, type: hold-tap }
     "&lt 2 BSPC": { tap: $$mdi:backspace$$, hold: SYM, type: hold-tap }
