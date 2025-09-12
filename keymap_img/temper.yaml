@@ -1,7 +1,16 @@
 layout: {zmk_keyboard: temper}
 layers:
   DEFAULT:
-  - [Q, W, E, R, T, Y, U, I, O, P]
+  - - Q
+    - W
+    - E
+    - R
+    - T
+    - Y
+    - U
+    - I
+    - O
+    - {t: P, s: '$$mdi:clipboard-check-outline$$'}
   - - A
     - {t: S, h: '$$mdi:apple-keyboard-command$$'}
     - {t: D, h: '$$mdi:apple-keyboard-control$$'}
@@ -12,7 +21,7 @@ layers:
     - {t: K, h: '$$mdi:apple-keyboard-control$$'}
     - {t: L, h: '$$mdi:apple-keyboard-command$$'}
     - {t: ;, s: ':'}
-  - - {t: T, s: '$$mdi:apple-keyboard-caps$$'}
+  - - {t: Z, s: '$$mdi:apple-keyboard-caps$$'}
     - {t: X, s: '$$mdi:content-cut$$'}
     - {t: C, s: '$$mdi:content-copy$$'}
     - {t: V, s: '$$mdi:content-paste$$'}
