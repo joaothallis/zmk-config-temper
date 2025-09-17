@@ -47,14 +47,14 @@
         copy_dance: tapdance_copy {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&kp C>, <&kp LG(C)>;
         };
         // Tap dance single tap = V double tap = gui+v
         paste_dance: tabdance_paste {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&kp V>, <&kp LG(V)>;
         };
         // Tap dance single tap = . double tap = SPACE
@@ -68,22 +68,29 @@
         caps_dance: tapdance_caps {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             bindings = <&kp Z>, <&kp CAPS>;
         };
         // Tap dance single tap = X double tap = gui+x
         cut_dance: tapdance_cut {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&kp X>, <&kp LG(X)>;
         };
         // Tap dance single tap = P double tap = gui+shift+v
         app_paste: app_paste {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&kp P>, <&kp LG(LS(V))>;
+        };
+        // Tap dance single tap = H double tap = C_AC_SEARCH
+        search_dance: tapdance_search {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&kp H>, <&kp C_AC_SEARCH>;
         };
         // Enable hyper key when tapped
         tp: tap-preferred {
@@ -239,7 +246,7 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
         &kp Q       &kp W         &kp E          &kp R          &kp T             &kp Y         &kp U         &kp I         &kp O       &app_paste
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &kp A       &hm LGUI S   &hm LCTRL D     &hm LSHFT F    &kp G             &kp H       &hm RSHFT J   &hm RCTRL K   &hm RGUI L    &kp SEMI
+        &kp A       &hm LGUI S   &hm LCTRL D     &hm LSHFT F    &kp G         &search_dance     &hm RSHFT J   &hm RCTRL K   &hm RGUI L    &kp SEMI
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &caps_dance    &cut_dance      &copy_dance    &paste_dance    &kp B           &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯

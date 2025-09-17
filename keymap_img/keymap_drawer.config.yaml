@@ -54,6 +54,7 @@ parse_config:
     "&dot_spc": { tap: '.', shifted: $$mdi:keyboard-space$$ }
     "&caps_dance": { tap: Z, shifted: $$mdi:apple-keyboard-caps$$ }
     "&app_paste": { tap: P, shifted: $$mdi:clipboard-check-outline$$ }
+    "&search_dance": { tap: H, shifted: $$mdi:mdi-magnify$$ }
 
     # Hold-Taps (Non-homerow)
     "&mt RALT BSPC": { tap: $$mdi:backspace$$, hold: Alt }
