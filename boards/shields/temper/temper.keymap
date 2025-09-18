@@ -85,12 +85,12 @@
             tapping-term-ms = <180>;
             bindings = <&kp P>, <&kp LG(LS(V))>;
         };
-        // Tap dance single tap = H double tap = C_AC_SEARCH
+        // Tap dance single tap = H double tap = Raycast seach (CMD + space)
         search_dance: tapdance_search {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <180>;
-            bindings = <&kp H>, <&kp C_AC_SEARCH>;
+            bindings = <&kp H>, <&kp LG(SPACE)>;
         };
         // Enable hyper key when tapped
         tp: tap-preferred {
