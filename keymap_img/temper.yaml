@@ -38,9 +38,9 @@ layers:
     - {t: '$$mdi:backspace$$', h: SYM, type: hold-tap}
     - {t: '$$mdi:keyboard-esc$$', h: Hyper}
   NUM:
-  - ['', _, '#', $, '@', +, '7', '8', '9', '*']
+  - [Nvim WQ, _, '#', $, '@', +, '7', '8', '9', '*']
   - ['', '~', '`', '%', '!', '-', '4', '5', '6', /]
-  - ['', \, '|', '&', ^, '0', '1', '2', '3', '=']
+  - [Nvim Q!, \, '|', '&', ^, '0', '1', '2', '3', '=']
   - - $$mdi:apple-keyboard-command$$
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -95,12 +95,6 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
 combos:
-- p: [1, 2]
-  k: Vim WQ
-  l: [DEFAULT]
-- p: [7, 8]
-  k: Vim Q!
-  l: [DEFAULT]
 - p: [1, 2]
   k: <>
   l: [SYM]
