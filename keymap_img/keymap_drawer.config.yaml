@@ -39,6 +39,7 @@ parse_config:
   raw_binding_map:
     "&lt NUM DEL": { tap: $$mdi:backspace-reverse-outline$$, hold: NUM, type: hold-tap }
     "&lt SYM BSPC": { tap: $$mdi:backspace$$, hold: SYM, type: hold-tap }
+
     # Homerow Mods
     "&hm LGUI S": { tap: S, hold: $$mdi:apple-keyboard-command$$ }
     "&hm LCTRL D": { tap: D, hold: $$mdi:apple-keyboard-control$$ }
@@ -100,10 +101,8 @@ parse_config:
     "&lb_rb_macro": "{}"
     "&lp_rp_macro": "()"
     "&ls_rs_macro": "[]"
-
-    # Combos
-    "&vim_wq": "Vim WQ"
-    "&vim_q": "Vim Q!"
+    "&vim_wq": "Nvim WQ"
+    "&vim_q": "Nvim Q!"
 
     # Browser navigation
     "&kp LG(LEFT)": $$mdi:arrow-left-bold-box-outline$$

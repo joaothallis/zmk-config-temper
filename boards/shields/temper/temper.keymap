@@ -114,20 +114,6 @@
 
     combos {
         compatible = "zmk,combos";
-        // Combo to exit vim (ESC : W Q)
-        combo_vimwq {
-            timeout-ms = <50>;
-            key-positions = <1 2>;
-            layers = <DEFAULT>;
-            bindings = <&vim_wq>;
-        };
-        // Combo to exit vim (ESC : Q !)
-        combo_vimq {
-            timeout-ms = <50>;
-            key-positions = <7 8>;
-            layers = <DEFAULT>;
-            bindings = <&vim_q>;
-        };
         // Combo to type < > and move cursor left
         lt_gt_combo {
             timeout-ms = <50>;
@@ -258,11 +244,11 @@
             label = "NUM";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-       &none     &kp UNDER     &kp HASH      &kp DLLR     &kp AT            &kp PLUS       &kp N7        &kp N8       &kp N9       &kp STAR
+       &vim_wq     &kp UNDER     &kp HASH      &kp DLLR     &kp AT            &kp PLUS       &kp N7        &kp N8       &kp N9       &kp STAR
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
        &none     &kp TILDE     &kp GRAVE     &kp PRCNT    &kp EXCL          &kp MINUS      &kp N4        &kp N5       &kp N6       &kp SLASH
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-       &none        &kp BSLH      &kp PIPE      &kp AMPS     &kp CARET         &kp N0         &kp N1        &kp N2       &kp N3       &kp EQUAL
+       &vim_q        &kp BSLH      &kp PIPE      &kp AMPS     &kp CARET         &kp N0         &kp N1        &kp N2       &kp N3       &kp EQUAL
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                   &kp LGUI      ______         ______          &dot_spc       ______       &kp RALT
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
