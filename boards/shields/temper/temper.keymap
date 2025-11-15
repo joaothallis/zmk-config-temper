@@ -15,92 +15,33 @@
 #define DEFAULT 0
 #define NUM 1
 #define SYM 2
-#define FUNC 3
+#define NAV 3
 
 #define ______ &trans
 
-&mt {
-  tapping-term-ms = <200>;
-  flavor = "tap-preferred";
-};
-
 / {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <NUM SYM>;
-            then-layer = <FUNC>;
-        };
-    };
     behaviors {
-
         // Home row mods
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-        // Tap dance single tap = C double tap = gui+c
-        copy_dance: tapdance_copy {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <180>;
-            bindings = <&kp C>, <&kp LG(C)>;
-        };
-        // Tap dance single tap = V double tap = gui+v
-        paste_dance: tabdance_paste {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <180>;
-            bindings = <&kp V>, <&kp LG(V)>;
-        };
-        // Tap dance single tap = . double tap = SPACE
-        dot_spc: dot_space {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp DOT>, <&kp SPACE>;
-        };
-        // Tap dance single tap = Z double tap = CAPS LOCK
-        caps_dance: tapdance_caps {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
             tapping-term-ms = <280>;
-            bindings = <&kp Z>, <&kp CAPS>;
-        };
-        // Tap dance single tap = X double tap = gui+x
-        cut_dance: tapdance_cut {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <180>;
-            bindings = <&kp X>, <&kp LG(X)>;
-        };
-        // Tap dance single tap = P double tap = gui+shift+v
-        app_paste: app_paste {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <180>;
-            bindings = <&kp P>, <&kp LG(LS(V))>;
-        };
-        // Tap dance single tap = H double tap = Raycast seach (CMD + space)
-        search_dance: tapdance_search {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <180>;
-            bindings = <&kp H>, <&kp LG(SPACE)>;
-        };
-        // Enable hyper key when tapped
-        tp: tap-preferred {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TAP-PREFERRED";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+        };
+        // One-shot shift
+        os_shft: one_shot_shift {
+            compatible = "zmk,behavior-one-shot";
+            #binding-cells = <1>;
+            bindings = <&kp>;
+        };
+        // Tap dance for SQT/DQT
+        sqt_dqt: tap_dance_sqt_dqt {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp SQT>, <&kp DQT>;
         };
     };
 
@@ -114,112 +55,20 @@
 
     combos {
         compatible = "zmk,combos";
-        // Combo to type < > and move cursor left
-        lt_gt_combo {
+        combo_esc {
             timeout-ms = <50>;
-            key-positions = <1 2>;
-            layers = <SYM>;
-            bindings = <&lt_gt_macro>;
-         };
-        // Combo to type { } and move cursor left
-        lb_rb_combo {
+            key-positions = <5 25>;
+            bindings = <&kp ESC>;
+        };
+        combo_sqt_dqt {
             timeout-ms = <50>;
-            key-positions = <3 4>;
-            layers = <SYM>;
-            bindings = <&lb_rb_macro>;
+            key-positions = <6 9>;
+            bindings = <&sqt_dqt>;
         };
-        // Combo to type ( ) and move cursor left
-        lp_rp_combo {
+        combo_os_shft {
             timeout-ms = <50>;
-            key-positions = <13 14>;
-            layers = <SYM>;
-            bindings = <&lp_rp_macro>;
-        };
-        // Combo to type [ ] and move cursor left
-        ls_rs_combo {
-            timeout-ms = <50>;
-            key-positions = <11 12>;
-            layers = <SYM>;
-            bindings = <&ls_rs_macro>;
-        };
-        // Combo to press the middle mouse button
-        mmb_combo {
-            timeout-ms = <50>;
-            key-positions = <25 26>;
-            layers = <SYM>;
-            bindings = <&mkp MCLK>;
-        };
-        // Combo to go Next
-        next_combo {
-            timeout-ms = <50>;
-            key-positions = <23 24>;
-            layers = <SYM>;
-            bindings = <&kp C_NEXT>;
-        };
-        // Combo to go Previous
-        prev_combo {
-            timeout-ms = <50>;
-            key-positions = <21 22>;
-            layers = <SYM>;
-            bindings = <&kp C_PREV>;
-        };
-     };
-
-    macros {
-        // Macro to exit vim: ESC : W Q
-        vim_wq: vim_quit {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp ESC &kp COLON &kp W &kp Q &kp ENTER>;
-        };
-        // Macro to exit vim: ESC : Q !
-        vim_q: vim_quit_force {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp ESC &kp COLON &kp Q &kp EXCL &kp ENTER>;
-        };
-        // Macro to type < > and move cursor left
-        lt_gt_macro: lt_gt_macro_with_cursor {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp LT &kp GT &kp LEFT>;
-        };
-        // Macro to type { } and move cursor left
-        lb_rb_macro: lb_rb_macro_with_cursor {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp LBRC &kp RBRC &kp LEFT>;
-        };
-        // Macro to type ( ) and move cursor left
-        lp_rp_macro: lp_rp_macro_with_cursor {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp LPAR &kp RPAR &kp LEFT>;
-        };
-        // Macro to type [ ] and move cursor left
-        ls_rs_macro: ls_rs_macro_with_cursor {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp LBKT &kp RBKT &kp LEFT>;
-        };
-        // Macro to open homerow app (LGUI+LCTRL+LSHFT) 
-        homeapp: homeapp {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI &kp LCTRL &kp LSHFT>,
-                        <&macro_release &kp LSHFT &kp LCTRL &kp LGUI>;
-        };
-        // Macro to type "" and move cursor left
-        dq_macro: dq_macro_with_cursor {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp DQT &kp DQT &kp LEFT>;
-        };
-        nomachine: nomachine_settings {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp RCTRL &kp RALT &kp N0>,
-                       <&macro_release &kp N0 &kp RALT &kp RCTRL>;
+            key-positions = <12 23>;
+            bindings = <&os_shft LSHFT>;
         };
     };
 
@@ -230,56 +79,58 @@
             label = "DEFAULT";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        &kp Q       &kp W         &kp E          &kp R          &kp T             &kp Y         &kp U         &kp I         &kp O       &app_paste
+        &kp Q       &kp W         &kp F          &kp P          &kp B             &kp J         &kp L         &kp U         &kp Y       &kp SEMI
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &kp A       &hm LGUI S   &hm LCTRL D     &hm LSHFT F    &kp G         &search_dance     &hm RSHFT J   &hm RCTRL K   &hm RGUI L    &kp SEMI
+        &hm LALT A  &hm LCTRL R   &hm LGUI S     &hm LSHFT T    &kp G             &kp M         &hm RSHFT N   &hm RGUI E    &hm RCTRL I &hm RALT O
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &caps_dance    &cut_dance      &copy_dance    &paste_dance    &kp B           &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH
+        &kp Z       &kp X         &kp C          &kp D          &kp V             &kp K         &kp H         &kp COMMA     &kp DOT     &kp FSLH
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                    &tp LG(LC(LA(LSHFT))) TAB  &lt NUM DEL    &kp ENTER          &kp SPACE   &lt SYM BSPC  &tp LG(LC(LA(LSHFT))) ESC
-//                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
-            >;
-        };
-        num_layer {
-            label = "NUM";
-            bindings = <
-// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-       &vim_wq     &kp UNDER     &kp HASH      &kp DLLR     &kp AT            &kp PLUS       &kp N7        &kp N8       &kp N9       &kp STAR
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-       &none     &kp TILDE     &kp GRAVE     &kp PRCNT    &kp EXCL          &kp MINUS      &kp N4        &kp N5       &kp N6       &kp SLASH
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-       &vim_q        &kp BSLH      &kp PIPE      &kp AMPS     &kp CARET         &kp N0         &kp N1        &kp N2       &kp N3       &kp EQUAL
-// ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                  &kp LGUI      ______         ______          &dot_spc       ______       &kp RALT
-//                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
-            >;
-        };
-        sym_layer {
-            label = "SYM";
-            bindings = <
-// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-      &dq_macro      &kp LT       &kp GT         &kp LBRC      &kp RBRC        &mmv MOVE_LEFT  &mmv MOVE_DOWN &mmv MOVE_UP  &mmv MOVE_RIGHT  &msc SCRL_UP
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &kp DQT      &kp LBKT     &kp RBKT       &kp LPAR      &kp RPAR          &kp LEFT        &kp DOWN     &kp UP       &kp RIGHT     &homeapp
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &kp SQT     &kp C_PP     &kp C_MUTE  &kp C_VOL_DN   &kp C_VOL_UP         &mkp LCLK      &mkp RCLK     &kp LG(LEFT)  &kp LG(RIGHT)  &msc SCRL_DOWN
-// ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                   ______       ______        ______             ______        ______        ______
+                                &kp TAB       &lt NAV 0      &kp ENTER         &kp SPACE     &lt SYM 0     &kp BSPC
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
 
-        func_layer {
-            label = "FUNC";
+        num_layer {
+            label = "NUM";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &bt BT_CLR    &bt BT_NXT    &bt BT_PRV    &bootloader   &sys_reset       &sys_reset    &bootloader    &none         &none         &none
+        &kp N1      &kp N2        &kp N3         &kp N4         &kp N5            &kp N6        &kp N7        &kp N8        &kp N9      &kp N0
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-       &kp F11       &kp F12    &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2       &kp LNLCK     &nomachine    &none         &none         &none
+        &kp MINUS   &kp EQUAL     &kp LBRC       &kp RBRC       &kp BSLH          &kp GRAVE     &kp TILDE     &kp PLUS      &kp UNDERSCORE &kp PIPE
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-       &kp F1        &kp F2        &kp F3        &kp F4        &kp F5           &kp F6         &kp F7       &kp F8        &kp F9         &kp F10
+        &kp DOT     &kp COMMA     &kp LPAR       &kp RPAR       &kp SLASH         &kp AMPS      &kp CARET     &kp DLLR      &kp PRCNT   &kp STAR
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                   ______        ______        ______            ______        ______        ______
+                                &______       &______        &______           &______       &______       &______
+//                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
+            >;
+        };
+
+        sym_layer {
+            label = "SYM";
+            bindings = <
+// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+        &kp EXCL    &kp AT        &kp HASH       &kp DLLR       &kp PRCNT         &kp CARET     &kp AMPS      &kp STAR      &kp LPAR    &kp RPAR
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+        &kp UNDERSCORE &kp PLUS   &kp MINUS      &kp EQUAL      &kp PIPE          &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT   &kp BSPC
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+        &kp GRAVE   &kp TILDE     &kp LBRC       &kp RBRC       &kp BSLH          &kp HOME      &kp PGDN      &kp PGUP      &kp END     &kp DEL
+// ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
+                                &______       &______        &______           &______       &______       &______
+//                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
+            >;
+        };
+
+        nav_layer {
+            label = "NAV";
+            bindings = <
+// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+        &kp F1      &kp F2        &kp F3         &kp F4         &kp F5            &kp F6        &kp F7        &kp F8        &kp F9      &kp F10
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+        &kp LALT    &kp LCTRL     &kp LGUI       &kp LSHFT      &kp CAPSLOCK      &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT   &kp BSPC
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+        &kp F11     &kp F12       &kp PSCRN      &kp SLCK       &kp PAUSE_BREAK   &kp HOME      &kp PGDN      &kp PGUP      &kp END     &kp DEL
+// ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
+                                &______       &______        &______           &______       &______       &______
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
