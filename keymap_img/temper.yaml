@@ -11,16 +11,7 @@ layers:
     - U
     - Y
     - {t: ;, s: ':'}
-  - - {t: A, h: LALT}
-    - {t: R, h: LCTRL}
-    - {t: S, h: '$$mdi:apple-keyboard-command$$'}
-    - {t: T, h: LSHFT}
-    - G
-    - M
-    - {t: N, h: RSHFT}
-    - {t: E, h: RGUI}
-    - {t: I, h: RCTRL}
-    - {t: O, h: '$$mdi:apple-keyboard-option$$'}
+  - [A, R, S, T, G, M, N, E, I, O]
   - - Z
     - X
     - C
