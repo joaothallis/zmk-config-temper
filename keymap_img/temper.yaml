@@ -22,56 +22,88 @@ layers:
     - {t: ',', s: <}
     - {t: ., s: '>'}
     - {t: /, s: '?'}
-  - - TAB
-    - {t: '0', h: NAV}
+  - - {t: '$$mdi:keyboard-tab$$', h: Hyper}
+    - {t: '$$mdi:backspace-reverse-outline$$', h: NUM, type: hold-tap}
     - ENTER
     - SPACE
-    - {t: '0', h: SYM}
-    - BSPC
+    - {t: '$$mdi:backspace$$', h: SYM, type: hold-tap}
+    - {t: '$$mdi:keyboard-esc$$', h: Hyper}
   NUM:
-  - ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
-  - ['-', '=', '{', '}', \, '`', '~', +, UNDERSCORE, '|']
-  - - {t: ., s: '>'}
-    - {t: ',', s: <}
-    - (
-    - )
-    - /
-    - '&'
-    - ^
-    - $
-    - '%'
-    - '*'
-  - - {t: ▽, type: trans}
+  - [Nvim WQ, _, '#', $, '@', +, '7', '8', '9', '*']
+  - ['', '~', '`', '%', '!', '-', '4', '5', '6', /]
+  - [Nvim Q!, \, '|', '&', ^, '0', '1', '2', '3', '=']
+  - - $$mdi:apple-keyboard-command$$
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
+    - {t: ., s: '$$mdi:keyboard-space$$'}
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - $$mdi:apple-keyboard-option$$
   SYM:
-  - ['!', '@', '#', $, '%', ^, '&', '*', (, )]
-  - [UNDERSCORE, +, '-', '=', '|', '$$mdi:arrow-left-bold$$', '$$mdi:arrow-down-bold$$', '$$mdi:arrow-up-bold$$', '$$mdi:arrow-right-bold$$', BSPC]
-  - ['`', '~', '{', '}', \, HOME, PGDN, PGUP, END, DEL]
+  - - '""'
+    - <
+    - '>'
+    - '{'
+    - '}'
+    - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
+    - $$mdi:mouse-move-down$$
+    - $$mdi:mouse-move-up$$
+    - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
+    - {t: '$$mdi:pan-up$$', s: '$$mdi:mouse-scroll-wheel$$'}
+  - ['"', '[', ']', (, ), '$$mdi:arrow-left-bold$$', '$$mdi:arrow-down-bold$$', '$$mdi:arrow-up-bold$$', '$$mdi:arrow-right-bold$$', '$$mdi:keyboard-settings$$']
+  - - ''''
+    - $$mdi:play-pause$$
+    - $$mdi:volume-off$$
+    - $$mdi:volume-low$$
+    - $$mdi:volume-high$$
+    - $$mdi:mouse-left-click-outline$$
+    - $$mdi:mouse-right-click-outline$$
+    - $$mdi:arrow-left-bold-box-outline$$
+    - $$mdi:arrow-right-bold-box-outline$$
+    - {t: '$$mdi:pan-down$$', s: '$$mdi:mouse-scroll-wheel$$'}
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {type: held}
     - {t: ▽, type: trans}
-  NAV:
+    - {t: ▽, type: trans}
+  FUNC:
+  - ['$$mdi:bluetooth-off$$', '$$mdi:bluetooth-transfer$$', '$$mdi:bluetooth-transfer$$', Boot, Reset, Reset, Boot, '', '', '']
+  - - F11
+    - F12
+    - {h: '1', s: '$$mdi:bluetooth-connect$$'}
+    - {h: '2', s: '$$mdi:bluetooth-connect$$'}
+    - {h: '3', s: '$$mdi:bluetooth-connect$$'}
+    - Num Lock
+    - $$mdi:gnome$$
+    - ''
+    - ''
+    - ''
   - [F1, F2, F3, F4, F5, F6, F7, F8, F9, F10]
-  - [LALT, LCTRL, '$$mdi:apple-keyboard-command$$', LSHFT, CAPSLOCK, '$$mdi:arrow-left-bold$$', '$$mdi:arrow-down-bold$$', '$$mdi:arrow-up-bold$$', '$$mdi:arrow-right-bold$$',
-    BSPC]
-  - [F11, F12, PSCRN, SLCK, PAUSE BREAK, HOME, PGDN, PGUP, END, DEL]
   - - {t: ▽, type: trans}
-    - {type: held}
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
 combos:
-- p: [5, 25]
-  k: ESC
-- p: [6, 9]
-  k: '&sqt_dqt'
-- p: [12, 23]
-  k: '&os_shft LSHFT'
+- p: [1, 2]
+  k: <>
+  l: [SYM]
+- p: [3, 4]
+  k: '{}'
+  l: [SYM]
+- p: [13, 14]
+  k: ()
+  l: [SYM]
+- p: [11, 12]
+  k: '[]'
+  l: [SYM]
+- p: [25, 26]
+  k: $$mdi:mouse-scroll-wheel$$
+  l: [SYM]
+- p: [23, 24]
+  k: $$mdi:skip-next$$
+  l: [SYM]
+- p: [21, 22]
+  k: $$mdi:skip-previous$$
+  l: [SYM]
