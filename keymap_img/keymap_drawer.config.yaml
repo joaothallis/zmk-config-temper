@@ -9,9 +9,9 @@ draw_config:
     rect.held, rect.combo.held { fill: #c8e1ff; }
     rect.combo { fill: #e1e4e8; }
     text { fill: #24292e; }
-    rect.layer-NUM.held { fill: #ffd8d8; }
-    rect.layer-SYM.held { fill: #d8ffd8; }
-    rect.layer-FUNC.held { fill: #d8d8ff; }
+     rect.layer-SYMBOLS.held { fill: #ffd8d8; }
+     rect.layer-NAV.held { fill: #d8ffd8; }
+     rect.layer-MISC.held { fill: #d8d8ff; }
     rect.layer-active { stroke: #ff0000; stroke-width: 2; }
   glyph_urls:
     mdi: https://raw.githubusercontent.com/Templarian/MaterialDesign-SVG/master/svg/{}.svg
@@ -25,42 +25,43 @@ parse_config:
   mark_alternate_layer_activators: true
   layer_names:
     0: DEFAULT
-    1: NUM
-    2: SYM
-    3: FUNC
+    1: SYMBOLS
+    2: NAV
+    3: MISC
   raw_layer_overrides:
-    NUM:
+    SYMBOLS:
       31: { type: held }
-    SYM:
+    NAV:
       34: { type: held }
-    FUNC:
+    MISC:
       31: { type: held }
       34: { type: held }
   raw_binding_map:
-    "&lt NUM DEL": { tap: $$mdi:backspace-reverse-outline$$, hold: NUM, type: hold-tap }
-    "&lt SYM BSPC": { tap: $$mdi:backspace$$, hold: SYM, type: hold-tap }
+    "&lt SYMBOLS TAB": { tap: $$mdi:keyboard-tab$$, hold: SYMBOLS, type: hold-tap }
+    "&lt NAV BSPC": { tap: $$mdi:backspace$$, hold: NAV, type: hold-tap }
 
     # Homerow Mods
     "&hm LGUI S": { tap: S, hold: $$mdi:apple-keyboard-command$$ }
-    "&hm LCTRL D": { tap: D, hold: $$mdi:apple-keyboard-control$$ }
-    "&hm LSHFT F": { tap: F, hold: $$mdi:apple-keyboard-shift$$ }
-    "&hm RSHFT J": { tap: J, hold: $$mdi:apple-keyboard-shift$$ }
-    "&hm RCTRL K": { tap: K, hold: $$mdi:apple-keyboard-control$$ }
+    "&hm LALT D": { tap: D, hold: $$mdi:apple-keyboard-option$$ }
+    "&hm LCTRL F": { tap: F, hold: $$mdi:apple-keyboard-control$$ }
+    "&hm LSHFT G": { tap: G, hold: $$mdi:apple-keyboard-shift$$ }
+    "&hm RSHFT H": { tap: H, hold: $$mdi:apple-keyboard-shift$$ }
+    "&hm RCTRL J": { tap: J, hold: $$mdi:apple-keyboard-control$$ }
+    "&hm RALT K": { tap: K, hold: $$mdi:apple-keyboard-option$$ }
     "&hm RGUI L": { tap: L, hold: $$mdi:apple-keyboard-command$$ }
 
-    # Tap Dances
-    "&copy_dance": { tap: C, shifted: $$mdi:content-copy$$ }
-    "&paste_dance": { tap: V, shifted: $$mdi:content-paste$$ }
-    "&cut_dance": { tap: X, shifted: $$mdi:content-cut$$ }
-    "&dot_spc": { tap: '.', shifted: $$mdi:keyboard-space$$ }
-    "&caps_dance": { tap: Z, shifted: $$mdi:apple-keyboard-caps$$ }
-    "&app_paste": { tap: P, shifted: $$mdi:clipboard-check-outline$$ }
-    "&search_dance": { tap: H, shifted: $$mdi:magnify$$ }
+    # Bottom Row Mods
+    "&tp LSHFT Z": { tap: Z, hold: $$mdi:apple-keyboard-shift$$ }
+    "&tp LALT X": { tap: X, hold: $$mdi:apple-keyboard-option$$ }
+    "&tp LCTRL C": { tap: C, hold: $$mdi:apple-keyboard-control$$ }
+    "&tp LGUI V": { tap: V, hold: $$mdi:apple-keyboard-command$$ }
+    "&tp RALT M": { tap: M, hold: $$mdi:apple-keyboard-option$$ }
+    "&tp RCTRL COMMA": { tap: ',', hold: $$mdi:apple-keyboard-control$$ }
+    "&tp RGUI DOT": { tap: '.', hold: $$mdi:apple-keyboard-command$$ }
 
-    # Hold-Taps (Non-homerow)
-    "&mt RALT BSPC": { tap: $$mdi:backspace$$, hold: Alt }
-    "&tp LG(LC(LA(LSHFT))) TAB": { tap: $$mdi:keyboard-tab$$, hold: Hyper }
-    "&tp LG(LC(LA(LSHFT))) ESC": { tap: $$mdi:keyboard-esc$$, hold: Hyper }
+
+
+
 
     # Bluetooth Keys
     "&bt BT_CLR": $$mdi:bluetooth-off$$
