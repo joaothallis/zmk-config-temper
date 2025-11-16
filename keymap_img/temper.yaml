@@ -3,14 +3,14 @@ layers:
   DEFAULT:
   - [Q, W, E, R, T, Y, U, I, O, P]
   - - A
-    - {t: S, h: '$$mdi:apple-keyboard-command$$'}
-    - {t: D, h: '$$mdi:apple-keyboard-option$$'}
-    - {t: F, h: '$$mdi:apple-keyboard-control$$'}
-    - {t: G, h: '$$mdi:apple-keyboard-shift$$'}
-    - {t: H, h: '$$mdi:apple-keyboard-shift$$'}
-    - {t: J, h: '$$mdi:apple-keyboard-control$$'}
-    - {t: K, h: '$$mdi:apple-keyboard-option$$'}
-    - {t: L, h: '$$mdi:apple-keyboard-command$$'}
+    - S
+    - D
+    - F
+    - G
+    - H
+    - J
+    - K
+    - L
     - {t: ;, s: ':'}
   - - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
     - {t: X, h: '$$mdi:apple-keyboard-option$$'}
