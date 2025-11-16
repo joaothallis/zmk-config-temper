@@ -12,7 +12,7 @@ layers:
     - K
     - L
     - {t: ;, s: ':'}
-  - - {t: Z, h: '$$mdi:apple-keyboard-option$$'}
+  - - {t: Z, h: LSHFT}
     - {t: X, h: LALT}
     - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-command$$'}
     - {t: V, h: '$$mdi:apple-keyboard-command$$'}
