@@ -12,9 +12,9 @@ layers:
     - K
     - L
     - {t: ;, s: ':'}
-  - - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
-    - {t: X, h: '$$mdi:apple-keyboard-option$$'}
-    - {t: C, h: '$$mdi:apple-keyboard-control$$'}
+  - - {t: Z, h: '$$mdi:apple-keyboard-option$$'}
+    - {t: X, h: SYMBOLS, type: layer-tap}
+    - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-command$$'}
     - {t: V, h: '$$mdi:apple-keyboard-command$$'}
     - B
     - N
