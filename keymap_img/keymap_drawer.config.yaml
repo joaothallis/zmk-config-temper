@@ -40,16 +40,6 @@ parse_config:
     "&lt SYMBOLS TAB": { tap: $$mdi:keyboard-tab$$, hold: SYMBOLS, type: hold-tap }
     "&lt NAV BSPC": { tap: $$mdi:backspace$$, hold: NAV, type: hold-tap }
 
-    # Homerow Mods
-    "&hm LGUI S": { tap: S, hold: $$mdi:apple-keyboard-command$$ }
-    "&hm LALT D": { tap: D, hold: $$mdi:apple-keyboard-option$$ }
-    "&hm LCTRL F": { tap: F, hold: $$mdi:apple-keyboard-control$$ }
-    "&hm LSHFT G": { tap: G, hold: $$mdi:apple-keyboard-shift$$ }
-    "&hm RSHFT H": { tap: H, hold: $$mdi:apple-keyboard-shift$$ }
-    "&hm RCTRL J": { tap: J, hold: $$mdi:apple-keyboard-control$$ }
-    "&hm RALT K": { tap: K, hold: $$mdi:apple-keyboard-option$$ }
-    "&hm RGUI L": { tap: L, hold: $$mdi:apple-keyboard-command$$ }
-
     # Bottom Row Mods
     "&tp LSHFT Z": { tap: Z, hold: $$mdi:apple-keyboard-shift$$ }
     "&tp LALT X": { tap: X, hold: $$mdi:apple-keyboard-option$$ }
