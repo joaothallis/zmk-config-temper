@@ -45,8 +45,9 @@ parse_config:
     "&lt SYMBOLS X": { tap: X, hold: SYMBOLS, type: layer-tap }
     "&tp LGUI TAB": { tap: $$mdi:keyboard-tab$$, hold: $$mdi:apple-keyboard-command$$ }
     "&tp LGUI V": { tap: V, hold: $$mdi:apple-keyboard-command$$ }
-    "&tp RALT M": { tap: M, hold: $$mdi:apple-keyboard-option$$ }
-    "&tp RCTRL COMMA": { tap: ',', hold: $$mdi:apple-keyboard-control$$ }
+    "&lt NAV SPACE": { tap: SPACE, hold: NAV, type: layer-tap }
+    "&tp LCTRL BSPC": { tap: $$mdi:backspace$$, hold: $$mdi:apple-keyboard-control$$ }
+    "&tp RSHFT ENTER": { tap: ENTER, hold: $$mdi:apple-keyboard-shift$$ }
     "&tp RGUI DOT": { tap: '.', hold: $$mdi:apple-keyboard-command$$ }
 
 
