@@ -14,14 +14,14 @@ layers:
     - {t: ;, s: ':'}
   - - {t: Z, h: LSHFT}
     - {t: X, h: LALT}
-    - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-command$$'}
+    - {t: C, h: LCTRL}
     - {t: V, h: '$$mdi:apple-keyboard-command$$'}
     - B
-    - {t: SPACE, h: NAV, type: layer-tap}
-    - {t: '$$mdi:backspace$$', h: '$$mdi:apple-keyboard-control$$'}
-    - {t: ENTER, h: '$$mdi:apple-keyboard-shift$$'}
-    - {t: ., h: '$$mdi:apple-keyboard-command$$'}
-    - {t: /, s: '?'}
+    - N
+    - {t: M, h: RGUI}
+    - {t: ',', h: RCTRL, s: <}
+    - {t: ., h: '$$mdi:apple-keyboard-option$$', s: '>'}
+    - {t: /, h: RSHIFT, s: '?'}
   - - $$mdi:apple-keyboard-command$$
     - {t: '$$mdi:keyboard-tab$$', h: SYMBOLS, type: hold-tap}
     - SPACE
