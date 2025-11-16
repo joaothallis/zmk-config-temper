@@ -102,6 +102,12 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+        // One shot modifier
+        osm: one_shot {
+            compatible = "zmk,behavior-one-shot";
+            #binding-cells = <1>;
+            timeout-ms = <1000>;
+        };
     };
 
     /*                KEY POSITIONS
