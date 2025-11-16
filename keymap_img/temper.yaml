@@ -102,5 +102,3 @@ combos:
   k: ESC
 - p: [18, 19]
   k: ''''
-- p: [11, 12]
-  k: '&osm LSHFT'
