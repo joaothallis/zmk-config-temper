@@ -25,9 +25,7 @@ layers:
   - - LALT
     - '&lt 1'
     - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-command$$'}
-    - {t: SPACE, h: NAV, type: layer-tap}
-    - {t: '$$mdi:backspace$$', h: '$$mdi:apple-keyboard-control$$'}
-    - {t: ENTER, h: '$$mdi:apple-keyboard-shift$$'}
+    - ''
   SYMBOLS:
   - [Nvim WQ, _, '#', $, '@', +, '7', '8', '9', '*']
   - ['', '~', '`', '%', '!', '-', '4', '5', '6', /]
@@ -35,9 +33,7 @@ layers:
   - - $$mdi:apple-keyboard-command$$
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - '&dot_spc'
-    - {t: ▽, type: trans}
-    - $$mdi:apple-keyboard-option$$
+    - ''
   NAV:
   - [<, '>', '{', '}', '[', PGUP, HOME, '$$mdi:arrow-up-bold$$', END, PGDN]
   - [(, ), '[', ']', '"', '$$mdi:arrow-left-bold$$', '$$mdi:arrow-down-bold$$', '$$mdi:arrow-up-bold$$', '$$mdi:arrow-right-bold$$', '''']
@@ -54,9 +50,7 @@ layers:
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - ''
   MISC:
   - ['$$mdi:bluetooth-off$$', '$$mdi:bluetooth-transfer$$', '$$mdi:bluetooth-transfer$$', Boot, Reset, Reset, Boot, '', '', '']
   - - F11
@@ -73,9 +67,7 @@ layers:
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - ''
 combos:
 - p: [1, 2]
   k: <>
@@ -110,3 +102,7 @@ combos:
   k: '['
 - p: [15, 16]
   k: ']'
+- p: [23, 24]
+  k: '{'
+- p: [25, 26]
+  k: '}'
