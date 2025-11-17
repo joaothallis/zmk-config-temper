@@ -194,6 +194,12 @@
              key-positions = <13 14>;
              bindings = <&kp LBKT>;
          };
+         // Combo for ] (H + J)
+         rbracket_combo {
+             timeout-ms = <50>;
+             key-positions = <15 16>;
+             bindings = <&kp RBKT>;
+         };
 
       };
 
