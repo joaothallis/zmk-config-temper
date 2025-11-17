@@ -176,6 +176,12 @@
              key-positions = <18 19>;
              bindings = <&kp SQT>;
          };
+         // Combo for ( (R + T)
+         lpar_combo {
+             timeout-ms = <50>;
+             key-positions = <3 4>;
+             bindings = <&kp LPAR>;
+         };
 
       };
 
