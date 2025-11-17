@@ -24,10 +24,10 @@ layers:
     - {t: /, h: RSHIFT, s: '?'}
   - - LALT
     - '&lt 1'
-    - TAB SPACE
-    - {t: ENTER, h: NAV}
-    - {t: BSPC, h: LCTL}
-    - {t: ENTER, h: RSHIFT}
+    - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-command$$'}
+    - {t: SPACE, h: NAV, type: layer-tap}
+    - {t: '$$mdi:backspace$$', h: '$$mdi:apple-keyboard-control$$'}
+    - {t: ENTER, h: '$$mdi:apple-keyboard-shift$$'}
   SYMBOLS:
   - [Nvim WQ, _, '#', $, '@', +, '7', '8', '9', '*']
   - ['', '~', '`', '%', '!', '-', '4', '5', '6', /]
@@ -54,7 +54,7 @@ layers:
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {type: held}
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   MISC:
@@ -73,7 +73,7 @@ layers:
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {type: held}
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
 combos:
