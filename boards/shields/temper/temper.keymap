@@ -206,6 +206,12 @@
              key-positions = <23 24>;
              bindings = <&kp LBRC>;
          };
+         // Combo for } (N + M)
+         rbrace_combo {
+             timeout-ms = <50>;
+             key-positions = <25 26>;
+             bindings = <&kp RBRC>;
+         };
 
       };
 
