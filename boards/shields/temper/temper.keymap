@@ -200,6 +200,12 @@
              key-positions = <15 16>;
              bindings = <&kp RBKT>;
          };
+         // Combo for { (V + B)
+         lbrace_combo {
+             timeout-ms = <50>;
+             key-positions = <23 24>;
+             bindings = <&kp LBRC>;
+         };
 
       };
 
@@ -274,7 +280,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                 &tp LSHFT Z &tp LALT X &tp LCTRL C &tp LGUI V &kp B             &kp N   &tp RGUI M &tp RCTRL COMMA &tp RALT DOT  &tp RSHIFT FSLH
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                    &kp LALT     &lt SYMBOLS       &tp LGUI TAB                   &lt NAV SPACE   &tp LCTRL BSPC &tp RSHFT ENTER
+                    &kp LALT     &lt SYMBOLS       &tp LGUI TAB
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
