@@ -37,30 +37,28 @@ parse_config:
       31: { type: held }
       34: { type: held }
   raw_binding_map:
-    "&lt NUM DEL": { tap: $$mdi:backspace-reverse-outline$$, hold: NUM, type: hold-tap }
-    "&lt SYM BSPC": { tap: $$mdi:backspace$$, hold: SYM, type: hold-tap }
+    # Thumb keys
+    "&mo NUM": { tap: NUM, type: layer }
+    "&hm LGUI TAB": { tap: $$mdi:keyboard-tab$$, hold: $$mdi:apple-keyboard-command$$ }
+    "&lt SYM SPACE": { tap: $$mdi:keyboard-space$$, hold: SYM, type: hold-tap }
+    "&hm LCTRL BSPC": { tap: $$mdi:backspace$$, hold: $$mdi:apple-keyboard-control$$ }
+    "&hm RSHFT ENTER": { tap: $$mdi:keyboard-return$$, hold: $$mdi:apple-keyboard-shift$$ }
 
-    # Homerow Mods
-    "&hm LGUI S": { tap: S, hold: $$mdi:apple-keyboard-command$$ }
-    "&hm LCTRL D": { tap: D, hold: $$mdi:apple-keyboard-control$$ }
-    "&hm LSHFT F": { tap: F, hold: $$mdi:apple-keyboard-shift$$ }
-    "&hm RSHFT J": { tap: J, hold: $$mdi:apple-keyboard-shift$$ }
-    "&hm RCTRL K": { tap: K, hold: $$mdi:apple-keyboard-control$$ }
-    "&hm RGUI L": { tap: L, hold: $$mdi:apple-keyboard-command$$ }
+    # Bottom row mods (left)
+    "&hm LSHFT Z": { tap: Z, hold: $$mdi:apple-keyboard-shift$$ }
+    "&hm LALT X": { tap: X, hold: $$mdi:apple-keyboard-option$$ }
+    "&hm LCTRL C": { tap: C, hold: $$mdi:apple-keyboard-control$$ }
+    "&hm LGUI V": { tap: V, hold: $$mdi:apple-keyboard-command$$ }
 
-    # Tap Dances
-    "&copy_dance": { tap: C, shifted: $$mdi:content-copy$$ }
-    "&paste_dance": { tap: V, shifted: $$mdi:content-paste$$ }
-    "&cut_dance": { tap: X, shifted: $$mdi:content-cut$$ }
-    "&dot_spc": { tap: '.', shifted: $$mdi:keyboard-space$$ }
-    "&caps_dance": { tap: Z, shifted: $$mdi:apple-keyboard-caps$$ }
-    "&app_paste": { tap: P, shifted: $$mdi:clipboard-check-outline$$ }
-    "&search_dance": { tap: H, shifted: $$mdi:magnify$$ }
+    # Bottom row mods (right)
+    "&hm RGUI N": { tap: N, hold: $$mdi:apple-keyboard-command$$ }
+    "&hm RCTRL M": { tap: M, hold: $$mdi:apple-keyboard-control$$ }
+    "&hm RALT COMMA": { tap: ',', hold: $$mdi:apple-keyboard-option$$ }
+    "&hm RSHFT DOT": { tap: '.', hold: $$mdi:apple-keyboard-shift$$ }
 
-    # Hold-Taps (Non-homerow)
-    "&mt RALT BSPC": { tap: $$mdi:backspace$$, hold: Alt }
-    "&tp LG(LC(LA(LSHFT))) TAB": { tap: $$mdi:keyboard-tab$$, hold: Hyper }
-    "&tp LG(LC(LA(LSHFT))) ESC": { tap: $$mdi:keyboard-esc$$, hold: Hyper }
+    # Navigation macros
+    "&lcs_tab": $$mdi:tab-minus$$
+    "&screenshot": $$mdi:camera$$
 
     # Bluetooth Keys
     "&bt BT_CLR": $$mdi:bluetooth-off$$
@@ -81,6 +79,7 @@ parse_config:
     "&kp C_VOL_UP": $$mdi:volume-high$$
     "&kp C_NEXT": $$mdi:skip-next$$
     "&kp C_PREV": $$mdi:skip-previous$$
+    "&kp C_STOP": $$mdi:stop$$
 
     # Mouse Keys
     "&mkp LCLK": $$mdi:mouse-left-click-outline$$
@@ -90,23 +89,19 @@ parse_config:
     "&mmv MOVE_RIGHT": { tap: $$mdi:menu-right$$, shifted: $$mdi:mouse$$ }
     "&mmv MOVE_UP": $$mdi:mouse-move-up$$
     "&mmv MOVE_DOWN": $$mdi:mouse-move-down$$
-    "&msc SCRL_UP": { tap: $$mdi:pan-up$$, shifted: $$mdi:mouse-scroll-wheel$$ }
-    "&msc SCRL_DOWN": { tap: $$mdi:pan-down$$, shifted: $$mdi:mouse-scroll-wheel$$ }
+    "&msc SCRL_UP": $$mdi:pan-up$$
+    "&msc SCRL_DOWN": $$mdi:pan-down$$
+    "&msc SCRL_LEFT": $$mdi:pan-left$$
+    "&msc SCRL_RIGHT": $$mdi:pan-right$$
 
-    # Macros (assign simple text/icons)
-    "&dq_macro": '""'
-    "&homeapp": $$mdi:keyboard-settings$$
-    "&nomachine": $$mdi:gnome$$
-    "&lt_gt_macro": "<>"
-    "&lb_rb_macro": "{}"
-    "&lp_rp_macro": "()"
-    "&ls_rs_macro": "[]"
-    "&vim_wq": "Nvim WQ"
-    "&vim_q": "Nvim Q!"
+    # Copy/Paste shortcuts
+    "&kp LG(C)": $$mdi:content-copy$$
+    "&kp LG(V)": $$mdi:content-paste$$
 
     # Browser navigation
     "&kp LG(LEFT)": $$mdi:arrow-left-bold-box-outline$$
     "&kp LG(RIGHT)": $$mdi:arrow-right-bold-box-outline$$
+    "&kp LC(TAB)": $$mdi:tab-plus$$
 
   # Use the default ZMK keycode mapping for standard keys
   zmk_keycode_map:
@@ -139,9 +134,10 @@ parse_config:
     DOT: 
       tap: '.'
       shifted: '>'
-    SEMI: 
+    SEMI:
       tap: ';'
       shifted: ':'
+    COLON: ':'
     LT: '<'
     GT: '>'
     LBKT: '['
