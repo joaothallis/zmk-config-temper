@@ -17,11 +17,11 @@ layers:
     - {t: C, h: '$$mdi:apple-keyboard-control$$'}
     - {t: V, h: '$$mdi:apple-keyboard-command$$'}
     - B
-    - {t: N, h: '$$mdi:apple-keyboard-command$$'}
-    - {t: M, h: '$$mdi:apple-keyboard-control$$'}
-    - {t: ',', h: '$$mdi:apple-keyboard-option$$'}
-    - {t: ., h: '$$mdi:apple-keyboard-shift$$'}
-    - {t: /, s: '?'}
+    - N
+    - {t: M, h: '$$mdi:apple-keyboard-command$$'}
+    - {t: ',', h: '$$mdi:apple-keyboard-control$$'}
+    - {t: ., h: '$$mdi:apple-keyboard-option$$'}
+    - {t: /, h: '$$mdi:apple-keyboard-shift$$'}
   - - LALT
     - {t: NUM, type: layer}
     - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-command$$'}
