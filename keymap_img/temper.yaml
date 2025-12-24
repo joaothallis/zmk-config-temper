@@ -35,9 +35,9 @@ layers:
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
     - '0'
     - {t: ., s: '>'}
-    - {t: ▽, type: trans}
   SYM:
   - ['', '', '', '', '', '$$mdi:tab-minus$$', '$$mdi:arrow-left-bold-box-outline$$', '$$mdi:arrow-right-bold-box-outline$$', '$$mdi:tab-plus$$', '$$mdi:camera$$']
   - [CAPS, '$$mdi:pan-left$$', '$$mdi:pan-down$$', '$$mdi:pan-up$$', '$$mdi:pan-right$$', '$$mdi:arrow-left-bold$$', '$$mdi:arrow-down-bold$$', '$$mdi:arrow-up-bold$$',
