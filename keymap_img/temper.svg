@@ -412,6 +412,10 @@ rect.layer-active { stroke: #ff0000; stroke-width: 2; }
 <rect rx="6" ry="6" x="536" y="153" width="28" height="26" class="combo"/>
 <text x="550" y="166" class="combo tap">}</text>
 </g>
+<g class="combo combopos-8">
+<rect rx="6" ry="6" x="714" y="111" width="28" height="26" class="combo"/>
+<text x="728" y="124" class="combo tap">&#x27;</text>
+</g>
 </g>
 </g>
 <g transform="translate(30, 354)" class="layer-NUM">
@@ -591,6 +595,10 @@ rect.layer-active { stroke: #ff0000; stroke-width: 2; }
 <g class="combo combopos-7">
 <rect rx="6" ry="6" x="536" y="153" width="28" height="26" class="combo"/>
 <text x="550" y="166" class="combo tap">}</text>
+</g>
+<g class="combo combopos-8">
+<rect rx="6" ry="6" x="714" y="111" width="28" height="26" class="combo"/>
+<text x="728" y="124" class="combo tap">&#x27;</text>
 </g>
 </g>
 </g>
@@ -774,6 +782,10 @@ rect.layer-active { stroke: #ff0000; stroke-width: 2; }
 <rect rx="6" ry="6" x="536" y="153" width="28" height="26" class="combo"/>
 <text x="550" y="166" class="combo tap">}</text>
 </g>
+<g class="combo combopos-8">
+<rect rx="6" ry="6" x="714" y="111" width="28" height="26" class="combo"/>
+<text x="728" y="124" class="combo tap">&#x27;</text>
+</g>
 </g>
 </g>
 <g transform="translate(30, 1063)" class="layer-FUNC">
@@ -951,6 +963,10 @@ rect.layer-active { stroke: #ff0000; stroke-width: 2; }
 <g class="combo combopos-7">
 <rect rx="6" ry="6" x="536" y="153" width="28" height="26" class="combo"/>
 <text x="550" y="166" class="combo tap">}</text>
+</g>
+<g class="combo combopos-8">
+<rect rx="6" ry="6" x="714" y="111" width="28" height="26" class="combo"/>
+<text x="728" y="124" class="combo tap">&#x27;</text>
 </g>
 </g>
 </g>
