@@ -12,44 +12,36 @@ layers:
     - K
     - L
     - {t: ;, s: ':'}
-  - - {t: Z, h: LSHFT}
-    - {t: X, h: LALT}
-    - {t: C, h: LCTRL}
+  - - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
+    - {t: X, h: '$$mdi:apple-keyboard-option$$'}
+    - {t: C, h: '$$mdi:apple-keyboard-control$$'}
     - {t: V, h: '$$mdi:apple-keyboard-command$$'}
     - B
-    - {t: N, h: RGUI}
-    - {t: M, h: RCTRL}
-    - {t: ',', h: '$$mdi:apple-keyboard-option$$', s: <}
-    - {t: ., h: RSHFT, s: '>'}
+    - {t: N, h: '$$mdi:apple-keyboard-command$$'}
+    - {t: M, h: '$$mdi:apple-keyboard-control$$'}
+    - {t: ',', h: '$$mdi:apple-keyboard-option$$'}
+    - {t: ., h: '$$mdi:apple-keyboard-shift$$'}
     - {t: /, s: '?'}
   - - LALT
-    - NUM
-    - {t: TAB, h: '$$mdi:apple-keyboard-command$$'}
-    - {t: SPACE, h: SYM}
-    - {t: BSPC, h: LCTRL}
-    - {t: ENTER, h: RSHFT}
+    - {t: NUM, type: layer}
+    - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-command$$'}
+    - {t: '$$mdi:keyboard-space$$', h: SYM, type: hold-tap}
+    - {t: '$$mdi:backspace$$', h: '$$mdi:apple-keyboard-control$$'}
+    - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   NUM:
   - ['!', '@', '*', '`', '~', '7', '8', '9', +, '']
-  - ['#', '''', '"', '-', '=', '4', '5', '6', '-', COLON]
+  - ['#', '''', '"', '-', '=', '4', '5', '6', '-', ':']
   - [_, $, '%', ^, '&', '1', '2', '3', \, '']
   - - {t: ▽, type: trans}
-    - {type: held}
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - '0'
     - {t: ., s: '>'}
     - {t: ▽, type: trans}
   SYM:
-  - ['', '', '', '', '', '&lcs_tab', '$$mdi:arrow-left-bold-box-outline$$', '$$mdi:arrow-right-bold-box-outline$$', Ctl+TAB, '&screenshot']
-  - - CAPS
-    - '&msc SCRL_LEFT'
-    - {t: '$$mdi:pan-down$$', s: '$$mdi:mouse-scroll-wheel$$'}
-    - {t: '$$mdi:pan-up$$', s: '$$mdi:mouse-scroll-wheel$$'}
-    - '&msc SCRL_RIGHT'
-    - $$mdi:arrow-left-bold$$
-    - $$mdi:arrow-down-bold$$
-    - $$mdi:arrow-up-bold$$
-    - $$mdi:arrow-right-bold$$
-    - Gui+C
+  - ['', '', '', '', '', '$$mdi:tab-minus$$', '$$mdi:arrow-left-bold-box-outline$$', '$$mdi:arrow-right-bold-box-outline$$', '$$mdi:tab-plus$$', '$$mdi:camera$$']
+  - [CAPS, '$$mdi:pan-left$$', '$$mdi:pan-down$$', '$$mdi:pan-up$$', '$$mdi:pan-right$$', '$$mdi:arrow-left-bold$$', '$$mdi:arrow-down-bold$$', '$$mdi:arrow-up-bold$$',
+    '$$mdi:arrow-right-bold$$', '$$mdi:content-copy$$']
   - - LSHFT
     - ''
     - ''
@@ -59,11 +51,11 @@ layers:
     - $$mdi:mouse-move-down$$
     - $$mdi:mouse-move-up$$
     - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-    - Gui+V
+    - $$mdi:content-paste$$
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {type: held}
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   FUNC:
@@ -78,11 +70,11 @@ layers:
     - {h: '3', s: '$$mdi:bluetooth-connect$$'}
     - Boot
   - [F6, F7, F8, F9, F10, '$$mdi:volume-off$$', '$$mdi:volume-low$$', '$$mdi:volume-high$$', '$$mdi:play-pause$$', Reset]
-  - [F11, F12, '', '', '', '', '$$mdi:skip-previous$$', '$$mdi:skip-next$$', STOP, '']
+  - [F11, F12, '', '', '', '', '$$mdi:skip-previous$$', '$$mdi:skip-next$$', '$$mdi:stop$$', '']
   - - {t: ▽, type: trans}
-    - {type: held}
     - {t: ▽, type: trans}
-    - {type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
 combos:
