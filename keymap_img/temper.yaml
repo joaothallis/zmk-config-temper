@@ -52,9 +52,9 @@ layers:
     - Gui+C
   - - LSHFT
     - ''
+    - ''
     - $$mdi:mouse-right-click-outline$$
     - $$mdi:mouse-left-click-outline$$
-    - ''
     - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
     - $$mdi:mouse-move-down$$
     - $$mdi:mouse-move-up$$
