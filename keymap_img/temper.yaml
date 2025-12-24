@@ -1,54 +1,45 @@
 layout: {zmk_keyboard: temper}
 layers:
   DEFAULT:
-  - - Q
-    - W
-    - E
-    - R
-    - T
-    - Y
-    - U
-    - I
-    - O
-    - {t: P, s: '$$mdi:clipboard-check-outline$$'}
+  - [Q, W, E, R, T, Y, U, I, O, P]
   - - A
     - {t: S, h: '$$mdi:apple-keyboard-command$$'}
     - {t: D, h: '$$mdi:apple-keyboard-control$$'}
     - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
     - G
-    - {t: H, s: '$$mdi:magnify$$'}
+    - H
     - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
     - {t: K, h: '$$mdi:apple-keyboard-control$$'}
     - {t: L, h: '$$mdi:apple-keyboard-command$$'}
     - {t: ;, s: ':'}
-  - - {t: Z, s: '$$mdi:apple-keyboard-caps$$'}
-    - {t: X, s: '$$mdi:content-cut$$'}
-    - {t: C, s: '$$mdi:content-copy$$'}
-    - {t: V, s: '$$mdi:content-paste$$'}
+  - - Z
+    - X
+    - C
+    - V
     - B
     - N
     - M
     - {t: ',', s: <}
     - {t: ., s: '>'}
     - {t: /, s: '?'}
-  - - {t: '$$mdi:keyboard-tab$$', h: Hyper}
+  - - TAB
     - {t: '$$mdi:backspace-reverse-outline$$', h: NUM, type: hold-tap}
     - ENTER
     - SPACE
     - {t: '$$mdi:backspace$$', h: SYM, type: hold-tap}
-    - {t: '$$mdi:keyboard-esc$$', h: Hyper}
+    - ESC
   NUM:
-  - [Nvim WQ, _, '#', $, '@', +, '7', '8', '9', '*']
+  - ['', _, '#', $, '@', +, '7', '8', '9', '*']
   - ['', '~', '`', '%', '!', '-', '4', '5', '6', /]
-  - [Nvim Q!, \, '|', '&', ^, '0', '1', '2', '3', '=']
+  - ['', \, '|', '&', ^, '0', '1', '2', '3', '=']
   - - $$mdi:apple-keyboard-command$$
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {t: ., s: '$$mdi:keyboard-space$$'}
+    - {t: ., s: '>'}
     - {t: ▽, type: trans}
     - $$mdi:apple-keyboard-option$$
   SYM:
-  - - '""'
+  - - ''
     - <
     - '>'
     - '{'
@@ -58,7 +49,7 @@ layers:
     - $$mdi:mouse-move-up$$
     - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
     - {t: '$$mdi:pan-up$$', s: '$$mdi:mouse-scroll-wheel$$'}
-  - ['"', '[', ']', (, ), '$$mdi:arrow-left-bold$$', '$$mdi:arrow-down-bold$$', '$$mdi:arrow-up-bold$$', '$$mdi:arrow-right-bold$$', '$$mdi:keyboard-settings$$']
+  - ['"', '[', ']', (, ), '$$mdi:arrow-left-bold$$', '$$mdi:arrow-down-bold$$', '$$mdi:arrow-up-bold$$', '$$mdi:arrow-right-bold$$', '']
   - - ''''
     - $$mdi:play-pause$$
     - $$mdi:volume-off$$
@@ -83,7 +74,7 @@ layers:
     - {h: '2', s: '$$mdi:bluetooth-connect$$'}
     - {h: '3', s: '$$mdi:bluetooth-connect$$'}
     - Num Lock
-    - $$mdi:gnome$$
+    - ''
     - ''
     - ''
     - ''
@@ -94,25 +85,3 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-combos:
-- p: [1, 2]
-  k: <>
-  l: [SYM]
-- p: [3, 4]
-  k: '{}'
-  l: [SYM]
-- p: [13, 14]
-  k: ()
-  l: [SYM]
-- p: [11, 12]
-  k: '[]'
-  l: [SYM]
-- p: [25, 26]
-  k: $$mdi:mouse-scroll-wheel$$
-  l: [SYM]
-- p: [23, 24]
-  k: $$mdi:skip-next$$
-  l: [SYM]
-- p: [21, 22]
-  k: $$mdi:skip-previous$$
-  l: [SYM]
