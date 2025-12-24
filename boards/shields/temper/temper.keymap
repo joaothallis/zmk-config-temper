@@ -103,6 +103,13 @@
             key-positions = <25 26>;
             bindings = <&kp RBRC>;
         };
+
+        // L + ; = '
+        combo_sqt {
+            timeout-ms = <50>;
+            key-positions = <18 19>;
+            bindings = <&kp SQT>;
+        };
     };
 
     macros {
