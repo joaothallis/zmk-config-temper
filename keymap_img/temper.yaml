@@ -35,9 +35,9 @@ layers:
   - - {t: ▽, type: trans}
     - {type: held}
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
     - '0'
     - {t: ., s: '>'}
+    - {t: ▽, type: trans}
   SYM:
   - ['', '', '', '', '', '&lcs_tab', '$$mdi:arrow-left-bold-box-outline$$', '$$mdi:arrow-right-bold-box-outline$$', Ctl+TAB, '&screenshot']
   - - CAPS
