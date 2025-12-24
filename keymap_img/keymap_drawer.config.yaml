@@ -51,10 +51,10 @@ parse_config:
     "&hm LGUI V": { tap: V, hold: $$mdi:apple-keyboard-command$$ }
 
     # Bottom row mods (right)
-    "&hm RGUI N": { tap: N, hold: $$mdi:apple-keyboard-command$$ }
-    "&hm RCTRL M": { tap: M, hold: $$mdi:apple-keyboard-control$$ }
-    "&hm RALT COMMA": { tap: ',', hold: $$mdi:apple-keyboard-option$$ }
-    "&hm RSHFT DOT": { tap: '.', hold: $$mdi:apple-keyboard-shift$$ }
+    "&hm RGUI M": { tap: M, hold: $$mdi:apple-keyboard-command$$ }
+    "&hm RCTRL COMMA": { tap: ',', hold: $$mdi:apple-keyboard-control$$ }
+    "&hm RALT DOT": { tap: '.', hold: $$mdi:apple-keyboard-option$$ }
+    "&hm RSHFT FSLH": { tap: '/', hold: $$mdi:apple-keyboard-shift$$ }
 
     # Navigation macros
     "&lcs_tab": $$mdi:tab-minus$$
