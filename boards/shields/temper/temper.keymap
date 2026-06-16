@@ -39,7 +39,7 @@
     };
     behaviors {
 
-        // Home row mods
+        // Thumb mod-tap (no positional filter)
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -63,7 +63,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        // Positional home row mods (right hand): mirror of hml.
+        // Positional home row mods (right hand): hold triggers only with a left-hand or thumb key.
         hmr: home_row_mod_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -171,7 +171,7 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
         &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O         &kp P
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F    &kp G             &kp H    &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI
+        &hml LGUI A   &hml LALT S   &hml LCTRL D   &hml LSHFT F   &kp G            &kp H   &hmr RSHFT J   &hmr RCTRL K   &hmr RALT L   &hmr RGUI SEMI
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M       &kp COMMA      &kp DOT      &kp FSLH
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
