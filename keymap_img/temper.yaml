@@ -2,26 +2,26 @@ layout: {zmk_keyboard: temper}
 layers:
   DEFAULT:
   - [Q, W, E, R, T, Y, U, I, O, P]
-  - - A
-    - S
-    - D
-    - F
+  - - {t: A, h: '$$mdi:apple-keyboard-command$$'}
+    - {t: S, h: LALT}
+    - {t: D, h: LCTRL}
+    - {t: F, h: LSHFT}
     - G
     - H
-    - J
-    - K
-    - L
-    - {t: ;, s: ':'}
-  - - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
-    - {t: X, h: '$$mdi:apple-keyboard-option$$'}
-    - {t: C, h: '$$mdi:apple-keyboard-control$$'}
-    - {t: V, h: '$$mdi:apple-keyboard-command$$'}
+    - {t: J, h: RSHFT}
+    - {t: K, h: RCTRL}
+    - {t: L, h: '$$mdi:apple-keyboard-option$$'}
+    - {t: ;, h: RGUI, s: ':'}
+  - - Z
+    - X
+    - C
+    - V
     - B
     - N
-    - {t: M, h: '$$mdi:apple-keyboard-command$$'}
-    - {t: ',', h: '$$mdi:apple-keyboard-control$$'}
-    - {t: ., h: '$$mdi:apple-keyboard-option$$'}
-    - {t: /, h: '$$mdi:apple-keyboard-shift$$'}
+    - M
+    - {t: ',', s: <}
+    - {t: ., s: '>'}
+    - {t: /, s: '?'}
   - - LALT
     - {t: NUM, type: layer}
     - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-command$$'}
